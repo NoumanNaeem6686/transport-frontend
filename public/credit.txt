@@ -1,6 +1,0 @@
-# Sources and Credits:
-- ReactJS
-- NextJS
-- sass / scss
-- Google Fonts
-- Figma
