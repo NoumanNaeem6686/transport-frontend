@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./provides";
+import Header from "@/Components/shared/Header";
+import Footer from "@/Components/shared/Footer";
 
 
 export const metadata: Metadata = {
@@ -18,7 +20,11 @@ export default function RootLayout({
       <body
       >
         <Providers>
+          <Header />
+          {/* <div className="pt-14"> */}
           {children}
+          <Footer />
+          {/* </div> */}
         </Providers>
       </body>
     </html>
