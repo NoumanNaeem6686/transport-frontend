@@ -7,15 +7,15 @@ function Footer() {
             <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
                 <div className="sm:col-span-2">
                     <Link href="/" aria-label="Go home" title="Company" className="inline-flex items-center">
-                        <svg className="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" strokeLinejoin="round" strokeWidth={2} strokeLinecap="round" strokeMiterlimit={10} stroke="currentColor" fill="none">
+                        {/* <svg className="w-8 text-deep-purple-accent-400" viewBox="0 0 24 24" strokeLinejoin="round" strokeWidth={2} strokeLinecap="round" strokeMiterlimit={10} stroke="currentColor" fill="none">
                             <rect x={3} y={1} width={7} height={12} />
                             <rect x={3} y={17} width={7} height={6} />
                             <rect x={14} y={1} width={7} height={6} />
                             <rect x={14} y={11} width={7} height={12} />
-                        </svg>
-                        <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">Transport</span>
+                        </svg> */}
+                        <img src="/t.png" className="h-24 w-auto " />
                     </Link>
-                    <div className="mt-6 lg:max-w-sm">
+                    <div className=" lg:max-w-sm">
                         <p className="text-sm text-gray-800">
                             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
                         </p>
@@ -34,12 +34,7 @@ function Footer() {
                         <p className="mr-1 text-gray-800">Email:</p>
                         <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@lorem.mail</a>
                     </div>
-                    <div className="flex">
-                        <p className="mr-1 text-gray-800">Address:</p>
-                        <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address" title="Our address" className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
-                            312 Lovely Street, NY
-                        </a>
-                    </div>
+
                 </div>
                 <div>
                     <span className="text-base font-bold tracking-wide text-gray-900">Social</span>
@@ -72,13 +67,13 @@ function Footer() {
                 </p>
                 <ul className="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
                     <li>
-                        <Link href="/" className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</Link>
+                        <Link href="/" className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Home</Link>
                     </li>
                     <li>
-                        <Link href="/" className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy Policy</Link>
+                        <Link href="/" className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400"> Get Vehicle</Link>
                     </li>
                     <li>
-                        <Link href="/" className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms &amp; Conditions</Link>
+                        <Link href="/" className="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Get Offer</Link>
                     </li>
                 </ul>
             </div>

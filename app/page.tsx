@@ -1,6 +1,7 @@
-import Image from "next/image";
+import Image from 'next/image'
+import React from 'react'
 
-export default function Home() {
+function page() {
   return (
     <>
       <div className="w-full text-white pt-14 lg:pb-0 flex flex-col lg:min-h-[100vh] h-[100vh] justify-between relative overflow-hidden">
@@ -21,5 +22,7 @@ export default function Home() {
 
       </div>
     </>
-  );
+  )
 }
+
+export default page
