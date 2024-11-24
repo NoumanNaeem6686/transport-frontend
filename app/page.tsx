@@ -3,6 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import HowItWorks from './_components/HowItWorks'
 import LocationArea from './_components/LocationArea'
+import AboutUs from './_components/AboutUs'
 
 function page() {
   return (
@@ -47,7 +48,9 @@ function page() {
 
       </div>
       <LocationArea />
+      <AboutUs />
       <HowItWorks />
+
     </>
   )
 }

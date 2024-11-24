@@ -66,7 +66,7 @@ const HowItWorks = () => {
                             Easy, Fast, and Reliable
                         </h2>
                     </div>
-                    <div className="w-full justify-start lg:items-end items-center lg:gap-16 gap-8 flex lg:flex-row flex-col">
+                    <div className="w-full justify-start lg:items-end items-center lg:gap-16 gap-4 flex lg:flex-row flex-col">
                         <img
                             className="h-80 rounded-xl w-auto"
                             src="/get-car.jpg"
