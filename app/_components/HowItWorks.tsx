@@ -59,7 +59,8 @@ const HowItWorks = () => {
             <div className="w-full max-w-7xl px-4 lg:p-5 mx-auto">
                 <div className="w-full flex-col justify-start items-center lg:gap-12 gap-8 inline-flex">
                     <div className="w-full flex-col justify-start items-center gap-3 flex my-4 mb-10">
-                        <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">
+                        <h1 data-aos="fade-up"
+                            data-aos-anchor-placement="top-bottom" className="font-bold text-4xl md:text-5xl lg:text-6xl">
                             Our Process
                         </h1>
                         <h2 className="w-full text-center text-primaryColor text-xl font-manrope leading-normal">

@@ -5,6 +5,7 @@ import HowItWorks from './_components/HowItWorks'
 import LocationArea from './_components/LocationArea'
 import AboutUs from './_components/AboutUs'
 import Reviews from './_components/Reviews'
+import FAQ from './_components/FAQ'
 
 function page() {
   return (
@@ -54,7 +55,8 @@ function page() {
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         <div className="bg-slate-100 rounded-3xl p-8 text-center sm:p-16 md:px-24 md:py-20 lg:px-28">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-4xl font-bold tracking-tight text-black sm:text-5xl lg:text-6xl">
+            <h2 data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom" className="font-display text-4xl font-bold tracking-tight text-black sm:text-5xl lg:text-6xl">
               Reliable Moving and Transport Solutions
             </h2>
             <p className="max-w-lg text-base text-slate-700 mx-auto mt-4 sm:text-lg">
@@ -99,6 +101,7 @@ function page() {
       </div>
 
       <Reviews />
+      <FAQ />
 
     </>
   )
