@@ -38,7 +38,44 @@ body {
 ::-webkit-scrollbar-button {
   display: none;
 }
+  .swiper-wrapper {
+          height: fit-content !important;
+          width: 100% !important;
+      }
+      .swiper-pagination{
+          display: flex !important;
+          align-items: center !important;
+          justify-content: start !important;
+          gap: 16px !important;
+          position: relative !important;
+      }
+      .swiper-pagination-bullet {
+          width: 42px !important;
+          height: 42px !important;
+          text-align: center !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          line-height: 26px !important;
+          font-size: 16px !important;
+          color: #6B7280 !important;
+          opacity: 1 !important;
+          background: #F9FAFB !important;
+          border: 1px solid #E5E7EB !important;
+      }
+      .swiper-pagination-bullet-active {
+      color: #fff !important;
+      background: #48575F !important;
+      }
 
+/* Remove or comment out this block */
+.swiper-wrapper {
+    height: fit-content !important;
+    width: 100% !important;
+}
+      .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: var(--swiper-pagination-bottom,0px) !important;
+      }
 /* Optionally, hide the scrollbar track piece that sits at the end of the scrollbar */
 ::-webkit-scrollbar-track-piece {
   background: transparent; /* Makes the track piece invisible */

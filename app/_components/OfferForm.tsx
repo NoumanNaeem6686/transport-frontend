@@ -35,7 +35,7 @@ const GetOffer = () => {
                 userType: "",
                 name: "",
                 contact: "",
-                timeRange: "",
+                timeRange: "0000",
                 need: "",
             }}
             validationSchema={validationSchema}
@@ -103,6 +103,7 @@ const GetOffer = () => {
                         </label>
                         <Input
                             type="datetime-local"
+                            label="Select Time"
                             fullWidth
                             className="rounded-xl"
                             value={values.timeRange}
