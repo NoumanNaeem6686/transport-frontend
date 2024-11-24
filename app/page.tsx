@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import HowItWorks from './_components/HowItWorks'
+import LocationArea from './_components/LocationArea'
 
 function page() {
   return (
@@ -45,7 +46,7 @@ function page() {
 
 
       </div>
-
+      <LocationArea />
       <HowItWorks />
     </>
   )

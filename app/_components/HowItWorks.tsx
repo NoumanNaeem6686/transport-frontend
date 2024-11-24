@@ -61,7 +61,7 @@ const HowItWorks = () => {
                         <h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">
                             Our Process
                         </h1>
-                        <h2 className="w-full text-center text-primaryColor text-xl font-bold font-manrope leading-normal">
+                        <h2 className="w-full text-center text-primaryColor text-xl font-manrope leading-normal">
                             Easy, Fast, and Reliable
                         </h2>
                     </div>

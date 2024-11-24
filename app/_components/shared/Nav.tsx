@@ -47,10 +47,10 @@ function Navbar() {
 
                 <div className="flex flex-row gap-x-6 " data-aos="fade-left">
                     <div className=' items-center gap-x-8 mr-3 hidden sm:flex'>
-                        <Link href={'/'} className='text-white hover:scale-x-110 duration-250 transition-all'>
+                        <Link href={'/'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
                             Home
                         </Link>
-                        <Link href={'/get-vehicle'} className='text-white hover:scale-x-110 duration-250 transition-all'>
+                        <Link href={'/get-vehicle'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
                             Get vehicle
                         </Link>
                     </div>
