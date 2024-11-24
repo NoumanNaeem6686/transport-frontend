@@ -4,6 +4,7 @@ import React from 'react'
 import HowItWorks from './_components/HowItWorks'
 import LocationArea from './_components/LocationArea'
 import AboutUs from './_components/AboutUs'
+import Reviews from './_components/Reviews'
 
 function page() {
   return (
@@ -50,6 +51,7 @@ function page() {
       <LocationArea />
       <AboutUs />
       <HowItWorks />
+      <Reviews />
 
     </>
   )
