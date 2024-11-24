@@ -99,12 +99,12 @@ const GetOffer = () => {
                     <div className="w-full mb-1 flex items-start    flex-col ">
 
                         <label htmlFor="" className="text-black font-semibold m-2">
-                            Enter time range
+                            Enter date
                         </label>
                         <Input
-                            label="Time Range"
+                            type="datetime-local"
                             fullWidth
-                            className="rounded-xl "
+                            className="rounded-xl"
                             value={values.timeRange}
                             onChange={(e) => setFieldValue("timeRange", e.target.value)}
                             isInvalid={touched.timeRange && !!errors.timeRange}
