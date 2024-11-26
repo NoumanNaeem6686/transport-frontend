@@ -1,12 +1,39 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Youtube, Instagram, Linkedin, Menu, X } from 'lucide-react';
 
 function Navbar() {
 
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(false);
+    const [Top, setTop] = useState("top-9")
 
+
+
+    useEffect(() => {
+        let navbar = true;
+        const handleScroll = () => {
+            if (navbar) {
+                const currentScrollPos = window.scrollY;
+                if (currentScrollPos > 30) {
+                    setVisible(true);
+                    setTop("top-0");
+                } else {
+                    setVisible(false);
+                    setTop("top-9");
+                }
+                setPrevScrollPos(currentScrollPos);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            navbar = false;
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     return (
         <div>
@@ -30,11 +57,44 @@ function Navbar() {
                     </div>
                 </div>
             </section>
-            <nav
+            {/* <nav
                 className={`w-full overflow-x-hidden  bg-transparent overflow-hidden h-20 flex flex-row items-center justify-between px-2 sm:px-6 md:px-12 lg:px-10 top-10 z-50
                     absolute
                        text-black
                          transform transition-transform duration-300`}
+            >
+                <Link href="/" data-aos="fade-right">
+                    <img src="/t.png" className="h-24 w-auto " />
+                 
+                </Link>
+
+                <div className="flex flex-row gap-x-6 " data-aos="fade-left">
+                    <div className=' items-center gap-x-8 mr-3 hidden sm:flex'>
+                        <Link href={'/'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
+                            Home
+                        </Link>
+                        <Link href={'/services'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
+                            Our Services
+                        </Link>
+                    </div>
+                    <Link href={"/get-offer"}>
+                        <div
+                            className={`bg-white hover:bg-black hover:text-white py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-colors`}
+                        >
+                            Get Offer
+                        </div>
+                    </Link>
+
+                </div>
+
+            </nav > */
+            }
+            <nav
+                className={`w-full fixed h-20 flex flex-row items-center justify-between px-6 md:px-12 lg:px-10 ${Top} z-50
+                ${visible
+                        ? "bg-[#949696]/85 backdrop:filter backdrop-blur-lg shadow-xl text-black z-40"
+                        : "bg-transparent text-black"
+                    } transform transition-transform duration-300`}
             >
                 <Link href="/" data-aos="fade-right">
                     <img src="/t.png" className="h-24 w-auto " />
@@ -50,8 +110,8 @@ function Navbar() {
                         <Link href={'/'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
                             Home
                         </Link>
-                        <Link href={'/get-vehicle'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
-                            Get vehicle
+                        <Link href={'/services'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
+                            Our Services
                         </Link>
                     </div>
                     <Link href={"/get-offer"}>
