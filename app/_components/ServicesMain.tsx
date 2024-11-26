@@ -7,7 +7,7 @@ function ServicesMain() {
     const router = useRouter();
 
     const handleBooking = (service: string) => {
-        router.push(`/service/${service}`);
+        router.push(`/services/${service}`);
     };
 
     return (

@@ -11,7 +11,7 @@ function Navbar() {
     const [visible, setVisible] = useState(false);
     const [Top, setTop] = useState("top-9")
     const currentPath = usePathname()
-    const isHomePage = true
+    const isService = currentPath.startsWith("/services")
     // const isHomePage = currentPath == "/"
 
 
@@ -96,7 +96,7 @@ function Navbar() {
                 className={`w-full fixed h-20 flex flex-row items-center justify-between px-6 md:px-12 lg:px-10 ${Top} z-50
                 ${visible
                         ? "bg-[#949696]/85 backdrop:filter backdrop-blur-lg shadow-xl text-black z-40"
-                        : isHomePage ? "bg-transparent text-black" : "bg-[#949696]/85 backdrop:filter backdrop-blur-lg shadow-xl text-black"
+                        : !isService ? "bg-transparent text-black" : "bg-[#4B4B4B]/85 backdrop:filter backdrop-blur-lg shadow-xl text-black"
                     } transform transition-transform duration-300`}
             >
                 <Link href="/" data-aos="fade-right">
