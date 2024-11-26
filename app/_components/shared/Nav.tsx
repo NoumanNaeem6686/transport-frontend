@@ -3,13 +3,16 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Youtube, Instagram, Linkedin, Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 function Navbar() {
 
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(false);
     const [Top, setTop] = useState("top-9")
-
+    const currentPath = usePathname()
+    const isHomePage = true
+    // const isHomePage = currentPath == "/"
 
 
     useEffect(() => {
@@ -93,7 +96,7 @@ function Navbar() {
                 className={`w-full fixed h-20 flex flex-row items-center justify-between px-6 md:px-12 lg:px-10 ${Top} z-50
                 ${visible
                         ? "bg-[#949696]/85 backdrop:filter backdrop-blur-lg shadow-xl text-black z-40"
-                        : "bg-transparent text-black"
+                        : isHomePage ? "bg-transparent text-black" : "bg-[#949696]/85 backdrop:filter backdrop-blur-lg shadow-xl text-black"
                     } transform transition-transform duration-300`}
             >
                 <Link href="/" data-aos="fade-right">

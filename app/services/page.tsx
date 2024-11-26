@@ -1,4 +1,5 @@
 import React from 'react'
+import ServicesMain from '../_components/ServicesMain'
 
 function page() {
     return (
@@ -16,11 +17,13 @@ function page() {
                 </div>
                 <h1 className="z-10" data-aos="fade-down">
                     Our Services
+
                 </h1>
             </div>
-            {/* <div className="-mt-20  rounded-2xl md:-mt-20 mx-auto my-4 mb-20  z-[100] w-full items-center flex justify-center" data-aos="fade-up">
-                <GetOffer />
-            </div> */}
+            <h1 className="z-10 font-bold text-3xl md:text-4xl lg:text-6xl mt-32 mb-10 text-black" data-aos="fade-down">
+            </h1>
+
+            <ServicesMain />
         </main>
     )
 }

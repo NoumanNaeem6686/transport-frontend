@@ -19,7 +19,7 @@ function page() {
                     Get Customized Offer
                 </h1>
             </div>
-            <div className="-mt-20 flex lg:hidden rounded-2xl md:mt-0 mx-auto my-4 mb-20  z-[30] w-full items-center justify-center" data-aos="fade-up">
+            <div className="flex lg:hidden rounded-2xl  mx-auto my-4 mb-20  z-[30] w-full items-center justify-center" data-aos="fade-up">
                 <GetOffer />
             </div>
             <div className='hidden lg:flex items-start my-14 px-7 justify-between gap-x-8 h-full w-full'>

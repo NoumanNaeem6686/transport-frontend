@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Input, Button, Select, SelectItem, Checkbox, CheckboxGroup, Textarea } from "@nextui-org/react";
+import { usePathname } from "next/navigation";
 
 const GetOffer = () => {
     const [formData, setFormData] = useState<any>({
@@ -27,12 +28,13 @@ const GetOffer = () => {
         }));
     };
 
+
     const handleSubmit = () => {
         console.log("Form Data:", formData);
     };
 
     return (
-        <div className="bg-white shadow-lg flex items-center justify-center rounded-3xl flex-col  md:w-9/12 p-5 sm:p-10 lg:w-6/12 ">
+        <div className="bg-white shadow-lg flex items-center justify-center rounded-3xl flex-col w-11/12  md:w-9/12 p-5 sm:p-10 lg:w-6/12 ">
             <div className="w-full mb-4 flex flex-col items-start">
                 <label className="text-black font-semibold text-start mb-2">I am a</label>
                 <Select
@@ -126,7 +128,7 @@ const GetOffer = () => {
                             onChange={(e) => handleChange("to", e.target.value)}
                         />
                     </div>
-                    <div className="w-full mb-4 flex flex-col items-start">
+                    {/* <div className="w-full mb-4 flex flex-col items-start">
                         <label className="text-black font-semibold mb-2">Van type</label>
                         <Select
                             fullWidth
@@ -138,7 +140,7 @@ const GetOffer = () => {
                             <SelectItem key="Medium">Medium Van</SelectItem>
                             <SelectItem key="Large">Large Van</SelectItem>
                         </Select>
-                    </div>
+                    </div> */}
                 </>
             )}
 
