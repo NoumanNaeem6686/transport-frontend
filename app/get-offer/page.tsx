@@ -3,8 +3,8 @@ import GetOffer from '../_components/OfferForm'
 
 function page() {
     return (
-        <main className="flex flex-col  text-center text-white ">
-            <div className="relative font-bold text-3xl md:text-5xl lg:text-6xl xl:text-7xl z-10 flex-col flex items-center justify-center w-full min-h-[300px] lg:min-h-[430px] max-md:px-5 max-md:pt-24 max-md:pb-28 max-md:max-w-full">
+        <main className="flex flex-col  text-center text-white bg-slate-50 ">
+            <div className="relative font-bold text-3xl md:text-5xl lg:text-6xl xl:text-7xl z-10 flex-col flex items-center justify-center w-full min-h-[200px] lg:min-h-[330px] max-md:px-5 max-md:pt-24 max-md:pb-28 max-md:max-w-full">
                 <img
                     src={"/test.jpg"}
                     alt="banner"
@@ -19,7 +19,11 @@ function page() {
                     Get Customized Offer
                 </h1>
             </div>
-            <div className="-mt-20  rounded-2xl md:-mt-20 mx-auto my-4 mb-20  z-[100] w-full items-center flex justify-center" data-aos="fade-up">
+            <div className="-mt-20 flex lg:hidden rounded-2xl md:mt-0 mx-auto my-4 mb-20  z-[30] w-full items-center justify-center" data-aos="fade-up">
+                <GetOffer />
+            </div>
+            <div className='hidden lg:flex items-start my-14 px-7 justify-between gap-x-8 h-full w-full'>
+                <img src="/move-get-2.jpg" alt="" className='w-6/12 rounded-3xl' />
                 <GetOffer />
             </div>
         </main>

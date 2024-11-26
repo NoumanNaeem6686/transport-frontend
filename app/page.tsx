@@ -68,7 +68,7 @@ function page() {
             <Link className="inline-flex items-center justify-center bg-white text-lg font-semibold text-gray-700 shadow-sm transition-all duration-150 rounded-xl px-8 py-4 hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               href="/get-offer">Get a Free Quote</Link>
             <Link className="inline-flex items-center justify-center bg-gray-700 text-lg font-semibold text-white shadow-sm ring-1 ring-inset ring-white transition-all duration-150 rounded-xl px-8 py-4 hover:bg-gray-800"
-              href="/get-vehicle">Get Vehicle</Link>
+              href="/services">Our Services</Link>
           </div>
           <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-medium text-white mt-8">
             <li className="inline-flex items-center gap-2 text-black">

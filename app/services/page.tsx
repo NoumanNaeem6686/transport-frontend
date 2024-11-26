@@ -15,7 +15,7 @@ function page() {
 
                 </div>
                 <h1 className="z-10" data-aos="fade-down">
-                    Get the Perfect Vehicle
+                    Our Services
                 </h1>
             </div>
             {/* <div className="-mt-20  rounded-2xl md:-mt-20 mx-auto my-4 mb-20  z-[100] w-full items-center flex justify-center" data-aos="fade-up">
