@@ -12,7 +12,8 @@ function Navbar() {
     const [Top, setTop] = useState("top-9")
     const currentPath = usePathname()
     const isService = currentPath.startsWith("/services")
-    // const isHomePage = currentPath == "/"
+    const isHomePage = currentPath == "/"
+    // const isHomePage = currentPath == "/" || currentPath == "/partner"
 
 
     useEffect(() => {
@@ -110,24 +111,37 @@ function Navbar() {
 
                 <div className="flex flex-row gap-x-6 " data-aos="fade-left">
                     <div className=' items-center gap-x-8 mr-3 hidden sm:flex'>
-                        <Link href={'/'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
+                        <Link href={'/'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                             Home
                         </Link>
-                        <Link href={'/about-us'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
+                        <Link href={'/about-us'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                             About Us
                         </Link>
-                        <Link href={'/services'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
+                        <Link href={'/partner'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                            Be Partner
+                        </Link>
+                        <Link href={'/services'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                             Our Services
                         </Link>
                     </div>
-                    <Link href={"/get-offer"}>
-                        <div
-                            className={`bg-white hover:bg-black hover:text-white py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-colors`}
-                        >
-                            Get Offer
-                        </div>
-                    </Link>
+                    <div className='flex items-center  gap-x-2'>
 
+                        <Link href={"/get-offer"}>
+                            <div
+                                className={`${isHomePage ? "bg-black border border-black text-white hover:rotate-6 " : "border border-white hover:border-black bg-white hover:bg-black hover:text-white "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+                            >
+                                Get Offer
+                            </div>
+                        </Link>
+                        <Link href={"/book-now"}>
+                            <div
+                                className={`${isHomePage ? "border border-black text-black hover:rotate-6 " : "bg-black border border-black text-white hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+                            >
+                                Book Now
+                            </div>
+                        </Link>
+
+                    </div>
                 </div>
 
             </nav>

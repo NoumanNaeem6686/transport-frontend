@@ -10,48 +10,99 @@ import FAQ from './_components/FAQ'
 function page() {
   return (
     <>
-      <div className="w-full text-white pt-14 lg:pb-0 flex flex-col lg:min-h-[100vh] h-[100vh] justify-between relative overflow-hidden">
+      {/* <div className="w-full text-white pt-14 lg:pb-0 flex flex-col lg:min-h-[100vh] h-[100vh] justify-between relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={"/home-open-boxes.jpeg"}
             layout="fill"
             objectFit="cover"
-            alt="boxes"
+            alt="Moving Boxes"
             className="opacity-60"
           />
         </div>
 
         <div className="absolute inset-0 bg-gradient-to-t from-black to-black opacity-60 z-10"></div>
-
-        <div className="relative z-20 flex sm:flex-row flex-col w-full h-full justify-between">
-          <div className="sm:w-7/12 w-full lg:pl-24 sm:pl-10 pl-6 pt-16  sm:px-0 px-6">
-            <h1 data-aos="fade-right" className="2xl:text-[120px] font-bold lg:text-7xl md:text-6xl text-5xl sm:pr-10 pr-0 leading-tight tracking-tight drop-shadow-lg">
-              Transport Made Easy
-            </h1>
-            <p className='text-lg mt-3' data-aos="fade-down">
-              Vehicles and Helpers for Every Move
-            </p>
-            <h2 className="md:text-lg text-sm opacity-90 md:pt-4 pt-2 pb-8 tracking-wide">
-              Whether you're moving, shipping, or need extra hands, we’ve got you covered moving shouldn&apos;t be complicated… <br />
-              <span className="italic">We&apos;re proof it isn&apos;t.</span>
-            </h2>
-            <div className="w-fit">
-              <Link href={"/get-offer"}>
-                <div
-                  className={`bg-white text-black hover:bg-black hover:text-white py-2 px-3  sm:px-5 min-w-[150px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-colors`}
-                >
-                  Book Now
-                </div>
+        <div className="mx-auto max-w-3xl pt-36 sm:py-22 lg:py-32">
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+              Simplifying moving, cleaning, and transport services.{' '}
+              <Link href="/services" className="font-semibold text-gray-800">
+                <span aria-hidden="true" className="absolute inset-0" />
+                Explore Services <span aria-hidden="true">&rarr;</span>
               </Link>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h1 className=" text-4xl font-bold  text-gray-900 sm:text-5xl md:text-6xl" data-aos="fade-up">
+              Moving Doesn’t Have to Be Hard
+            </h1>
+            <p className="mt-8 text-pretty text-lg text-gray-500 sm:text-xl/8">
+              Whether you're relocating, need professional cleaning, or reliable transport solutions, we provide tailored
+              services to meet your needs. Experience seamless and efficient assistance at every step.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+
+            </div>
+          </div>
+        </div>
+      </div> */}
+      <div className="bg-white">
+
+
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        >
+          <div
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+            className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+          />
+        </div>
+        <div className="mx-auto max-w-3xl pt-36 sm:py-22 lg:py-32">
+          <div className="hidden sm:mb-8 sm:flex sm:justify-center">
+            <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+              Simplifying moving, cleaning, and transport services.{' '}
+              <Link href="/services" className="font-semibold text-gray-800">
+                <span aria-hidden="true" className="absolute inset-0" />
+                Explore Services <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h1 className=" text-4xl font-bold  text-gray-900 sm:text-5xl md:text-6xl" data-aos="fade-up">
+              Moving Doesn’t Have to Be Hard
+            </h1>
+            <p className="mt-8 text-pretty text-lg text-gray-500 sm:text-xl/8">
+              Whether you're relocating, need professional cleaning, or reliable transport solutions, we provide tailored
+              services to meet your needs. Experience seamless and efficient assistance at every step.
+            </p>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+
             </div>
           </div>
         </div>
 
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        >
+          <div
+            style={{
+              clipPath:
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+            }}
+            className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ebf8ff] to-[#cfe8ff] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
 
+          />
+        </div>
       </div>
       <AboutUs />
       <HowItWorks />
-      <LocationArea />
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         <div className="bg-slate-100 rounded-3xl p-8 text-center sm:p-16 md:px-24 md:py-20 lg:px-28">
           <div className="max-w-3xl mx-auto">
@@ -101,6 +152,7 @@ function page() {
       </div>
 
       <Reviews />
+      <LocationArea />
       <FAQ />
 
     </>
