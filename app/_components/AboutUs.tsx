@@ -3,7 +3,7 @@ import React from 'react'
 
 function AboutUs() {
     return (
-        <div className='w-full grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-12 gap-6 lg:gap-16 my-9 mt-20'>
+        <div className='w-full grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-12 gap-6 lg:gap-16 my-9   '>
             <div className="mx-auto text-center md:text-left">
                 <span className="text-gray-500 text-base font-normal">
                     A little about us

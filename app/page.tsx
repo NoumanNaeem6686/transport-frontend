@@ -81,11 +81,54 @@ function page() {
               Whether you're relocating, need professional cleaning, or reliable transport solutions, we provide tailored
               services to meet your needs. Experience seamless and efficient assistance at every step.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
 
+            <div className="mt-16 grid gap-8 md:grid-cols-2">
+              <div className="overflow-hidden  bg-slate-50 rounded-2xl hover:bg-slate-100 duration-500 transition-all">
+
+                <div className="p-6">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-2xl font-semibold text-gray-800">Get Offer</h2>
+                    <svg className="h-6 w-6 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3l2.09 6.26L21 9.27l-4.91 4.02L17.18 21 12 17.27 6.82 21l1.09-7.71L3 9.27l6.91-1.01L12 3z" />
+                    </svg>
+                  </div>
+                  <p className="mt-2 text-gray-600">Receive a personalized quote for your specific needs.</p>
+                  <Link href="/get-offer">
+                    <button className="mt-4 w-full bg-gray-800 text-white py-2 px-4 rounded-full flex items-center justify-center">
+
+                      Request Quote
+                      <svg className="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="overflow-hidden  bg-slate-50 rounded-2xl hover:bg-slate-100 duration-500 transition-all">
+                <div className="p-6">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-2xl font-semibold text-gray-800">Book Now</h2>
+                    <svg className="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 10h18M5 20h14a2 2 0 002-2V10H3v8a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <p className="mt-2 text-gray-600">Schedule your service at a time that suits you best.</p>
+                  <Link href="/book-now">
+
+                    <button className="mt-4 w-full bg-gray-800 text-white py-2 px-4 rounded-full flex items-center justify-center">
+                      Schedule Service
+                      <svg className="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
+
           </div>
-        </div>
+        </div >
 
         <div
           aria-hidden="true"
@@ -100,7 +143,7 @@ function page() {
 
           />
         </div>
-      </div>
+      </div >
       <AboutUs />
       <HowItWorks />
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
