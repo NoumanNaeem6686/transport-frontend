@@ -49,9 +49,9 @@ function page() {
 
 
       </div>
-      <LocationArea />
       <AboutUs />
       <HowItWorks />
+      <LocationArea />
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
         <div className="bg-slate-100 rounded-3xl p-8 text-center sm:p-16 md:px-24 md:py-20 lg:px-28">
           <div className="max-w-3xl mx-auto">

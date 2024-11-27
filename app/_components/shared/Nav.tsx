@@ -113,6 +113,9 @@ function Navbar() {
                         <Link href={'/'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
                             Home
                         </Link>
+                        <Link href={'/about-us'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
+                            About Us
+                        </Link>
                         <Link href={'/services'} className='text-white hover:scale-x-110 hover:rotate-6 duration-250 transition-all'>
                             Our Services
                         </Link>

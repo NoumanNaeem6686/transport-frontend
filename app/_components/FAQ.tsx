@@ -76,7 +76,7 @@ const FAQ = () => {
 
                     {/* FAQ Content */}
                     <div className="w-full">
-                        <div className="lg:max-w-xl">
+                        <div className="">
                             <div className="mb-6 lg:mb-16">
                                 <h6 className="text-lg text-center font-medium text-gray-600 mb-2 lg:text-left">
                                     FAQs
