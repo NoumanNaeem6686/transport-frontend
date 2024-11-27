@@ -51,6 +51,58 @@ function page() {
                     </div>
                 </div>
             </div>
+            <section className="about-section py-20">
+                <div className="container mx-auto px-4">
+                    <div className="row flex flex-wrap">
+                        <div className="content-column order-2 lg:order-1 lg:w-1/2 w-full z-10">
+                            <div className="inner-column lg:pl-8">
+                                <div className="sec-title mb-12">
+                                    <span className="title text-lg font-medium text-black mb-4 block">About Us</span>
+                                    <h2 className="text-4xl font-semibold text-gray-900 mb-4">
+                                        Simplifying Moving and Transport <br /> with Excellence
+                                    </h2>
+                                </div>
+                                <p className="text-gray-500 text-base leading-relaxed mb-8">
+                                    At our company, we believe in making lives easier by offering reliable and efficient moving, cleaning,
+                                    and transport solutions. Whether it's helping you relocate, providing professional cleaning services, or
+                                    ensuring timely transport, we strive to deliver exceptional quality and unmatched customer satisfaction.
+                                </p>
+                                <ul className="list-style-one space-y-3 mb-8">
+                                    <li className="relative pl-8 text-gray-800">
+                                        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
+                                        Over a decade of experience in moving and transport services
+                                    </li>
+                                    <li className="relative pl-8 text-gray-800">
+                                        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
+                                        Trusted by more than 100k satisfied customers worldwide
+                                    </li>
+                                    <li className="relative pl-8 text-gray-800">
+                                        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
+                                        Operating in 20+ locations to serve you better
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div className="image-column hidden lg:flex lg:w-1/2 w-full relative lg:pl-12 lg:order-2 order-1 mb-8 lg:mb-0">
+                            <div className="inner-column relative ">
+                                <div className="absolute -left-20 -z-30 top-16 h-[520px] w-[520px] bg-no-repeat bg-center" style={{ backgroundImage: "url('https://i.ibb.co/fxJ1jtC/about-circle-1.png');" }}></div>
+                                <figure className="image-1 z-50">
+                                    <a href="#" className="block">
+                                        <img src="/move.jpg" alt="" className="shadow-lg rounded-xl" />
+                                    </a>
+                                </figure>
+                                {/* <figure className="image-2 absolute bottom-0 left-0">
+                                    <a href="#" className="block">
+                                        <img src="/happy family.jpg" alt="" className="shadow-lg" />
+                                    </a>
+                                </figure> */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
 
