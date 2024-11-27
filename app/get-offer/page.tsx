@@ -19,13 +19,13 @@ function page() {
                     Get Customized Offer
                 </h1>
             </div>
-            <div className="flex lg:hidden rounded-2xl  mx-auto my-4 mb-20  z-[30] w-full items-center justify-center" data-aos="fade-up">
+            <div className="flex rounded-2xl  -mt-20 lg:-mt-20 mx-auto my-4 mb-20  z-[30] w-full items-center justify-center" data-aos="fade-up">
                 <GetOffer />
             </div>
-            <div className='hidden lg:flex items-start my-14 px-7 justify-between gap-x-8 h-full w-full'>
+            {/* <div className='hidden lg:flex items-start my-14 px-7 justify-between gap-x-8 h-full w-full'>
                 <img src="/move-get-2.jpg" alt="" className='w-6/12 rounded-3xl' />
                 <GetOffer />
-            </div>
+            </div> */}
         </main>
     )
 }

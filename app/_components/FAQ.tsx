@@ -24,36 +24,36 @@ const FAQ = () => {
             answer:
                 "We provide a fleet of reliable vehicles, trained and professional helpers, and affordable pricing with no hidden fees. Our flexible scheduling and commitment to customer satisfaction set us apart.",
         },
-        {
-            question: "Can I trust your team with my belongings?",
-            answer:
-                "Absolutely! Our helpers are trained and reliable professionals who handle your belongings with utmost care. We prioritize safety and efficiency in every move.",
-        },
-        {
-            question: "Do you provide assistance for fragile items?",
-            answer:
-                "Yes, we offer specialized handling and transport for fragile items to ensure they reach their destination safely.",
-        },
-        {
-            question: "Can I book a service without a helper or vehicle?",
-            answer:
-                "Yes, you can customize your booking to include only the services you need, whether it’s just a vehicle, helper, or both.",
-        },
-        {
-            question: "How far in advance should I book a service?",
-            answer:
-                "We recommend booking your service at least a few days in advance to ensure availability, especially during peak times.",
-        },
-        {
-            question: "What is your cancellation policy?",
-            answer:
-                "We offer a flexible cancellation policy. Please refer to our terms and conditions or contact our support team for details about cancellations and refunds.",
-        },
-        {
-            question: "Do you offer services in my area?",
-            answer:
-                "We operate across a wide range of locations. Click on 'Get Offer' and enter your location details to check availability in your area.",
-        },
+        // {
+        //     question: "Can I trust your team with my belongings?",
+        //     answer:
+        //         "Absolutely! Our helpers are trained and reliable professionals who handle your belongings with utmost care. We prioritize safety and efficiency in every move.",
+        // },
+        // {
+        //     question: "Do you provide assistance for fragile items?",
+        //     answer:
+        //         "Yes, we offer specialized handling and transport for fragile items to ensure they reach their destination safely.",
+        // },
+        // {
+        //     question: "Can I book a service without a helper or vehicle?",
+        //     answer:
+        //         "Yes, you can customize your booking to include only the services you need, whether it’s just a vehicle, helper, or both.",
+        // },
+        // {
+        //     question: "How far in advance should I book a service?",
+        //     answer:
+        //         "We recommend booking your service at least a few days in advance to ensure availability, especially during peak times.",
+        // },
+        // {
+        //     question: "What is your cancellation policy?",
+        //     answer:
+        //         "We offer a flexible cancellation policy. Please refer to our terms and conditions or contact our support team for details about cancellations and refunds.",
+        // },
+        // {
+        //     question: "Do you offer services in my area?",
+        //     answer:
+        //         "We operate across a wide range of locations. Click on 'Get Offer' and enter your location details to check availability in your area.",
+        // },
     ];
 
     const [openIndex, setOpenIndex] = useState(null);
@@ -64,19 +64,18 @@ const FAQ = () => {
 
     return (
         <section className="py-24">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
-                    {/* FAQ Image */}
-                    <div className="w-full lg:w-1/2">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="flex w-full mx-auto ">
+                    {/* <div className="w-full lg:w-1/2">
                         <img
                             src="/move-van.jpg"
                             alt="FAQ Section"
                             className="w-full rounded-xl object-cover"
                         />
-                    </div>
+                    </div> */}
 
                     {/* FAQ Content */}
-                    <div className="w-full lg:w-1/2">
+                    <div className="w-full">
                         <div className="lg:max-w-xl">
                             <div className="mb-6 lg:mb-16">
                                 <h6 className="text-lg text-center font-medium text-gray-600 mb-2 lg:text-left">
