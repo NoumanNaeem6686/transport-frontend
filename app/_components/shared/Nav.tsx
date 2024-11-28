@@ -14,8 +14,7 @@ function Navbar() {
     const [Top, setTop] = useState("top-9")
     const currentPath = usePathname()
     const isService = currentPath.startsWith("/services")
-    const isHomePage = currentPath == "/"
-    // const isHomePage = currentPath == "/" || currentPath == "/partner"
+    const isHomePage = currentPath == "/" || currentPath == "/book-now"
 
 
     useEffect(() => {
@@ -161,16 +160,16 @@ function Navbar() {
                                                 <img src="/t.png" className="h-24 w-auto " />
                                             </Link>
                                             <div className='flex flex-col items-start gap-6 mr-3 mt-5'>
-                                                <Link href={'/'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                                                <Link href={'/'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                                                     Home
                                                 </Link>
-                                                <Link href={'/about-us'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                                                <Link href={'/about-us'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                                                     About Us
                                                 </Link>
-                                                <Link href={'/partner'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                                                <Link href={'/partner'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                                                     Be Partner
                                                 </Link>
-                                                <Link href={'/services'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                                                <Link href={'/services'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                                                     Our Services
                                                 </Link>
                                             </div>
