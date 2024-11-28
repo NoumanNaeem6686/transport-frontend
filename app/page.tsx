@@ -147,14 +147,12 @@ function page() {
       </div >
 
 
-      <div className='h-[200px] grid place-content-center mb-10'>
+      <div className='h-[200px] grid place-content-center mb-28'>
         <ScrollBaseAnimation
-          // delay={500}
-          baseVelocity={3}
           scrollDependent={true}
-          clasname='font-bold tracking-[-0.07em] leading-[90%]'
+          clasname='font-bold tracking-[-0.07em] leading-[90%] pb-2'
         >
-          We Provide our services in America, Ukrain and India
+          Simplifying lives with reliable moving and transport solutions! | Trusted by 100k+ satisfied customers worldwide! | Over a decade of expertise, serving 20+ locations globally!
         </ScrollBaseAnimation>
       </div>
       <AboutUs />
