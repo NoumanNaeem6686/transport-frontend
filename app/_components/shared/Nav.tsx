@@ -2,12 +2,14 @@
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Facebook, Twitter, Youtube, Instagram, Linkedin, Menu, X } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Twitter, Youtube, Instagram, Linkedin, Menu, X, MenuIcon } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { DrawerContent, HeaderDrawer } from '../Dialog';
 
 function Navbar() {
 
     const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [sidebarOpen, setSidebarOpen] = useState(false)
     const [visible, setVisible] = useState(false);
     const [Top, setTop] = useState("top-9")
     const currentPath = usePathname()
@@ -110,7 +112,7 @@ function Navbar() {
                 </Link>
 
                 <div className="flex flex-row gap-x-6 " data-aos="fade-left">
-                    <div className=' items-center gap-x-8 mr-3 hidden sm:flex'>
+                    <div className=' items-center gap-x-8 mr-3 hidden lg:flex'>
                         <Link href={'/'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                             Home
                         </Link>
@@ -124,7 +126,7 @@ function Navbar() {
                             Our Services
                         </Link>
                     </div>
-                    <div className='flex items-center  gap-x-2'>
+                    <div className='hidden lg:flex items-center  gap-x-2'>
 
                         <Link href={"/get-offer"}>
                             <div
@@ -140,6 +142,61 @@ function Navbar() {
                                 Book Now
                             </div>
                         </Link>
+                    </div>
+
+                    <div className='flex lg:hidden'>
+                        <HeaderDrawer
+                            open={sidebarOpen}
+                            setOpen={setSidebarOpen}
+
+                            drawerBtn={() => {
+                                return <button><MenuIcon /></button>
+                            }}>
+                            <DrawerContent>
+                                <figure className=' w-[300px] h-full  flex flex-col'>
+                                    <div className='p-5 flex-grow  h-full w-full flex flex-col justify-between pb-4'>
+                                        <div className='flex-grow  w-full flex flex-col mt-3'>
+
+                                            <Link href="/" data-aos="fade-right">
+                                                <img src="/t.png" className="h-24 w-auto " />
+                                            </Link>
+                                            <div className='flex flex-col items-start gap-6 mr-3 mt-5'>
+                                                <Link href={'/'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                                                    Home
+                                                </Link>
+                                                <Link href={'/about-us'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                                                    About Us
+                                                </Link>
+                                                <Link href={'/partner'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                                                    Be Partner
+                                                </Link>
+                                                <Link href={'/services'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                                                    Our Services
+                                                </Link>
+                                            </div>
+                                        </div>
+                                        <div className='flex items-center flex-col pb-4  gap-3 w-full '>
+
+                                            <Link href={"/get-offer"} className='w-full'>
+                                                <div
+                                                    className={`${isHomePage ? "bg-black border border-black text-white hover:rotate-6 " : "border border-white hover:border-black bg-white hover:bg-black hover:text-white "}py-2 px-3  sm:px-5 w-full rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+                                                >
+                                                    Get Offer
+                                                </div>
+                                            </Link>
+                                            <Link href={"/book-now"} className='w-full'>
+                                                <div
+                                                    className={`${isHomePage ? "border border-black text-black hover:rotate-6 " : "bg-black border border-black text-white hover:rotate-6  "}py-2 px-3  sm:px-5 w-full rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+                                                >
+                                                    Book Now
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    </div>
+
+                                </figure>
+                            </DrawerContent>
+                        </HeaderDrawer>
 
                     </div>
                 </div>

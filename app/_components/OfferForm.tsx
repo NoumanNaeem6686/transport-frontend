@@ -18,7 +18,9 @@ const GetOffer = () => {
         name: "",
         email: "",
         phone: "",
-        timeRange: "000",
+        timeRange: "",
+        // timeRange: "000",
+        dateRange: "",
         services: [],
         from: "",
         to: "",
@@ -142,11 +144,20 @@ const GetOffer = () => {
                 />
             </div>
 
-            {/* Time Range Input */}
+            <div className="w-full mb-4 flex flex-col items-start">
+                <label className="text-black font-semibold mb-2">Best Date range</label>
+                <Input
+                    type="date"
+                    label="Date Range"
+                    fullWidth
+                    value={formData.dateRange}
+                    onChange={(e) => handleChange("dateRange", e.target.value)}
+                />
+            </div>
             <div className="w-full mb-4 flex flex-col items-start">
                 <label className="text-black font-semibold mb-2">Best time range</label>
                 <Input
-                    type="datetime-local"
+                    type="time"
                     label="Time Range"
                     fullWidth
                     value={formData.timeRange}

@@ -6,6 +6,7 @@ import LocationArea from './_components/LocationArea'
 import AboutUs from './_components/AboutUs'
 import Reviews from './_components/Reviews'
 import FAQ from './_components/FAQ'
+import ScrollBaseAnimation from './_components/text-marquee'
 
 function page() {
   return (
@@ -83,7 +84,7 @@ function page() {
             </p>
 
             <div className="mt-16 grid gap-8 md:grid-cols-2">
-              <div className="overflow-hidden  bg-slate-50 rounded-2xl hover:bg-slate-100 duration-500 transition-all">
+              <div className="overflow-hidden  bg-slate-100 rounded-2xl hover:bg-slate-200 duration-500 transition-all">
 
                 <div className="p-6">
                   <div className="flex items-center justify-between">
@@ -105,7 +106,7 @@ function page() {
                 </div>
               </div>
 
-              <div className="overflow-hidden  bg-slate-50 rounded-2xl hover:bg-slate-100 duration-500 transition-all">
+              <div className="overflow-hidden  bg-slate-100 rounded-2xl hover:bg-slate-200 duration-500 transition-all">
                 <div className="p-6">
                   <div className="flex items-center justify-between">
                     <h2 className="text-2xl font-semibold text-gray-800">Book Now</h2>
@@ -144,6 +145,18 @@ function page() {
           />
         </div>
       </div >
+
+
+      <div className='h-[200px] grid place-content-center mb-10'>
+        <ScrollBaseAnimation
+          // delay={500}
+          baseVelocity={3}
+          scrollDependent={true}
+          clasname='font-bold tracking-[-0.07em] leading-[90%]'
+        >
+          We Provide our services in America, Ukrain and India
+        </ScrollBaseAnimation>
+      </div>
       <AboutUs />
       <HowItWorks />
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">

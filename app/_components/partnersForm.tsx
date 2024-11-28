@@ -12,7 +12,6 @@ import {
 
 const PartnerForm = () => {
     const [formData, setFormData] = useState<any>({
-        userType: "",
         name: "",
         email: "",
         phone: "",
@@ -35,25 +34,6 @@ const PartnerForm = () => {
 
     return (
         <div className="bg-white shadow-lg flex items-center justify-center rounded-3xl flex-col w-11/12 md:w-9/12 p-5 sm:p-10 lg:w-7/12 xl:w-6/12 2xl:w-4/12">
-            {/* User Type Selection */}
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold text-start mb-2">
-                    I am a
-                </label>
-                <Select
-                    label="Select Who you are"
-                    fullWidth
-                    selectedKeys={formData.userType ? [formData.userType] : undefined}
-                    onSelectionChange={(key) =>
-                        handleChange("userType", key.currentKey as string)
-                    }
-                >
-                    <SelectItem key="Private">Private Individual</SelectItem>
-                    <SelectItem key="Company">Company</SelectItem>
-                    <SelectItem key="Student">Student</SelectItem>
-                </Select>
-            </div>
-
             <div className="w-full mb-4 flex flex-col items-start">
                 <label className="text-black font-semibold mb-2">Enter your name</label>
                 <Input

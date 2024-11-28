@@ -65,7 +65,7 @@ function page() {
                                 <p className="text-gray-500 text-base leading-relaxed mb-8">
                                     At our company, we believe in making lives easier by offering reliable and efficient moving, cleaning,
                                     and transport solutions. Whether it's helping you relocate, providing professional cleaning services, or
-                                    ensuring timely transport, we strive to deliver exceptional quality and unmatched customer satisfaction.
+                                    ensuring timely transport.
                                 </p>
                                 <ul className="list-style-one space-y-3 mb-8">
                                     <li className="relative pl-8 text-gray-800">
@@ -119,8 +119,7 @@ function page() {
                                     <p className="text-gray-500 text-base font-normal leading-relaxed text-start">
                                         At our company, we are dedicated to simplifying lives by providing dependable moving and transport
                                         solutions. Whether it's a local move or a long-distance relocation, our mission is to ensure a
-                                        stress-free experience for every client. We are passionate about delivering tailored services that
-                                        cater to your unique needs and exceed your expectations.
+                                        stress-free experience for every client.
                                     </p>
                                 </div>
 
@@ -175,7 +174,7 @@ function page() {
                                     Simplifying Your Moving Experience
                                 </p>
                                 <p data-aos="fade-down" className="mt-6 text-lg leading-8 text-gray-600">
-                                    We specialize in providing top-quality cleaning, helpers, and transport services. Our goal is to make your experience seamless, efficient, and stress-free, whether you're moving homes or require assistance with daily tasks.
+                                    Our goal is to make your experience seamless, efficient, and stress-free, whether you're moving homes or require assistance with daily tasks.
                                 </p>
                                 <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                                     <div className="relative pl-9" data-aos="fade-right">
