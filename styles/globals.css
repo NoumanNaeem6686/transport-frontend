@@ -67,7 +67,6 @@ body {
       color: #fff !important;
       background: #48575F !important;
       }
-
 /* Remove or comment out this block */
 .swiper-wrapper {
     height: fit-content !important;
@@ -87,3 +86,16 @@ body {
   scrollbar-width: thin; /* Thin scrollbar */
   scrollbar-arrow-color: transparent;
 }
+.swiper-pagination1 .swiper-pagination-bullet {
+  padding: 0.5rem 1rem !important;
+  background: #f0f0f0 !important;
+  border-radius: 10px !important;
+  width: fit-content !important;
+  cursor: pointer !important;
+  transition: background 0.3s !important;
+}
+  .swiper-pagination1 .swiper-pagination-bullet-active {
+      color: #fff !important;
+      background: #48575F !important;
+      }
+

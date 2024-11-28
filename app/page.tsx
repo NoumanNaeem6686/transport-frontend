@@ -7,6 +7,7 @@ import AboutUs from './_components/AboutUs'
 import Reviews from './_components/Reviews'
 import FAQ from './_components/FAQ'
 import ScrollBaseAnimation from './_components/text-marquee'
+import ServicesSlider from './_components/ServicesSlider'
 
 function page() {
   return (
@@ -155,6 +156,7 @@ function page() {
           Simplifying lives with reliable moving and transport solutions! | Trusted by 100k+ satisfied customers worldwide! | Over a decade of expertise, serving 20+ locations globally!
         </ScrollBaseAnimation>
       </div>
+      <ServicesSlider />
       <AboutUs />
       <HowItWorks />
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
