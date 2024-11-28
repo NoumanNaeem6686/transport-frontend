@@ -52,7 +52,7 @@ const ServicesSlider = () => {
                     pagination={{
                         el: ".swiper-pagination1",
                         clickable: true,
-                        renderBullet: (index, className) => {
+                        renderBullet: (index: any, className: any) => {
                             return `<span class="${className}">${services[index].name}</span>`;
                         },
                     }}
@@ -61,7 +61,7 @@ const ServicesSlider = () => {
                         disableOnInteraction: false,
                     }}
                 >
-                    {services.map((service, index) => (
+                    {services.map((service: any, index: any) => (
                         <SwiperSlide key={index}>
                             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
                                 <div className="w-full lg:w-1/2">
