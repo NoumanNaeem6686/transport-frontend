@@ -1,6 +1,6 @@
 "use client";
 
-export function ServicesCard({ service, handleOpenForm }: any) {
+export function ServicesCard({ service, handleOpenForm, pricing }: any) {
     console.log("🚀 ~ ServicesCard ~ service:", service)
     return (
         <div className="w-full group/card overflow-hidden rounded-xl group">
@@ -21,9 +21,34 @@ export function ServicesCard({ service, handleOpenForm }: any) {
                     <h1 className="font-bold text-xl md:text-2xl text-gray-50 relative z-10">
                         {service.name}
                     </h1>
+                    {
+                        service.name.toLowerCase() == "helper" ?
+                            <>
+                                <p className="font-normal text-sm text-gray-50 relative z-10">
+                                    Per Helper Cost :  {pricing.helper.ratePerHelperPerHour}$
+                                </p>
+                            </>
+                            :
+                            service.name.toLowerCase() == "transport" ?
+                                <>
+                                    <p className="font-normal text-sm text-gray-50 relative z-10">
+                                        Per KM Cost :  {pricing.transport.ratePerKm}$
+                                    </p>
+                                </>
+                                :
+
+                                <>
+                                    <p className="font-normal text-sm text-gray-50 relative z-10">
+                                        Per Cleaner Cost :  {pricing.cleaning.ratePerCleaner}$
+                                    </p>
+                                </>
+                    }
                     <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
                         {service.description}
                     </p>
+
+
+
                     <div
                         onClick={() => handleOpenForm(service)}
                         className={`${false ? "border border-black text-black hover:rotate-6 " : "bg-transparent border-2 border-white text-white hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}

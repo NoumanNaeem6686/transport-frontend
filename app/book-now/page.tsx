@@ -10,6 +10,7 @@ import {
     ModalFooter,
 } from '@nextui-org/react';
 import { ServicesCard } from '../_components/servicesCard';
+import { Trash } from 'lucide-react';
 
 const pricing = {
     transport: {
@@ -23,7 +24,7 @@ const pricing = {
     },
     cleaning: {
         ratePerSqFt: 1,
-        ratePerCleaner: 20, // Added rate per cleaner
+        ratePerCleaner: 20, 
     },
 };
 
@@ -46,6 +47,12 @@ interface FormData {
 }
 
 interface SelectedService extends Service, FormData { }
+
+const requiredFields: { [key: string]: (keyof FormData)[] } = {
+    transport: ['from', 'to', 'distance', 'vanType'],
+    helper: ['helpers', 'hours'],
+    cleaning: ['area', 'cleaners'],
+};
 
 const BookingPage: React.FC = () => {
     const [selectedServices, setSelectedServices] = useState<SelectedService[]>([]);
@@ -148,13 +155,25 @@ const BookingPage: React.FC = () => {
         setTotalCost(total);
     };
 
+    const areFieldsFilled = () => {
+        if (currentService) {
+            const fields = requiredFields[currentService.id];
+            return fields.every((field) => formData[field] !== undefined && formData[field] !== '');
+        }
+        return false;
+    };
+
+    const handleDeleteService = (serviceId: string) => {
+        setSelectedServices(selectedServices.filter((s) => s.id !== serviceId));
+    };
+
     return (
         <div className="mt-20 min-h-screen flex flex-col md:flex-row p-4 gap-4">
             {/* Left Section: User Info and Service Cards */}
             <div className="flex flex-col gap-4 w-full md:w-4/12 xl:w-5/12">
                 {services.map((service, index) => (
                     <div className="w-full" key={index}>
-                        <ServicesCard service={service} handleOpenForm={handleOpenForm} />
+                        <ServicesCard service={service} handleOpenForm={handleOpenForm} pricing={pricing} />
                     </div>
                 ))}
             </div>
@@ -191,20 +210,59 @@ const BookingPage: React.FC = () => {
                         className="mb-2"
                     />
                     {selectedServices.length > 0 ? (
-                        selectedServices.map((service, index) => (
-                            <Card key={index} className="p-4 mb-2">
-                                <h5 className='font-semibold text-xl mb-3'>{service.name}</h5>
-                                <ul>
-                                    {Object.entries(service)
-                                        .filter(([key]) => !['id', 'name', 'description', 'image'].includes(key))
-                                        .map(([key, value]) => (
-                                            <li key={key} className='text-lg capitalize'>
-                                                {key}: {value}
-                                            </li>
-                                        ))}
-                                </ul>
-                            </Card>
-                        ))
+                        selectedServices.map((service, index) => {
+                            // Calculate cost and cost breakdown for each service
+                            let serviceCost = 0;
+                            let costBreakdown = '';
+
+                            if (service.id === 'transport') {
+                                const distanceCost = (service.distance || 0) * pricing.transport.ratePerKm;
+                                let vanCost = 0;
+                                if (service.vanType === 'small') vanCost = pricing.transport.smallVan;
+                                if (service.vanType === 'medium') vanCost = pricing.transport.mediumVan;
+                                if (service.vanType === 'large') vanCost = pricing.transport.largeVan;
+                                serviceCost = distanceCost + vanCost;
+
+                                costBreakdown = `Distance Cost: ${service.distance || 0} km * $${pricing.transport.ratePerKm}/km = $${distanceCost}\n`
+                                    + `Van Cost (${service.vanType}): $${vanCost}\n`
+                                    + `Total: $${serviceCost}`;
+                            }
+                            else if (service.id === 'helper') {
+                                serviceCost = (service.helpers || 0) * (service.hours || 0) * pricing.helper.ratePerHelperPerHour;
+                                costBreakdown = `${service.helpers || 0} helpers * ${service.hours || 0} hours * $${pricing.helper.ratePerHelperPerHour}/hr = $${serviceCost}`;
+                            }
+                            else if (service.id === 'cleaning') {
+                                const areaCost = (service.area || 0) * pricing.cleaning.ratePerSqFt;
+                                const cleanerCost = (service.cleaners || 0) * pricing.cleaning.ratePerCleaner;
+                                serviceCost = areaCost + cleanerCost;
+                                costBreakdown = `Area Cost: ${service.area || 0} sq ft * $${pricing.cleaning.ratePerSqFt}/sq ft = $${areaCost}\n`
+                                    + `Cleaner Cost: ${service.cleaners || 0} cleaners * $${pricing.cleaning.ratePerCleaner} = $${cleanerCost}\n`
+                                    + `Total: $${serviceCost}`;
+                            }
+
+                            return (
+                                <Card key={index} className="p-4 mb-2">
+                                    <div className="flex justify-between items-center">
+                                        <h5 className='font-semibold text-xl mb-3'>{service.name}</h5>
+                                        <button className='bg-red-800 text-white flex items-center justify-center p-2 rounded-full hover:scale-95'
+                                            onClick={() => handleDeleteService(service.id)}
+                                        >
+                                            <Trash className='h-5 w-5' />
+                                        </button>
+                                    </div>
+                                    <ul>
+                                        {Object.entries(service)
+                                            .filter(([key]) => !['id', 'name', 'description', 'image'].includes(key))
+                                            .map(([key, value]) => (
+                                                <li key={key} className='text-lg capitalize'>
+                                                    {key}: {value}
+                                                </li>
+                                            ))}
+                                    </ul>
+                                    <p className='mt-2 whitespace-pre-line'>{costBreakdown}</p>
+                                </Card>
+                            );
+                        })
                     ) : (
                         <div className="p-4 flex w-full items-center justify-center">
                             <p>No services selected yet.</p>
@@ -250,10 +308,9 @@ const BookingPage: React.FC = () => {
                                 <Select
                                     fullWidth
                                     label="Select Van Type"
-                                    selectedKeys={formData.vanType ? [formData.vanType] : undefined}
+                                    selectedKeys={formData.vanType ? new Set([formData.vanType]) : undefined}
                                     onSelectionChange={(key) =>
-                                        handleInputChange("vanType", key.currentKey as string)
-
+                                        handleInputChange("vanType", Array.from(key as Set<string>)[0])
                                     }
                                 >
                                     <SelectItem key="small">Small Van</SelectItem>
@@ -307,7 +364,9 @@ const BookingPage: React.FC = () => {
                         <Button onClick={handleClose} color="danger">
                             Cancel
                         </Button>
-                        <Button onClick={handleAddService}>Add Service</Button>
+                        <Button onClick={handleAddService} disabled={!areFieldsFilled()}>
+                            Add Service
+                        </Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>
