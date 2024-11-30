@@ -1,7 +1,6 @@
-'use client';
-
+"use client"
 import React, { useState, useEffect } from 'react';
-import { Card, Input, Button, Select, SelectItem } from '@nextui-org/react';
+import { Card, Input, Button, Checkbox } from '@nextui-org/react';
 import {
     Modal,
     ModalContent,
@@ -9,8 +8,11 @@ import {
     ModalBody,
     ModalFooter,
 } from '@nextui-org/react';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { ServicesCard } from '../_components/servicesCard';
 import { Trash } from 'lucide-react';
+import { LocalizationProvider, renderTimeViewClock } from '@mui/x-date-pickers';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
 const pricing = {
     transport: {
@@ -58,6 +60,8 @@ const BookingPage: React.FC = () => {
     const [currentService, setCurrentService] = useState<Service | null>(null);
     const [formData, setFormData] = useState<FormData>({});
     const [totalCost, setTotalCost] = useState(0);
+
+    const [isWorking, setIsWorking] = useState(false);
 
     const [userInfo, setUserInfo] = useState({
         name: '',
@@ -125,7 +129,7 @@ const BookingPage: React.FC = () => {
 
     useEffect(() => {
         calculateTotal();
-    }, [selectedServices]);
+    }, [selectedServices, isWorking]);
 
     const handleInputChange = (key: keyof FormData, value: string | number) => {
         setFormData({ ...formData, [key]: value });
@@ -148,6 +152,9 @@ const BookingPage: React.FC = () => {
                 }
             }
         });
+        if (isWorking) {
+            total = total * 0.5; // Apply 50% discount
+        }
         setTotalCost(total);
     };
 
@@ -199,15 +206,32 @@ const BookingPage: React.FC = () => {
                         onChange={(e) => setUserInfo({ ...userInfo, date: e.target.value })}
                         className="mb-2"
                     />
-                    <Input
-                        label="Time for service"
-                        type="time"
-                        onChange={(e) => setUserInfo({ ...userInfo, time: e.target.value })}
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                        <TimePicker
+                            label="Time for service"
+                            sx={{
+                                width: "100%",
+                                borderRadius: "25px"
+                            }}
+                            viewRenderers={{
+                                hours: renderTimeViewClock,
+                                minutes: renderTimeViewClock,
+                                seconds: renderTimeViewClock,
+                            }}
+                        />
+                    </LocalizationProvider>
+
+                    <Checkbox
+                        isSelected={isWorking}
+                        onChange={(e) => setIsWorking(e.target.checked)}
                         className="mb-2"
-                    />
+                    >
+                        If you are working, you have 50% off
+                    </Checkbox>
+
                     {selectedServices.length > 0 ? (
                         selectedServices.map((service, index) => {
-                            // Calculate cost and cost breakdown for each service
+                            // Existing code for displaying selected services...
                             let serviceCost = 0;
                             let costBreakdown = '';
 
@@ -262,7 +286,10 @@ const BookingPage: React.FC = () => {
                     )}
                     {selectedServices.length > 0 && (
                         <>
-                            <h4 className="mt-4 text-end pr-4">Total Cost: ${totalCost}</h4>
+                            <h4 className="mt-4 text-end pr-4">
+                                Total Cost: ${totalCost}
+                                {isWorking && <span className="text-green-600"> (50% off applied)</span>}
+                            </h4>
                             <Button className="w-full mt-8 bg-[#4B4B4B] text-white text-lg">Book Now</Button>
                         </>
                     )}
