@@ -14,7 +14,7 @@ function Navbar() {
     const [Top, setTop] = useState("top-9")
     const currentPath = usePathname()
     const isService = currentPath.startsWith("/services")
-    const isHomePage = currentPath == "/" || currentPath == "/book-now"
+    const isHomePage = currentPath == "/about-us" || currentPath == "/book-now"
 
 
     useEffect(() => {

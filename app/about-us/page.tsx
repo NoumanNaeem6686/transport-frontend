@@ -8,7 +8,7 @@ import LocationArea from '../_components/LocationArea'
 function page() {
     return (
         <>
-            <div className="w-full text-white pt-14 lg:pb-0 flex flex-col lg:min-h-[100vh] h-[100vh] justify-between relative overflow-hidden">
+            {/* <div className="w-full text-white pt-14 lg:pb-0 flex flex-col lg:min-h-[100vh] h-[100vh] justify-between relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src={"/home-open-boxes.jpeg"}
@@ -50,8 +50,8 @@ function page() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <section className="about-section py-20">
+            </div> */}
+            <section className="about-section py-24">
                 <div className="container mx-auto px-4">
                     <div className="row flex flex-wrap">
                         <div className="content-column order-2 lg:order-1 lg:w-1/2 w-full z-10">
@@ -104,6 +104,7 @@ function page() {
                 </div>
             </section>
 
+            <AboutUs />
 
 
             <section className="py-24 relative max-w-[100vw] overflow-x-hidden">

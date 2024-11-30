@@ -12,7 +12,7 @@ import ServicesSlider from './_components/ServicesSlider'
 function page() {
   return (
     <>
-      {/* <div className="w-full text-white pt-14 lg:pb-0 flex flex-col lg:min-h-[100vh] h-[100vh] justify-between relative overflow-hidden">
+      <div className="w-full text-white pt-14 lg:pb-0 flex flex-col lg:min-h-[100vh] h-full justify-between relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src={"/home-open-boxes.jpeg"}
@@ -23,12 +23,12 @@ function page() {
           />
         </div>
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black to-black opacity-60 z-10"></div>
-        <div className="mx-auto max-w-3xl pt-36 sm:py-22 lg:py-32">
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-black opacity-70 z-10"></div>
+        <div className="mx-auto max-w-3xl pt-36 sm:py-22 lg:py-24 z-20">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-300 ring-1 ring-gray-200 hover:ring-gray-500">
               Simplifying moving, cleaning, and transport services.{' '}
-              <Link href="/services" className="font-semibold text-gray-800">
+              <Link href="/services" className="font-semibold text-gray-100">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Explore Services <span aria-hidden="true">&rarr;</span>
               </Link>
@@ -36,20 +36,63 @@ function page() {
           </div>
 
           <div className="text-center">
-            <h1 className=" text-4xl font-bold  text-gray-900 sm:text-5xl md:text-6xl" data-aos="fade-up">
+            <h1 className=" text-4xl font-bold  text-gray-200 sm:text-5xl md:text-6xl" data-aos="fade-up">
               Moving Doesn’t Have to Be Hard
             </h1>
-            <p className="mt-8 text-pretty text-lg text-gray-500 sm:text-xl/8">
+            <p className="mt-8 text-pretty text-lg text-gray-400 sm:text-xl/8">
               Whether you're relocating, need professional cleaning, or reliable transport solutions, we provide tailored
               services to meet your needs. Experience seamless and efficient assistance at every step.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
 
+            <div className="mt-16 grid gap-8 md:grid-cols-2">
+              <div className="overflow-hidden  bg-slate-100 rounded-2xl hover:bg-slate-200 duration-500 transition-all">
+
+                <div className="p-6">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-2xl font-semibold text-gray-800">Get Offer</h2>
+                    <svg className="h-6 w-6 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3l2.09 6.26L21 9.27l-4.91 4.02L17.18 21 12 17.27 6.82 21l1.09-7.71L3 9.27l6.91-1.01L12 3z" />
+                    </svg>
+                  </div>
+                  <p className="mt-2 text-gray-600">Receive a personalized quote for your specific needs.</p>
+                  <Link href="/get-offer">
+                    <button className="mt-4 w-full bg-gray-800 text-white py-2 px-4 rounded-full flex items-center justify-center">
+
+                      Request Quote
+                      <svg className="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="overflow-hidden  bg-slate-100 rounded-2xl hover:bg-slate-200 duration-500 transition-all">
+                <div className="p-6">
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-2xl font-semibold text-gray-800">Book Now</h2>
+                    <svg className="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3M3 10h18M5 20h14a2 2 0 002-2V10H3v8a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <p className="mt-2 text-gray-600">Schedule your service at a time that suits you best.</p>
+                  <Link href="/book-now">
+
+                    <button className="mt-4 w-full bg-gray-800 text-white py-2 px-4 rounded-full flex items-center justify-center">
+                      Schedule Service
+                      <svg className="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </button>
+                  </Link>
+                </div>
+              </div>
             </div>
+
           </div>
-        </div>
-      </div> */}
-      <div className="bg-white">
+        </div >
+      </div>
+      {/* <div className="bg-white">
 
 
         <div
@@ -145,7 +188,7 @@ function page() {
 
           />
         </div>
-      </div >
+      </div > */}
 
 
       <div className='h-[200px] grid place-content-center mb-28'>
