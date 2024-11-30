@@ -16,7 +16,6 @@ const pricing = {
     transport: {
         ratePerKm: 10,
         smallVan: 50,
-        mediumVan: 75,
         largeVan: 100,
     },
     helper: {
@@ -24,7 +23,7 @@ const pricing = {
     },
     cleaning: {
         ratePerSqFt: 1,
-        ratePerCleaner: 20, 
+        ratePerCleaner: 20,
     },
 };
 
@@ -39,7 +38,6 @@ interface FormData {
     distance?: number;
     from?: string;
     to?: string;
-    vanType?: string;
     helpers?: number;
     hours?: number;
     area?: number;
@@ -49,7 +47,7 @@ interface FormData {
 interface SelectedService extends Service, FormData { }
 
 const requiredFields: { [key: string]: (keyof FormData)[] } = {
-    transport: ['from', 'to', 'distance', 'vanType'],
+    transport: ['from', 'to', 'distance'],
     helper: ['helpers', 'hours'],
     cleaning: ['area', 'cleaners'],
 };
@@ -138,9 +136,7 @@ const BookingPage: React.FC = () => {
         selectedServices.forEach((service) => {
             if (service.id === 'transport') {
                 total += (service.distance || 0) * pricing.transport.ratePerKm;
-                if (service.vanType === 'small') total += pricing.transport.smallVan;
-                if (service.vanType === 'medium') total += pricing.transport.mediumVan;
-                if (service.vanType === 'large') total += pricing.transport.largeVan;
+
             }
             if (service.id === 'helper') {
                 total += (service.helpers || 0) * (service.hours || 0) * pricing.helper.ratePerHelperPerHour;
@@ -217,14 +213,10 @@ const BookingPage: React.FC = () => {
 
                             if (service.id === 'transport') {
                                 const distanceCost = (service.distance || 0) * pricing.transport.ratePerKm;
-                                let vanCost = 0;
-                                if (service.vanType === 'small') vanCost = pricing.transport.smallVan;
-                                if (service.vanType === 'medium') vanCost = pricing.transport.mediumVan;
-                                if (service.vanType === 'large') vanCost = pricing.transport.largeVan;
-                                serviceCost = distanceCost + vanCost;
+
+                                serviceCost = distanceCost;
 
                                 costBreakdown = `Distance Cost: ${service.distance || 0} km * $${pricing.transport.ratePerKm}/km = $${distanceCost}\n`
-                                    + `Van Cost (${service.vanType}): $${vanCost}\n`
                                     + `Total: $${serviceCost}`;
                             }
                             else if (service.id === 'helper') {
@@ -305,18 +297,7 @@ const BookingPage: React.FC = () => {
                                     onChange={(e) => handleInputChange('distance', parseFloat(e.target.value))}
                                     className="mb-2"
                                 />
-                                <Select
-                                    fullWidth
-                                    label="Select Van Type"
-                                    selectedKeys={formData.vanType ? new Set([formData.vanType]) : undefined}
-                                    onSelectionChange={(key) =>
-                                        handleInputChange("vanType", Array.from(key as Set<string>)[0])
-                                    }
-                                >
-                                    <SelectItem key="small">Small Van</SelectItem>
-                                    <SelectItem key="medium">Medium Van</SelectItem>
-                                    <SelectItem key="large">Large Van</SelectItem>
-                                </Select>
+
                             </>
                         )}
                         {currentService?.id === 'helper' && (

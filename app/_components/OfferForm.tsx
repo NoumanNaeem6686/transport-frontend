@@ -1,5 +1,6 @@
 "use client";
 
+import TimeKeeper from "react-timekeeper";
 import React, { useState, useEffect } from "react";
 import {
     Input,
@@ -10,15 +11,20 @@ import {
     CheckboxGroup,
     Textarea,
 } from "@nextui-org/react";
-import { usePathname } from "next/navigation";
-
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { TimePicker } from '@mui/x-date-pickers/TimePicker';
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { StaticTimePicker } from "@mui/x-date-pickers/StaticTimePicker";
+import TextField from "@mui/material/TextField";
+import { renderTimeViewClock } from "@mui/x-date-pickers";
 const GetOffer = () => {
     const [formData, setFormData] = useState<any>({
         userType: "",
         name: "",
         email: "",
         phone: "",
-        timeRange: "",
+        // timeRange: "",
         // timeRange: "000",
         dateRange: "",
         services: [],
@@ -35,6 +41,7 @@ const GetOffer = () => {
 
     const [selectAll, setSelectAll] = useState<boolean>(false);
     const [isTerm, setIsTerm] = useState<boolean>(false);
+    const [value, setValue] = useState()
 
     const handleChange = (key: string, value: any) => {
         setFormData((prevData: any) => ({
@@ -154,15 +161,38 @@ const GetOffer = () => {
                     onChange={(e) => handleChange("dateRange", e.target.value)}
                 />
             </div>
-            <div className="w-full mb-4 flex flex-col items-start">
+            <div className="w-full mb-4 flex flex-col items-start text-black">
                 <label className="text-black font-semibold mb-2">Best time range</label>
-                <Input
-                    type="time"
-                    label="Time Range"
-                    fullWidth
-                    value={formData.timeRange}
-                    onChange={(e) => handleChange("timeRange", e.target.value)}
-                />
+
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <TimePicker
+                        // label="With Time Clock"
+                        sx={{
+                            width: "100%",
+                            borderRadius: "25px"
+                        }}
+                        value={formData.timeRange}
+                        onChange={(newValue) => handleChange("timeRange", newValue)}
+                        viewRenderers={{
+                            hours: renderTimeViewClock,
+                            minutes: renderTimeViewClock,
+                            seconds: renderTimeViewClock,
+                        }}
+                    />
+                </LocalizationProvider>
+                {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <StaticTimePicker orientation="landscape"
+                        value={formData.timeRange}
+                        onChange={(newValue) => handleChange("timeRange", newValue)}
+                    />
+                    {/* <StaticTimePicker
+                        orientation="landscape"
+                        value={value}
+                        onChange={(newValue) => setValue(newValue)}
+                        displayStaticWrapperAs="desktop"
+                        renderInput={(params) => <TextField {...params} />}
+                    /> 
+                </LocalizationProvider> */}
             </div>
 
             {/* Services Selection */}
