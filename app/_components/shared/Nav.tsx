@@ -111,7 +111,7 @@ function Navbar() {
                 </Link>
 
                 <div className="flex flex-row gap-x-6 " data-aos="fade-left">
-                    <div className=' items-center gap-x-8 mr-3 hidden lg:flex'>
+                    <div className=' items-center gap-x-4 mr-3 hidden lg:flex'>
                         <Link href={'/'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                             Home
                         </Link>
@@ -123,6 +123,9 @@ function Navbar() {
                         </Link>
                         <Link href={'/services'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                             Our Services
+                        </Link>
+                        <Link href={'/work'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                            Work With Us
                         </Link>
                     </div>
                     <div className='hidden lg:flex items-center  gap-x-2'>
@@ -171,6 +174,10 @@ function Navbar() {
                                                 </Link>
                                                 <Link href={'/services'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                                                     Our Services
+                                                </Link>
+                                                <Link href={'/work'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                                                    Work With Us
+
                                                 </Link>
                                             </div>
                                         </div>

@@ -33,7 +33,7 @@ const ServicesSlider = () => {
             description:
                 "Our helper services are designed to take the stress out of moving. From packing your belongings to heavy lifting, we ensure everything is handled with care. Whether you’re moving within the city or to a new location, our team provides unmatched support.",
             image: "/helper.jpg",
-            link: "/book-now?service=helper",
+            link: "/book-now",
         },
     ];
 
@@ -78,20 +78,23 @@ const ServicesSlider = () => {
                                     <p className="mt-8 text-lg text-gray-700 text-start">
                                         {service.description}
                                     </p>
-                                    <div className="mt-10 flex items-center justify-start">
-                                        <Link href={service.link}>
-                                            <button
-                                                className="inline-flex rounded-full bg-[#4B4B4B] px-6 py-1.5 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-gray-700"
-                                            >
-                                                Book Now
-                                            </button>
-                                        </Link>
-                                    </div>
+
                                 </div>
                             </div>
                         </SwiperSlide>
                     ))}
-                    <div className="swiper-pagination1 mt-8 flex justify-center lg:justify-start"></div>
+                    <div className="swiper-pagination1 mt-14 flex mx-2 justify-center "></div>
+                    <div className="flex items-center justify-center">
+                        <div className="mt-10 flex items-center justify-start ">
+                            <Link href={"/book-now"}>
+                                <button
+                                    className=" rounded-full min-w-[200px] flex items-center justify-center bg-[#4B4B4B] px-6 py-1.5 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-gray-700"
+                                >
+                                    Book Now
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
                 </Swiper>
             </div>
         </section >
