@@ -9,8 +9,10 @@ import {
     Checkbox,
     Textarea,
 } from "@nextui-org/react";
+import { toast } from "sonner";
 
 const PartnerForm = () => {
+    const [loading, setLoading] = useState(false)
     const [formData, setFormData] = useState<any>({
         name: "",
         email: "",
@@ -28,8 +30,50 @@ const PartnerForm = () => {
         }));
     };
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
+        if (!isTerm) {
+            toast.error("You must agree to the terms and conditions.");
+            return;
+        }
+        if (!formData.name || !formData.email || !formData.phone) {
+            toast.error("Name,Email and phone number is required.");
+            return;
+        }
         console.log("Form Data:", formData);
+        setLoading(true)
+        try {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/partner`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                toast.error(errorData.message ? errorData.message : "Error during submission");
+                throw new Error(errorData.message || "Failed to submit data");
+            }
+
+            const result = await response.json();
+            toast.error("Submission successful");
+            setFormData({
+                name: "",
+                email: "",
+                phone: "",
+                vehicleNumber: "",
+                licenseNumber: "",
+            })
+            console.log("Submission successful:", result);
+        } catch (error: any) {
+            console.error("Error during submission:", error.message);
+            toast.error(error.message ? error.message : "Error during submission");
+
+        } finally {
+            setLoading(false)
+
+        }
     };
 
     return (
@@ -112,7 +156,9 @@ const PartnerForm = () => {
                 onClick={handleSubmit}
                 className="w-full mt-8 bg-[#4B4B4B] text-white text-lg"
             >
-                Submit
+                {
+                    loading ? "Submitting..." : "Submit"
+                }
             </Button>
         </div>
     );
