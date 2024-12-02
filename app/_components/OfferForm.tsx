@@ -17,19 +17,18 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { StaticTimePicker } from "@mui/x-date-pickers/StaticTimePicker";
 import TextField from "@mui/material/TextField";
 import { renderTimeViewClock } from "@mui/x-date-pickers";
+import { toast } from "sonner";
+import dayjs from "dayjs";
 const GetOffer = () => {
   const [formData, setFormData] = useState<any>({
     userType: "",
     name: "",
     email: "",
     phone: "",
-    // timeRange: "",
-    // timeRange: "000",
     dateRange: "",
     services: [],
     from: "",
     to: "",
-    vanType: "",
     helpers: "",
     workers: "",
     spaceSize: "",
@@ -39,7 +38,8 @@ const GetOffer = () => {
 
   const [selectAll, setSelectAll] = useState<boolean>(false);
   const [isTerm, setIsTerm] = useState<boolean>(false);
-  const [value, setValue] = useState();
+  const [loading, setLoading] = useState(false)
+  const [time, setTime] = useState<any>()
 
   const handleChange = (key: string, value: any) => {
     setFormData((prevData: any) => ({
@@ -49,10 +49,7 @@ const GetOffer = () => {
   };
 
   const handleServiceChange = (newValues: any) => {
-    // Update services in formData
     handleChange("services", newValues);
-
-    // Update "Select All" checkbox based on services selection
     if (newValues.length === servicesOptions.length) {
       setSelectAll(true);
     } else {
@@ -72,7 +69,61 @@ const GetOffer = () => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    if (!isTerm) {
+      toast.error("You must agree to the terms and conditions.");
+      return;
+    }
+    const formattedTime = dayjs(time).format("HH:mm");
+    console.log(formattedTime)
+    setLoading(true)
+    const data = {
+      ...formData,
+      timeRange: formattedTime
+    }
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/offer`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        toast.error(errorData.message ? errorData.message : "Error during submission");
+        throw new Error(errorData.message || "Failed to submit data");
+      }
+
+      const result = await response.json();
+      toast.error("Submission successful");
+      setFormData({
+        userType: "",
+        name: "",
+        email: "",
+        phone: "",
+        timeRange: "",
+        dateRange: "",
+        services: [],
+        from: "",
+        to: "",
+        vanType: "",
+        helpers: "",
+        workers: "",
+        spaceSize: "",
+        specialRequirements: "",
+        frequency: "",
+      })
+      console.log("Submission successful:", result);
+    } catch (error: any) {
+      console.error("Error during submission:", error.message);
+      toast.error(error.message ? error.message : "Error during submission");
+
+    } finally {
+      setLoading(false)
+
+    }
     console.log("Form Data:", formData);
   };
 
@@ -168,8 +219,8 @@ const GetOffer = () => {
               width: "100%",
               borderRadius: "25px",
             }}
-            value={formData.timeRange}
-            onChange={(newValue) => handleChange("timeRange", newValue)}
+            value={time}
+            onChange={(newValue) => setTime(newValue)}
             viewRenderers={{
               hours: renderTimeViewClock,
               minutes: renderTimeViewClock,
@@ -177,22 +228,9 @@ const GetOffer = () => {
             }}
           />
         </LocalizationProvider>
-        {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <StaticTimePicker orientation="landscape"
-                        value={formData.timeRange}
-                        onChange={(newValue) => handleChange("timeRange", newValue)}
-                    />
-                    {/* <StaticTimePicker
-                        orientation="landscape"
-                        value={value}
-                        onChange={(newValue) => setValue(newValue)}
-                        displayStaticWrapperAs="desktop"
-                        renderInput={(params) => <TextField {...params} />}
-                    /> 
-                </LocalizationProvider> */}
+
       </div>
 
-      {/* Services Selection */}
       <div className="w-full mb-4 flex flex-col items-start">
         <label className="text-black font-semibold mb-2">
           Select service(s)
@@ -345,7 +383,9 @@ const GetOffer = () => {
         onClick={handleSubmit}
         className="w-full mt-8 bg-[#4B4B4B] text-white text-lg"
       >
-        Submit
+        {
+          loading ? "Submitting..." : "Submit"
+        }
       </Button>
     </div>
   );
