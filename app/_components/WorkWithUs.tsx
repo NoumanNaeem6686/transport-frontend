@@ -9,19 +9,20 @@ import {
     Checkbox,
     CheckboxGroup,
 } from "@nextui-org/react";
+import { toast } from "sonner";
 
 const WorkWithUs = () => {
+    const [loading, setLoading] = useState(false)
     const [formData, setFormData] = useState<any>({
         name: "",
         address: "",
         email: "",
         phone: "",
-        vehicleNumber: "",
-        licenseNumber: "",
-        userType: "",
+        isDivingLicense: "",
         workBasis: "",
         services: [],
     });
+    console.log("🚀 ~ WorkWithUs ~ formData:", formData)
 
     const [isTerm, setIsTerm] = useState<boolean>(false);
     const [selectAll, setSelectAll] = useState<boolean>(false);
@@ -39,11 +40,54 @@ const WorkWithUs = () => {
         { key: "Helper", value: "Moving Helper" },
     ];
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (!isTerm) {
-            alert("You must agree to the terms and conditions.");
+            toast.error("You must agree to the terms and conditions.");
             return;
         }
+        if (!formData.phone) {
+
+            toast.error("Phone Number is required");
+            return;
+        }
+        setLoading(true)
+        try {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/work-with-us`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                toast.error(errorData.message ? errorData.message : "Error during submission");
+                throw new Error(errorData.message || "Failed to submit data");
+            }
+
+            const result = await response.json();
+            toast.error("Submission successful");
+            setFormData({
+                name: "",
+                address: "",
+                email: "",
+                phone: "",
+                isDivingLicense: "",
+                workBasis: "",
+                services: [],
+            })
+            setSelectAll(false)
+            console.log("Submission successful:", result);
+        } catch (error: any) {
+            console.error("Error during submission:", error.message);
+            toast.error(error.message ? error.message : "Error during submission");
+
+        } finally {
+            setLoading(false)
+
+        }
+
         console.log("Form Data:", formData);
     };
 
@@ -115,7 +159,7 @@ const WorkWithUs = () => {
 
             {/* Services Section */}
             <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">Type of work you want</label>
+                <label className="text-black font-semibold mb-2">Type of work you do</label>
                 <Checkbox
                     isSelected={selectAll}
                     onChange={(e) => handleSelectAllChange(e.target.checked)}
@@ -134,22 +178,18 @@ const WorkWithUs = () => {
                     ))}
                 </CheckboxGroup>
             </div>
-
-            {/* Driving License Field */}
             <div className="w-full mb-4 flex flex-col items-start">
                 <label className="text-black font-semibold mb-2">Do you have a driving license?</label>
                 <Select
                     label="Select an option"
                     fullWidth
-                    selectedKeys={formData.userType ? [formData.userType] : undefined}
-                    onSelectionChange={(key) => handleChange("userType", key.currentKey)}
+                    value={formData.isDivingLicense}
+                    onSelectionChange={(value) => handleChange("isDivingLicense", value.currentKey)}
                 >
-                    <SelectItem key="yes">Yes</SelectItem>
-                    <SelectItem key="no">No</SelectItem>
+                    <SelectItem key="yes" value="yes">Yes</SelectItem>
+                    <SelectItem key="no" value="no">No</SelectItem>
                 </Select>
             </div>
-
-            {/* Work Basis Field */}
             <div className="w-full mb-4 flex flex-col items-start">
                 <label className="text-black font-semibold mb-2">Work basis</label>
                 <Select
@@ -163,8 +203,6 @@ const WorkWithUs = () => {
                     <SelectItem key="hourly">Hourly</SelectItem>
                 </Select>
             </div>
-
-            {/* Terms and Conditions */}
             <div className="flex items-center justify-start w-full mt-4">
                 <Checkbox
                     isSelected={isTerm}
@@ -174,13 +212,14 @@ const WorkWithUs = () => {
                     I agree to the terms and conditions.
                 </Checkbox>
             </div>
-
-            {/* Submit Button */}
             <Button
                 onClick={handleSubmit}
                 className="w-full mt-8 bg-[#4B4B4B] text-white text-lg"
             >
-                Submit
+                {
+                    loading ? "Submitting..." : "Submit"
+                }
+
             </Button>
         </div>
     );
