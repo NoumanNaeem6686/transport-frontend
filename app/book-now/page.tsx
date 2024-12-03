@@ -13,6 +13,8 @@ import { ServicesCard } from '../_components/servicesCard';
 import { Trash } from 'lucide-react';
 import { LocalizationProvider, renderTimeViewClock } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import dayjs from 'dayjs';
+import { toast } from 'sonner';
 
 const pricing = {
     transport: {
@@ -57,10 +59,11 @@ const requiredFields: { [key: string]: (keyof FormData)[] } = {
 const BookingPage: React.FC = () => {
     const [selectedServices, setSelectedServices] = useState<SelectedService[]>([]);
     const [visible, setVisible] = useState(false);
+    const [loading, setLoading] = useState(false)
     const [currentService, setCurrentService] = useState<Service | null>(null);
     const [formData, setFormData] = useState<FormData>({});
     const [totalCost, setTotalCost] = useState(0);
-
+    const [time, setTime] = useState<any>()
     const [isWorking, setIsWorking] = useState(false);
 
     const [userInfo, setUserInfo] = useState({
@@ -94,7 +97,6 @@ const BookingPage: React.FC = () => {
 
     const handleOpenForm = (service: Service) => {
         setCurrentService(service);
-        // Check if the service is already selected
         const existingService = selectedServices.find((s) => s.id === service.id);
         if (existingService) {
             const { id, name, description, image, ...existingFormData } = existingService;
@@ -170,6 +172,48 @@ const BookingPage: React.FC = () => {
         setSelectedServices(selectedServices.filter((s) => s.id !== serviceId));
     };
 
+    const handleSubmit = async () => {
+        if (!userInfo.name || !userInfo.email || !userInfo.phone || !userInfo.date) {
+            toast.error("Please fill in all required fields.");
+            return;
+        }
+
+        const bookingData = {
+            userInfo: {
+                ...userInfo,
+                time: dayjs(time).format("HH:mm"),
+            },
+            selectedServices,
+            totalCost,
+            isWorking,
+        };
+
+        try {
+            setLoading(true);
+            const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/booking`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(bookingData),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                toast.error(errorData.message || "Failed to create booking.");
+                throw new Error(errorData.message || "Failed to create booking.");
+            }
+
+            const result = await response.json();
+            toast.success("Booking created successfully!");
+            console.log("Booking result:", result);
+        } catch (error) {
+            console.error("Error creating booking:", error);
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <div className="mt-20 min-h-screen flex flex-col md:flex-row p-4 gap-4">
             {/* Left Section: User Info and Service Cards */}
@@ -213,6 +257,8 @@ const BookingPage: React.FC = () => {
                                 width: "100%",
                                 borderRadius: "25px"
                             }}
+                            value={time}
+                            onChange={(newValue) => setTime(newValue)}
                             viewRenderers={{
                                 hours: renderTimeViewClock,
                                 minutes: renderTimeViewClock,
@@ -290,7 +336,13 @@ const BookingPage: React.FC = () => {
                                 Total Cost: ${totalCost}
                                 {isWorking && <span className="text-green-600"> (50% off applied)</span>}
                             </h4>
-                            <Button className="w-full mt-8 bg-[#4B4B4B] text-white text-lg">Book Now</Button>
+                            <Button
+                                onPress={handleSubmit}
+                                className="w-full mt-8 bg-[#4B4B4B] text-white text-lg">
+                                {
+                                    loading ? "Submitting..." : "Book Now"
+                                }
+                            </Button>
                         </>
                     )}
                 </Card>
