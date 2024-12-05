@@ -194,10 +194,11 @@ function page() {
       <div className='h-[200px] grid place-content-center mb-28'>
         <ScrollBaseAnimation
           scrollDependent={true}
-          clasname='font-bold tracking-[-0.07em] leading-[90%] pb-2'
+        // className="font-bold tracking-[-0.07em] leading-[90%] pb-2"
         >
-          Simplifying lives with reliable moving and transport solutions! | Trusted by 100k+ satisfied customers worldwide! | Over a decade of expertise, serving 20+ locations globally!
+          Paris | London | Berlin | Madrid | Rome | Amsterdam | Vienna | Prague | Budapest | Lisbon
         </ScrollBaseAnimation>
+
       </div>
       <ServicesSlider />
       <AboutUs />

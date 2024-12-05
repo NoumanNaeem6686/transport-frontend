@@ -267,13 +267,7 @@ const BookingPage: React.FC = () => {
                         />
                     </LocalizationProvider>
 
-                    <Checkbox
-                        isSelected={isWorking}
-                        onChange={(e) => setIsWorking(e.target.checked)}
-                        className="mb-2"
-                    >
-                        If you are working, you have 50% off
-                    </Checkbox>
+
 
                     {selectedServices.length > 0 ? (
                         selectedServices.map((service, index) => {
@@ -332,6 +326,13 @@ const BookingPage: React.FC = () => {
                     )}
                     {selectedServices.length > 0 && (
                         <>
+                            <Checkbox
+                                isSelected={isWorking}
+                                onChange={(e) => setIsWorking(e.target.checked)}
+                                className="mb-2"
+                            >
+                                If you are working, you have 50% off
+                            </Checkbox>
                             <h4 className="mt-4 text-end pr-4">
                                 Total Cost: ${totalCost}
                                 {isWorking && <span className="text-green-600"> (50% off applied)</span>}
