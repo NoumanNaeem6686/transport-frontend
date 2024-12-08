@@ -8,7 +8,7 @@ const ProcessSection: React.FC = () => {
 
     const processSteps = [
         {
-            image: "https://cdn.builder.io/api/v1/image/assets/TEMP/f193d1fa3cc89549cabb143f00f5456f87fc3950fef87c6c951b0cb64d5a27c0?placeholderIfAbsent=true&apiKey=bc24cc4b887842b2a1fd79f5d8491e57",
+            image: "/process_1.png",
             title: "Request an offer",
             description:
                 "Start by filling out our 'Get Offer' form. Share about your moving or transport needs in detail. This helps us understand your specific requirements, whether you’re relocating a small apartment, a full household, or just transporting a few items. Provide information about the size of your move, the distance involved, and any special considerations like fragile or valuable items. Our team will review your request and tailor a solution to meet your needs. This step is crucial as it helps us provide an accurate estimate and ensure we allocate the right resources for your move. Once you submit the form, our representatives will get back to you promptly with a personalized quote. This ensures that you can make an informed decision with all the necessary details at your fingertips.",
@@ -16,7 +16,7 @@ const ProcessSection: React.FC = () => {
             hasUnderline: false,
         },
         {
-            image: "https://cdn.builder.io/api/v1/image/assets/TEMP/340a9a024335037fc62adf6b6a8fad4c8f73bd723c5d3c0cc12ba3e14ea435a4?placeholderIfAbsent=true&apiKey=bc24cc4b887842b2a1fd79f5d8491e57",
+            image: "/process_2.png",
             title: "Select Your Services",
             description:
                 "Once you receive a quote, choose the services you need from our flexible options. Whether it’s just a transport vehicle, a team of professional helpers, or a complete moving package, we’ve got you covered. You can customize the services to suit your budget and requirements. Need packing assistance? No problem. Require special handling for fragile items? We’ve got it covered. Select the combination of services that works best for you. This step is designed to give you maximum control and ensure that every aspect of your move is handled to your satisfaction. Our goal is to make your move as seamless and stress-free as possible, offering transparency and flexibility at every stage.",
@@ -24,7 +24,7 @@ const ProcessSection: React.FC = () => {
             hasUnderline: false,
         },
         {
-            image: "https://cdn.builder.io/api/v1/image/assets/TEMP/691c0a665159a603448b6c4ce0bc93c95bdc9ec7ab63f8ea9d0644e9ac7b5053?placeholderIfAbsent=true&apiKey=bc24cc4b887842b2a1fd79f5d8491e57",
+            image: "/process_3.png",
             title: "Schedule your move",
             description:
                 "Pick a convenient date and time for your move, and our team will ensure timely arrival. Scheduling is a critical part of the moving process. Whether you prefer to move on a weekday or during the weekend, we work around your schedule to accommodate your needs. Let us know the time frame that suits you best, and we’ll handle the rest. Our team is punctual and reliable, ensuring that everything runs smoothly on the day of your move. By planning ahead, you can avoid last-minute surprises and ensure that all logistics are taken care of. This step also allows us to assign the right team and resources to make your move as efficient and hassle-free as possible.",
@@ -32,7 +32,7 @@ const ProcessSection: React.FC = () => {
             hasUnderline: false,
         },
         {
-            image: "https://cdn.builder.io/api/v1/image/assets/TEMP/8b5c6547528212f2e6651bd0dc1fe6db557ef11d2c5965a485947124d12429d2?placeholderIfAbsent=true&apiKey=bc24cc4b887842b2a1fd79f5d8491e57",
+            image: "/process_4.png",
             title: "Sit Back and Relax",
             description:
                 "After finalizing your booking, all that’s left for you to do is sit back and relax. Our professional team takes care of everything from packing and loading to transporting and unloading. You can have peace of mind knowing that your belongings are in safe hands. Our experienced movers handle your items with the utmost care, ensuring they arrive at their destination in perfect condition. Focus on settling into your new space while we handle the heavy lifting. With our team by your side, moving becomes a hassle-free experience. Whether it’s a local move or a long-distance relocation, we make sure the process is smooth, efficient, and stress-free. Your satisfaction is our top priority.",

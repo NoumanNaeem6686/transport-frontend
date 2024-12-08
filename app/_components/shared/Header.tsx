@@ -8,7 +8,7 @@ import { DrawerContent, HeaderDrawer } from '../Dialog';
 export const NavigationBar: React.FC = () => {
     const [sidebarOpen, setSidebarOpen] = React.useState(false)
     return (
-        <div className="flex flex-col w-full max-md:max-w-full fixed top-0 z-[100]">
+        <div className="flex flex-col w-full max-md:max-w-full absolute top-0 z-[100]">
             <section className=" z-50 bg-sky-800 text-white ">
                 <div className="container mx-auto px-4 py-2 flex justify-between items-center flex-wrap" data-aos="fade-down">
                     <div className="flex sm:space-x-6">
