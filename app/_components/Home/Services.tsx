@@ -5,19 +5,23 @@ import { ServiceCard } from "./ServicesCard";
 
 const servicesData: any = [
     {
-        title: "professional cleaning service",
+        title: "Professional cleaning service",
         description: "Our cleaning services provide a spotless environment for your home and office. We promote a healthier living and working space. Whether you need one time deep cleaning or a recurring service, we are flexible to match your schedule.",
-        isHighlighted: false
+        isHighlighted: false,
+        image: "/service_1.png"
     },
     {
         title: "Safe and Efficient transport",
         description: "Our transport ensures your belonging are moved safely. With a fleet of reliable vehicles and skilled drivers. We make sure your items reach destination on time. Whether you need a small van for light items or a larger vehicle for heavy furniture, we have the right option for you.",
-        isHighlighted: true
+        isHighlighted: true,
+        image: "/service_2.png"
+
     },
     {
         title: "Reliable moving help center",
         description: "Our helper services are designed to take the stress out of moving. From packing your belongings to heavy lifting we ensure that everything is handled with care. Whether you are moving within the city or to a new location our team provides unmatched support.",
-        isHighlighted: false
+        isHighlighted: false,
+        image: "/service_3.png"
     }
 ];
 
@@ -35,14 +39,15 @@ export const ServicesSection: React.FC = () => {
                         <span className="font-bold text-sky-800">we do</span>
                     </div>
                 </div>
-                <div className="gap-10 -start mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div className="gap-10 -start mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {servicesData.map((service: any, index: number) => (
                         <ServiceCard
                             key={index}
                             title={service.title}
+                            image={service.image}
                             description={service.description}
                             isHighlighted={service.isHighlighted}
-                        /> 
+                        />
                     ))}
                 </div>
             </div>

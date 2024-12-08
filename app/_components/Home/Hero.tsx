@@ -57,7 +57,7 @@ export const TransportPage: React.FC = () => {
                     ))}
                 </div>
             </div>
-            <div className="overflow-hidden z-10 gap-2.5 self-center px-2.5 py-12 -mt-6 w-full text-2xl font-medium leading-loose text-white rounded-xl bg-sky-800 bg-opacity-90 max-w-[1061px] max-md:max-w-full">
+            <div className="overflow-hidden z-10 gap-2.5 self-center px-2.5 py-12 -mt-6 w-full text-2xl font-medium leading-loose text-white rounded-xl bg-sky-800 max-w-[1061px] max-md:max-w-full">
 
                 <ScrollBaseAnimation
                     scrollDependent={true}
