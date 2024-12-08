@@ -38,6 +38,7 @@ body {
 ::-webkit-scrollbar-button {
   display: none;
 }
+/* }
   .swiper-wrapper {
           height: fit-content !important;
           width: 100% !important;
@@ -67,7 +68,6 @@ body {
       color: #fff !important;
       background: #48575F !important;
       }
-/* Remove or comment out this block */
 .swiper-wrapper {
     height: fit-content !important;
     width: 100% !important;
@@ -75,15 +75,13 @@ body {
       .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
         bottom: var(--swiper-pagination-bottom,0px) !important;
       }
-/* Optionally, hide the scrollbar track piece that sits at the end of the scrollbar */
 ::-webkit-scrollbar-track-piece {
-  background: transparent; /* Makes the track piece invisible */
+  background: transparent; /* Makes the track piece invisible 
 }
 
-/* Scrollbar styles for Edge, IE */
 * {
-  scrollbar-track-color: transparent; /* Track color */
-  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-track-color: transparent; /* Track color 
+  scrollbar-width: thin; /* Thin scrollbar 
   scrollbar-arrow-color: transparent;
 }
 .swiper-pagination1 .swiper-pagination-bullet {
@@ -98,4 +96,4 @@ body {
       color: #fff !important;
       background: #48575F !important;
       }
-
+ */

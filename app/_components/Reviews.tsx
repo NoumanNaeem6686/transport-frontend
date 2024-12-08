@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const staticReviews = [
@@ -66,24 +66,32 @@ const Reviews = () => {
     };
 
     return (
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-center items-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8 max-w-sm sm:max-w-2xl lg:max-w-full mx-auto">
-                {/* Section Heading */}
-                <div className="w-full lg:w-2/5">
+        <div className="flex items-center px-3 sm:px-7">
+            <img src="/review.png" alt="" className="h-96 rounded-xl hidden lg:flex" />
 
-                    <img src="/review.png" alt="" className="h-96 rounded-xl" />
-                    <div className="flex items-center justify-start gap-1">
-                        {/* <button className="swiper-button-prev-custom group flex justify-center hover:bg-gray-700 items-center w-10 h-10 transition-all duration-500 rounded-lg bg-[#4B4B4B] text-white active:scale-95">
-                                <ChevronLeft />
-                            </button>
-                            <button className="swiper-button-next-custom group flex justify-center hover:bg-gray-700 items-center w-10 h-10 transition-all duration-500 rounded-lg bg-[#4B4B4B] text-white active:scale-95">
-                                <ChevronRight />
-                            </button> */}
+            <div className="flex flex-col gap-y-8 flex-wrap max-w-sm sm:max-w-2xl mx-auto">
+
+                <div className="flex items-center justify-start gap-1">
+                    <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
+                        <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+                            <div
+                                className="h-[2px] rounded-md my-auto bg-sky-800 w-[115px]"
+                            />
+                            <div className="self-stretch uppercase my-auto">testimonials</div>
+                        </div>
+                        <div data-aos="fade-down" className="mt-4 text-4xl leading-10 text-gray-900 max-md:max-w-full">
+                            Our <span className="text-sky-800">Happy</span> customers
+                        </div>
                     </div>
+                    <button className="swiper-button-prev-custom group flex justify-center hover:bg-gray-700 items-center w-10 h-10 transition-all duration-500 rounded-lg bg-[#4B4B4B] text-white active:scale-95">
+                        <ChevronLeft />
+                    </button>
+                    <button className="swiper-button-next-custom group flex justify-center hover:bg-gray-700 items-center w-10 h-10 transition-all duration-500 rounded-lg bg-[#4B4B4B] text-white active:scale-95">
+                        <ChevronRight />
+                    </button>
                 </div>
 
-                {/* Reviews Slider */}
-                <div className="w-full lg:w-3/5">
+                <div className="w-full bg-gray-100 rounded-2xl">
                     <Swiper
                         slidesPerView={3}
                         spaceBetween={28}
@@ -95,8 +103,11 @@ const Reviews = () => {
                             delay: 1500,
                             disableOnInteraction: true,
                         }}
+                        pagination={{
+                            clickable: true,
+                        }}
                         loop={true}
-                        modules={[Navigation, Autoplay]}
+                        modules={[Navigation, Autoplay, Pagination]}
                         breakpoints={{
                             0: {
                                 slidesPerView: 1,
@@ -113,6 +124,7 @@ const Reviews = () => {
                         }}
                     >
                         {staticReviews.map((review, index) => (
+
                             <SwiperSlide
                                 key={index}
                                 className="flex flex-col items-center justify-center w-full h-full p-4 sm:p-8 rounded-xl lg:p-10 bg-gray-100"
@@ -127,7 +139,7 @@ const Reviews = () => {
                                     <p className="text-sm sm:text-base text-gray-900 text-center">
                                         {review.comment}
                                     </p>
-                                    <div className="flex items-center justify-center">
+                                    <div className="flex items-center justify-center text-xl">
                                         {renderStars(review.rating)}
                                     </div>
                                     <p className="text-sm font-medium capitalize text-gray-700 text-center">
