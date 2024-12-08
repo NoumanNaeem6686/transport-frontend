@@ -110,51 +110,58 @@ const WorkWithUs = () => {
     };
 
     return (
-        <div className="bg-white shadow-lg flex items-center justify-center rounded-3xl flex-col w-11/12 md:w-9/12 p-5 sm:p-10 lg:w-7/12 xl:w-6/12 2xl:w-4/12">
+        <div className="bg-white shadow-lg flex items-center justify-center rounded-3xl flex-col w-11/12 md:w-8/12 p-5 sm:p-10  2xl:w-7/12">
+
             {/* Name Field */}
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">Enter your name</label>
-                <Input
-                    label="Your Full Name"
-                    fullWidth
-                    value={formData.name}
-                    onChange={(e) => handleChange("name", e.target.value)}
-                />
-            </div>
+            <div className="flex flex-col md:flex-row w-full gap-3">
 
-            {/* Address Field */}
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">Enter your address</label>
-                <Input
-                    label="Your Address"
-                    fullWidth
-                    value={formData.address}
-                    onChange={(e) => handleChange("address", e.target.value)}
-                />
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">Enter your name</label>
+                    <Input
+                        label="Your Full Name"
+                        fullWidth
+                        value={formData.name}
+                        onChange={(e) => handleChange("name", e.target.value)}
+                    />
+                </div>
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">Enter your email</label>
+                    <Input
+                        label="example@example.com"
+                        fullWidth
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                    />
+                </div>
             </div>
+            <div className="flex flex-col md:flex-row w-full gap-3">
 
-            {/* Email Field */}
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">Enter your email</label>
-                <Input
-                    label="example@example.com"
-                    fullWidth
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                />
-            </div>
+                {/* Address Field */}
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">Enter your address</label>
+                    <Input
+                        label="Your Address"
+                        fullWidth
+                        value={formData.address}
+                        onChange={(e) => handleChange("address", e.target.value)}
+                    />
+                </div>
 
-            {/* Phone Field */}
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">Enter your phone number</label>
-                <Input
-                    label="123-456-7890"
-                    fullWidth
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => handleChange("phone", e.target.value)}
-                />
+                {/* Email Field */}
+
+
+                {/* Phone Field */}
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">Enter your phone number</label>
+                    <Input
+                        label="123-456-7890"
+                        fullWidth
+                        type="tel"
+                        value={formData.phone}
+                        onChange={(e) => handleChange("phone", e.target.value)}
+                    />
+                </div>
             </div>
 
             {/* Services Section */}
@@ -178,30 +185,33 @@ const WorkWithUs = () => {
                     ))}
                 </CheckboxGroup>
             </div>
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">Do you have a driving license?</label>
-                <Select
-                    label="Select an option"
-                    fullWidth
-                    value={formData.isDivingLicense}
-                    onSelectionChange={(value) => handleChange("isDivingLicense", value.currentKey)}
-                >
-                    <SelectItem key="yes" value="yes">Yes</SelectItem>
-                    <SelectItem key="no" value="no">No</SelectItem>
-                </Select>
-            </div>
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">Work basis</label>
-                <Select
-                    label="Select an option"
-                    fullWidth
-                    selectedKeys={formData.workBasis ? [formData.workBasis] : undefined}
-                    onSelectionChange={(key) => handleChange("workBasis", key.currentKey)}
-                >
-                    <SelectItem key="full_time">Full Time</SelectItem>
-                    <SelectItem key="part_time">Part Time</SelectItem>
-                    <SelectItem key="hourly">Hourly</SelectItem>
-                </Select>
+            <div className="flex flex-col md:flex-row w-full gap-3">
+
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">Do you have a driving license?</label>
+                    <Select
+                        label="Select an option"
+                        fullWidth
+                        value={formData.isDivingLicense}
+                        onSelectionChange={(value) => handleChange("isDivingLicense", value.currentKey)}
+                    >
+                        <SelectItem key="yes" value="yes">Yes</SelectItem>
+                        <SelectItem key="no" value="no">No</SelectItem>
+                    </Select>
+                </div>
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">Work basis</label>
+                    <Select
+                        label="Select an option"
+                        fullWidth
+                        selectedKeys={formData.workBasis ? [formData.workBasis] : undefined}
+                        onSelectionChange={(key) => handleChange("workBasis", key.currentKey)}
+                    >
+                        <SelectItem key="full_time">Full Time</SelectItem>
+                        <SelectItem key="part_time">Part Time</SelectItem>
+                        <SelectItem key="hourly">Hourly</SelectItem>
+                    </Select>
+                </div>
             </div>
             <div className="flex items-center justify-start w-full mt-4">
                 <Checkbox
@@ -212,15 +222,17 @@ const WorkWithUs = () => {
                     I agree to the terms and conditions.
                 </Checkbox>
             </div>
-            <Button
-                onClick={handleSubmit}
-                className="w-full mt-8 bg-[#4B4B4B] text-white text-lg"
-            >
-                {
-                    loading ? "Submitting..." : "Submit"
-                }
+            <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center justify-end w-full">
+                <button
+                    onClick={handleSubmit}
 
-            </Button>
+                    className="gap-2.5 hover:scale-105 transition-all duration-250 self-stretch px-9 py-3.5 my-auto sm:w-48 text-white bg-sky-800 rounded min-h-[46px] max-md:px-5">
+                    {
+                        loading ? "Submitting..." : "Submit"
+                    }
+                </button>
+
+            </div>
         </div>
     );
 };
