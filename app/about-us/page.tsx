@@ -51,18 +51,25 @@ function page() {
                     </div>
                 </div>
             </div> */}
-            <section className="about-section py-24">
+            <section className="about-section py-24 mt-10">
                 <div className="container mx-auto px-4">
                     <div className="row flex flex-wrap">
                         <div className="content-column order-2 lg:order-1 lg:w-1/2 w-full z-10">
                             <div className="inner-column lg:pl-8">
-                                <div className="sec-title mb-12">
-                                    <span className="title text-lg font-medium text-black mb-4 block">About Us</span>
-                                    <h2 className="text-4xl font-semibold text-gray-900 mb-4">
-                                        Simplifying Moving and Transport <br /> with Excellence
-                                    </h2>
+
+                                <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
+                                    <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+                                        <div
+                                            className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]"
+
+                                        />
+                                        <div className="self-stretch text-[#1CAC78] my-auto">About Us</div>
+                                    </div>
+                                    <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
+                                        Simplifying <span className="text-sky-800">Moving and transport</span>  with Excellence
+                                    </div>
                                 </div>
-                                <p className="text-gray-500 text-base leading-relaxed mb-8">
+                                <p className="text-gray-500 text-base leading-relaxed my-8">
                                     At our company, we believe in making lives easier by offering reliable and efficient moving, cleaning,
                                     and transport solutions. Whether it's helping you relocate, providing professional cleaning services, or
                                     ensuring timely transport.
@@ -114,9 +121,13 @@ function page() {
                         <div className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
                             <div className="w-full flex-col justify-center items-start gap-8 flex">
                                 <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
-                                    <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal text-start">
-                                        Reliable Moving and Transport Services
-                                    </h2>
+                                    <h1 className="text-2xl sm:text-4xl font-bold text-sky-800 ">
+                                        <span className="text-zinc-800">Reliable {" "}</span>
+                                        <span className='text-[#1CAC78]'>
+                                            Moving and Transport{' '}
+                                        </span>
+                                        <span className="text-zinc-800">Services</span>
+                                    </h1>
                                     <p className="text-gray-500 text-base font-normal leading-relaxed text-start">
                                         At our company, we are dedicated to simplifying lives by providing dependable moving and transport
                                         solutions. Whether it's a local move or a long-distance relocation, our mission is to ensure a
@@ -144,14 +155,14 @@ function page() {
                                 </div>
                             </div>
 
-                            <Link href={'/get-offer'}>
-                                <div
-                                    className={`bg-black text-white py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-colors`}
-                                >
-                                    Get Offer
-                                </div>
+                            <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center">
 
-                            </Link>
+                                <Link href="book-now">
+                                    <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
+                                        Book Now
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                         <div
                             className="w-full justify-center items-start gap-6 grid sm:grid-cols-2 grid-cols-1 lg:order-first order-last">
@@ -179,9 +190,20 @@ function page() {
                             <div className="w-full flex-col justify-center items-start gap-8 flex">
                                 <div className="flex-col justify-start lg:items-start items-center gap-4 flex">
                                     <div className="w-full flex-col justify-start lg:items-start items-center gap-3 flex">
-                                        <h2
-                                            className="text-gray-700 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
-                                            Reliable Moving and Transport Services</h2>
+
+                                        <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
+                                            <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-lg sm:text-xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+                                                <div
+                                                    className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]"
+
+                                                />
+                                                <div className="self-stretch text-[#1CAC78] my-auto">Our Success In Numbers</div>
+                                            </div>
+                                            <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
+                                                Reliable <span className="text-sky-800">Moving and transport</span>  Services
+                                            </div>
+                                        </div>
+
                                         <p
                                             className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
                                             At our company, we are dedicated to simplifying lives by providing dependable moving and transport solutions. Whether it's a local move or a long-distance relocation, our mission is to ensure a stress-free experience for every client.
@@ -227,10 +249,19 @@ function page() {
                     <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                         <div className="lg:pr-8 lg:pt-4">
                             <div className="lg:max-w-lg">
-                                <h2 className="text-base font-semibold leading-7 text-secondaryColor">Why Choose Us</h2>
-                                <p data-aos="fade-right" className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                                    Simplifying Your Moving Experience
-                                </p>
+                                <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
+                                    <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-lg sm:text-xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+                                        <div
+                                            className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]"
+
+                                        />
+                                        <div className="self-stretch text-[#1CAC78] my-auto">Why Choose Us</div>
+                                    </div>
+                                    <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
+                                        Simplifying <span className="text-sky-800">Your Moving Experience</span>
+                                    </div>
+                                </div>
+
                                 <p data-aos="fade-down" className="mt-6 text-lg leading-8 text-gray-600">
                                     Our goal is to make your experience seamless, efficient, and stress-free, whether you're moving homes or require assistance with daily tasks.
                                 </p>

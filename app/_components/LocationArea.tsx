@@ -14,19 +14,16 @@ function LocationArea() {
 
             </div>
 
-            <div className='flex items-center gap-6'>
-                <Link href={"/get-offer"}>
-                    <div
-                        className={` text-white transition-all  border border-black  duration-200 bg-black hover:rotate-6 py-2 px-3  sm:px-5 min-w-[150px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black `}
-                    >
+            <div className="flex gap-3 items-center self-start mt-8 mx-auto text-base font-medium text-center">
+                <Link href="get-offer">
+                    <button className="gap-2.5 hover:scale-105 transition-all duration-250 self-stretch px-9 py-3.5 my-auto sm:w-48 text-white bg-sky-800 rounded min-h-[46px] max-md:px-5">
                         Get Offer
-                    </div>
+                    </button>
                 </Link>
-                <Link href={"/booking"}>
-                    <div
-                        className={` text-black transition-all duration-200 bg-white border border-black hover:rotate-6 py-2 px-3  sm:px-5 min-w-[150px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black `}                    >
+                <Link href="book-now">
+                    <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
                         Book Now
-                    </div>
+                    </button>
                 </Link>
             </div>
 

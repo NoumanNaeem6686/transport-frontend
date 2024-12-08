@@ -5,14 +5,20 @@ function AboutUs() {
     return (
         <div className='w-full grid grid-cols-1 lg:grid-cols-2 px-4 lg:px-12 gap-6 lg:gap-16 my-9   '>
             <div className="mx-auto text-center md:text-left">
-                <span className="text-gray-500 text-base font-normal">
-                    A little about us
-                </span>
-                <h2
-                    data-aos="fade-right"
-                    className="text-4xl font-bold text-gray-900 mt-2">
-                    Delivering Seamless Moving Experiences
-                </h2>
+                <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
+                    <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+                        <div
+                            className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[50px]  sm:w-[100px]"
+
+                        />
+                        <div className="self-stretch text-[#1CAC78] my-auto">                    A little more about us
+                        </div>
+                    </div>
+                    <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-sky-800 max-md:max-w-full">
+                        Delivering Seamless Moving Experiences
+                    </div>
+                </div>
+
                 <p className="text-gray-600 text-lg mt-4">
                     we believe in simplifying lives by providing reliable and efficient moving and transport solutions.
                     Our mission is to make every move stress-free, ensuring that our customers feel supported and confident every step of the way.
@@ -38,11 +44,18 @@ function AboutUs() {
                         </p>
                     </li>
                 </ul>
-                <Link href="/get-offer">
-                    <button className="mt-8 px-6 py-2 hover:rotate-6 bg-black text-white  rounded-2xl shadow-md  transition">
-                        Get Offer
-                    </button>
-                </Link>
+                <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center">
+                    <Link href="get-offer">
+                        <button className="gap-2.5 hover:scale-105 transition-all duration-250 self-stretch px-9 py-3.5 my-auto sm:w-48 text-white bg-sky-800 rounded min-h-[46px] max-md:px-5">
+                            Get Offer
+                        </button>
+                    </Link>
+                    <Link href="book-now">
+                        <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
+                            Book Now
+                        </button>
+                    </Link>
+                </div>
             </div>
 
             <div className=" w-full flex items-center justify-center  ">
