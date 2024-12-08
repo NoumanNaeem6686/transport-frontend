@@ -77,29 +77,32 @@ const PartnerForm = () => {
     };
 
     return (
-        <div className="bg-white shadow-lg flex items-center justify-center rounded-3xl flex-col w-11/12 md:w-9/12 p-5 sm:p-10 lg:w-7/12 xl:w-6/12 2xl:w-4/12">
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">Enter your name</label>
-                <Input
-                    label="Name"
-                    fullWidth
-                    value={formData.name}
-                    onChange={(e) => handleChange("name", e.target.value)}
-                />
+        <div className="bg-white shadow-lg flex items-center justify-center rounded-3xl flex-col w-11/12 md:w-8/12 p-5 sm:p-10  2xl:w-7/12">
+            <div className="flex flex-col md:flex-row w-full gap-3">
+
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">Enter your name</label>
+                    <Input
+                        label="Name"
+                        fullWidth
+                        value={formData.name}
+                        onChange={(e) => handleChange("name", e.target.value)}
+                    />
+                </div>
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">
+                        Enter Your Email
+                    </label>
+                    <Input
+                        label="Enter Email"
+                        fullWidth
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => handleChange("email", e.target.value)}
+                    />
+                </div>
             </div>
 
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">
-                    Enter Your Email
-                </label>
-                <Input
-                    label="Enter Email"
-                    fullWidth
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleChange("email", e.target.value)}
-                />
-            </div>
 
             <div className="w-full mb-4 flex flex-col items-start">
                 <label className="text-black font-semibold mb-2">
@@ -115,29 +118,32 @@ const PartnerForm = () => {
             </div>
 
             {/* Vehicle Number */}
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">
-                    Enter Vehicle Number
-                </label>
-                <Input
-                    label="Vehicle Number"
-                    fullWidth
-                    value={formData.vehicleNumber}
-                    onChange={(e) => handleChange("vehicleNumber", e.target.value)}
-                />
-            </div>
+            <div className="flex flex-col md:flex-row w-full gap-3">
 
-            {/* License Number */}
-            <div className="w-full mb-4 flex flex-col items-start">
-                <label className="text-black font-semibold mb-2">
-                    Enter License Number
-                </label>
-                <Input
-                    label="License Number"
-                    fullWidth
-                    value={formData.licenseNumber}
-                    onChange={(e) => handleChange("licenseNumber", e.target.value)}
-                />
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">
+                        Enter Vehicle Number
+                    </label>
+                    <Input
+                        label="Vehicle Number"
+                        fullWidth
+                        value={formData.vehicleNumber}
+                        onChange={(e) => handleChange("vehicleNumber", e.target.value)}
+                    />
+                </div>
+
+                {/* License Number */}
+                <div className="w-full mb-4 flex flex-col items-start">
+                    <label className="text-black font-semibold mb-2">
+                        Enter License Number
+                    </label>
+                    <Input
+                        label="License Number"
+                        fullWidth
+                        value={formData.licenseNumber}
+                        onChange={(e) => handleChange("licenseNumber", e.target.value)}
+                    />
+                </div>
             </div>
 
 
@@ -152,14 +158,18 @@ const PartnerForm = () => {
                 </Checkbox>
             </div>
 
-            <Button
-                onClick={handleSubmit}
-                className="w-full mt-8 bg-[#4B4B4B] text-white text-lg"
-            >
-                {
-                    loading ? "Submitting..." : "Submit"
-                }
-            </Button>
+
+            <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center  justify-end w-full">
+
+                <button
+                    onClick={handleSubmit}
+
+                    className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
+                    {
+                        loading ? "Submitting..." : "Submit"
+                    }
+                </button>
+            </div>
         </div>
     );
 };
