@@ -27,7 +27,7 @@ const servicesData: any = [
 
 export const ServicesSection: React.FC = () => {
     return (
-        <div className="flex flex-col w-full items-center justify-center  ">
+        <div className="flex flex-col w-full items-center justify-center mt-10 sm:mt-0  ">
             <div className="flex flex-col w-11/12  ">
                 <div className="flex flex-col w-full uppercase max-md:max-w-full">
                     <div className="flex flex-wrap gap-6 items-center w-full text-2xl font-bold leading-none text-[#1CAC78] tracking-[5.52px] max-md:max-w-full">
@@ -39,7 +39,7 @@ export const ServicesSection: React.FC = () => {
                         <span className="font-bold text-sky-800">we do</span>
                     </div>
                 </div>
-                <div className="gap-10 -start mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <div className="gap-10 -start mt-20 place-content-center place-items-center gap-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {servicesData.map((service: any, index: number) => (
                         <ServiceCard
                             key={index}

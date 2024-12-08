@@ -12,20 +12,21 @@ const checklistItems = [
 
 export const WhyUs: React.FC = () => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center gap-10  px-20 py-5 max-md:px-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center gap-10 mt-9 sm:mt-0  px-20 py-5 max-md:px-5">
 
             <div className="flex flex-col justify-between items-center self-stretchmy-auto ">
                 <div className="flex flex-col w-full">
                     <div className="flex flex-col justify-between w-full">
 
                         <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
-                            <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+                            <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
                                 <div
-                                    className="h-[2px] rounded-md my-auto bg-sky-800 w-[115px]"
+                                    className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]"
+
                                 />
-                                <div className="self-stretch my-auto">Why choose us</div>
+                                <div className="self-stretch text-[#1CAC78] my-auto">Why choose us</div>
                             </div>
-                            <div data-aos="fade-down" className="mt-4 text-4xl leading-10 text-gray-900 max-md:max-w-full">
+                            <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
                                 Reliable <span className="text-sky-800">Moving and transport</span> solution
                             </div>
                         </div>
@@ -57,7 +58,7 @@ export const WhyUs: React.FC = () => {
                     </button>
                 </div>
             </div>
-            <div className="flex flex-col justify-center self-stretch py-16 ">
+            <div className="flex flex-col justify-center self-stretch sm:py-16 ">
                 <img src="/about.png" alt="" />
             </div>
         </div>

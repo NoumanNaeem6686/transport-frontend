@@ -10,7 +10,7 @@ export const ServiceCard = ({ title, description, isHighlighted = false, image }
     const titleClasses = `text-xl lg:text-2xl capatalize font-bold text-center ${isHighlighted ? "text-white" : "text-zinc-800"
         }`;
 
-    const descriptionClasses = `mt-3.5 text-base leading-7 ${isHighlighted ? "text-white" : "text-zinc-800 text-justify"
+    const descriptionClasses = `mt-3.5 text-base ${isHighlighted ? "text-white" : "text-zinc-800 text-justify"
         }`;
 
     const buttonClasses = `gap-2.5 hover:scale-105 duration-300 self-stretch mx-auto mb-5 px-9 py-3.5 mt-7 max-w-full text-base font-medium text-center uppercase rounded min-h-[46px] w-[254px] max-md:px-5 ${isHighlighted ? "bg-emerald-500 text-white" : "bg-sky-800 text-white"

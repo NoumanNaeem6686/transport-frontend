@@ -11,7 +11,7 @@ const checklistItems = [
 export const AboutSection: React.FC = () => {
     return (
         <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center gap-10  px-20 py-5 max-md:px-5">
-            <div className="flex flex-col justify-center self-stretch py-16 ">
+            <div className="flex flex-col justify-center self-stretch sm:py-16 ">
                 <img src="/about.png" alt="" />
             </div>
             <div className="flex flex-col justify-between items-center self-stretchmy-auto ">
@@ -19,13 +19,13 @@ export const AboutSection: React.FC = () => {
                     <div className="flex flex-col justify-between w-full">
 
                         <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
-                            <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+                            <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
                                 <div
-                                    className="h-[2px] rounded-md my-auto bg-sky-800 w-[115px]"
+                                    className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]"
                                 />
-                                <div className="self-stretch my-auto">about us</div>
+                                <div className="self-stretch text-[#1CAC78] my-auto">about us</div>
                             </div>
-                            <div data-aos="fade-down" className="mt-4 text-4xl leading-10 text-gray-900 max-md:max-w-full">
+                            <div data-aos="fade-down" className="mt-4 text-2xl md:text-4xl leading-10 text-gray-900 max-md:max-w-full">
                                 Delivering <span className="text-sky-800">Seamless Moving</span> Experiences
                             </div>
                         </div>
@@ -41,7 +41,7 @@ export const AboutSection: React.FC = () => {
                             <div className="flex flex-col pt-4 pb-6 mt-3 w-full max-md:max-w-full">
                                 {checklistItems.map((item, index) => (
                                     <div key={index} className="mt-3 first:mt-0">
-                                        <div className="flex flex-wrap gap-3 items-center w-full max-md:max-w-full">
+                                        <div className="flex gap-3 items-center w-full max-md:max-w-full">
                                             <div className="self-stretch my-auto text-xl leading-snug text-cyan-700 whitespace-nowrap">
                                                 ✔
                                             </div>

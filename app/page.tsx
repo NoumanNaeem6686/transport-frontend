@@ -6,10 +6,13 @@ import ProcessSection from './_components/Home/Processing'
 import { WhyUs } from './_components/Home/WhyUs'
 import Reviews from './_components/Reviews'
 import { FAQTWO } from './_components/Home/FAQ'
+import ScrollBaseAnimation from './_components/text-marquee'
 
 function page() {
+  const cities = 'Paris | London | Berlin | Madrid | Rome | Amsterdam | Vienna | Prague | Budapest';
+
   return (
-    <>
+    <div className=''>
       <TransportPage />
       <AboutSection />
       <ServicesSection />
@@ -26,7 +29,7 @@ function page() {
       <LocationArea />
       <FAQ /> */}
 
-    </>
+    </div>
   )
 }
 

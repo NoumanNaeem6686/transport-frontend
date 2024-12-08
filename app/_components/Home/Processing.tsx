@@ -11,7 +11,7 @@ const ProcessSection: React.FC = () => {
             image: "/process_1.png",
             title: "Request an offer",
             description:
-                "Start by filling out our 'Get Offer' form. Share about your moving or transport needs in detail. This helps us understand your specific requirements, whether you’re relocating a small apartment, a full household, or just transporting a few items. Provide information about the size of your move, the distance involved, and any special considerations like fragile or valuable items. Our team will review your request and tailor a solution to meet your needs. This step is crucial as it helps us provide an accurate estimate and ensure we allocate the right resources for your move. Once you submit the form, our representatives will get back to you promptly with a personalized quote. This ensures that you can make an informed decision with all the necessary details at your fingertips.",
+                "Fill out our 'Get Offer' form to share your moving or transport needs. Provide details about the size of your move, distance, and any special considerations. Our team will review your request and provide a tailored quote promptly. This ensures accurate estimates and proper resource allocation for a smooth process.",
             showSeeMore: true,
             hasUnderline: false,
         },
@@ -19,7 +19,7 @@ const ProcessSection: React.FC = () => {
             image: "/process_2.png",
             title: "Select Your Services",
             description:
-                "Once you receive a quote, choose the services you need from our flexible options. Whether it’s just a transport vehicle, a team of professional helpers, or a complete moving package, we’ve got you covered. You can customize the services to suit your budget and requirements. Need packing assistance? No problem. Require special handling for fragile items? We’ve got it covered. Select the combination of services that works best for you. This step is designed to give you maximum control and ensure that every aspect of your move is handled to your satisfaction. Our goal is to make your move as seamless and stress-free as possible, offering transparency and flexibility at every stage.",
+                "After receiving a quote, choose the services you need from our flexible options. Whether it's just transport, helpers, or a full package, customize to fit your budget. From packing to special handling for fragile items, we provide transparency and flexibility for a seamless experience.",
             showSeeMore: true,
             hasUnderline: false,
         },
@@ -27,7 +27,7 @@ const ProcessSection: React.FC = () => {
             image: "/process_3.png",
             title: "Schedule your move",
             description:
-                "Pick a convenient date and time for your move, and our team will ensure timely arrival. Scheduling is a critical part of the moving process. Whether you prefer to move on a weekday or during the weekend, we work around your schedule to accommodate your needs. Let us know the time frame that suits you best, and we’ll handle the rest. Our team is punctual and reliable, ensuring that everything runs smoothly on the day of your move. By planning ahead, you can avoid last-minute surprises and ensure that all logistics are taken care of. This step also allows us to assign the right team and resources to make your move as efficient and hassle-free as possible.",
+                "Pick a convenient date and time, and we’ll ensure timely arrival. Let us know your preferred schedule, and our reliable team will handle the logistics. Planning ahead avoids surprises, ensuring your move is efficient and hassle-free.",
             showSeeMore: true,
             hasUnderline: false,
         },
@@ -35,30 +35,30 @@ const ProcessSection: React.FC = () => {
             image: "/process_4.png",
             title: "Sit Back and Relax",
             description:
-                "After finalizing your booking, all that’s left for you to do is sit back and relax. Our professional team takes care of everything from packing and loading to transporting and unloading. You can have peace of mind knowing that your belongings are in safe hands. Our experienced movers handle your items with the utmost care, ensuring they arrive at their destination in perfect condition. Focus on settling into your new space while we handle the heavy lifting. With our team by your side, moving becomes a hassle-free experience. Whether it’s a local move or a long-distance relocation, we make sure the process is smooth, efficient, and stress-free. Your satisfaction is our top priority.",
+                "Once booked, relax as our professional team handles packing, loading, transport, and unloading. Your belongings are in safe hands. Focus on settling in while we ensure a smooth and stress-free moving experience.",
             showSeeMore: true,
             hasUnderline: false,
         },
     ];
 
     return (
-        <div className="flex flex-col px-20 max-md:px-5 mt-20">
+        <div className="flex flex-col  xl:px-20 px-5 mt-20">
             <div className="flex flex-wrap gap-10 items-end w-full leading-none uppercase max-md:max-w-full">
                 <div className="flex flex-col flex-1 shrink basis-0 min-w-[240px] max-md:max-w-full">
-                    <div className="flex flex-wrap gap-6 items-center w-full text-2xl font-bold text-emerald-500 tracking-[5.52px] max-md:max-w-full">
-                        <div className="shrink-0 self-stretch my-auto h-0.5 border-2 border-emerald-500 border-solid w-[86px]" />
+                    <div className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl font-bold text-emerald-500 tracking-[5.52px] max-md:max-w-full">
+                        <div className="shrink-0 self-stretch my-auto h-0.5 border-2 border-emerald-500 border-solid w-[50px] sm:w-[86px]" />
                         <div className="self-stretch my-auto">Our Process</div>
                     </div>
-                    <div className="mt-4 text-4xl font-semibold text-black max-md:max-w-full">
+                    <div className="mt-4 text-3xl sm:text-4xl font-semibold text-black w-full">
                         <span className="font-bold leading-10 text-neutral-800">What Our </span>
                         <span className="font-bold leading-10 text-sky-800">Process</span>
                     </div>
                 </div>
-                <div className="flex shrink-0 h-[49px] w-[206px]" />
+                <div className="flex sm:flex shrink-0 h-[49px] w-[206px]" />
             </div>
-            <div className="px-px mt-16  max-md:mt-10">
-                <div className="flex gap-5 max-md:flex-col">
-                    <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+            <div className="px-px sm:mt-16 ">
+                <div className="flex gap-5 flex-col-reverse lg:flex-row w-full items-center justify-center">
+                    <div className="flex flex-col lg:w-6/12 max-md:ml-0 w-full">
                         <div className="flex flex-col w-full  max-md:max-w-full">
                             <div className="flex flex-col w-full  rounded-md max-md:max-w-full">
                                 <img
@@ -83,13 +83,13 @@ const ProcessSection: React.FC = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                    <div className="flex flex-col ml-5 lg:w-6/12 max-md:ml-0 w-full">
                         <div className="flex relative flex-col text-zinc-800 max-md:mt-10 max-md:max-w-full">
-                            <div className="flex z-0 flex-col w-full max-w-[638px] max-md:max-w-full">
+                            <div className="flex z-0 flex-col w-full lg:max-w-[638px] max-w-full">
                                 {processSteps.map((step, index) => (
                                     <div
                                         key={index}
-                                        className={`cursor-pointer ${index > 0 ? "mt-3" : ""} ${activeIndex === index ? "border-emerald-500 border-2 rounded-xl p-1" : ""
+                                        className={`cursor-pointer ${index > 0 ? "mt-3" : ""} ${activeIndex === index ? "border-emerald-500 border rounded-xl p-1" : ""
                                             }`}
                                         onClick={() => setActiveIndex(index)}
                                     >
@@ -115,7 +115,8 @@ const ProcessCard: React.FC<any> = ({
     description,
     showSeeMore,
 }) => {
-    const containerClasses = `flex items-center gap-3 items-start w-full hover:scale-[1.02] duration-300
+    const containerClasses = `flex flex-col sm:flex-row items-center gap-3 items-start w-full 
+    ${showSeeMore && "hover:scale-[1.01] duration-300"}
         }`;
 
     return (
@@ -124,9 +125,9 @@ const ProcessCard: React.FC<any> = ({
                 loading="lazy"
                 src={image}
                 alt={title}
-                className="object-contain rounded-md aspect-[1.62] min-w-[240px] h-full w-[212px]"
+                className="object-contain rounded-md aspect-[1.62] min-w-[240px] h-full w-full sm:w-[212px]"
             />
-            <div className="flex flex-col grow shrink min-w-[240px] w-[281px]">
+            <div className="flex flex-col grow  min-w-[240px] w-full sm:w-[281px]">
                 <div className="text-xl font-bold">{title}</div>
                 <div className="mt-1 text-justify">{description.slice(0, 90)}...</div>
                 {showSeeMore && (

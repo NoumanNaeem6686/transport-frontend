@@ -73,20 +73,21 @@ const Reviews = () => {
 
                 <div className="flex items-center justify-start gap-1">
                     <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
-                        <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+                        <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
                             <div
-                                className="h-[2px] rounded-md my-auto bg-sky-800 w-[115px]"
+                                className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[80px] sm:w-[115px]"
                             />
-                            <div className="self-stretch uppercase my-auto">testimonials</div>
+                            <div className="self-stretch uppercase text-[#1CAC78] my-auto">testimonials</div>
                         </div>
-                        <div data-aos="fade-down" className="mt-4 text-4xl leading-10 text-gray-900 max-md:max-w-full">
+                        <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
                             Our <span className="text-sky-800">Happy</span> customers
                         </div>
                     </div>
-                    <button className="swiper-button-prev-custom group flex justify-center hover:bg-gray-700 items-center w-10 h-10 transition-all duration-500 rounded-lg bg-[#4B4B4B] text-white active:scale-95">
+                    <button className="swiper-button-prev-custom group hidden sm:flex justify-center hover:bg-sky-900 items-center w-10 h-10 transition-all duration-500 rounded-lg bg-sky-800 text-white active:scale-95">
                         <ChevronLeft />
                     </button>
-                    <button className="swiper-button-next-custom group flex justify-center hover:bg-gray-700 items-center w-10 h-10 transition-all duration-500 rounded-lg bg-[#4B4B4B] text-white active:scale-95">
+                    <button className="swiper-button-prev-custom group hidden sm:flex justify-center hover:bg-sky-900 items-center w-10 h-10 transition-all duration-500 rounded-lg bg-sky-800 text-white active:scale-95">
+
                         <ChevronRight />
                     </button>
                 </div>
