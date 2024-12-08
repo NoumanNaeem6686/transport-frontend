@@ -10,7 +10,7 @@ import {
 } from '@nextui-org/react';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { ServicesCard } from '../_components/servicesCard';
-import { Trash } from 'lucide-react';
+import { Trash, X } from 'lucide-react';
 import { LocalizationProvider, renderTimeViewClock } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
@@ -217,16 +217,20 @@ const BookingPage: React.FC = () => {
     return (
         <div className="mt-20 min-h-screen flex flex-col md:flex-row p-4 gap-4">
             {/* Left Section: User Info and Service Cards */}
-            <div className="flex flex-col gap-4 w-full md:w-4/12 xl:w-5/12">
-                {services.map((service, index) => (
-                    <div className="w-full" key={index}>
-                        <ServicesCard service={service} handleOpenForm={handleOpenForm} pricing={pricing} />
-                    </div>
-                ))}
-            </div>
 
-            <div className="flex flex-col w-full md:w-8/12 xl:w-7/12 ">
+
+            <div className="flex flex-col w-full md:w-6/12 xl:w-7/12 ">
                 <Card className="p-4 flex flex-col gap-2">
+
+                    <div className='mb-8 ml-3'>
+
+                        <h1 className='text-3xl font-bold sm:text-4xl'>
+                            Book <span className='text-sky-800'>Now</span>
+                        </h1>
+                        <p className='mt-1 '>
+                            Book for a service now!
+                        </p>
+                    </div>
                     <Input
                         label="Name"
                         onChange={(e) => setUserInfo({ ...userInfo, name: e.target.value })}
@@ -297,13 +301,13 @@ const BookingPage: React.FC = () => {
                             }
 
                             return (
-                                <Card key={index} className="p-4 mb-2">
+                                <Card key={index} className="p-4 mb-2 bg-[#f0f2f4]">
                                     <div className="flex justify-between items-center">
-                                        <h5 className='font-semibold text-xl mb-3'>{service.name}</h5>
-                                        <button className='bg-red-800 text-white flex items-center justify-center p-2 rounded-full hover:scale-95'
+                                        <h5 className='font-bold text-xl text-sky-800 mb-3'>{service.name}</h5>
+                                        <button className=' text-[#1CAC78] flex items-center justify-center p-2 rounded-full hover:scale-95'
                                             onClick={() => handleDeleteService(service.id)}
                                         >
-                                            <Trash className='h-5 w-5' />
+                                            <X className='h-5 w-5' />
                                         </button>
                                     </div>
                                     <ul>
@@ -320,8 +324,8 @@ const BookingPage: React.FC = () => {
                             );
                         })
                     ) : (
-                        <div className="p-4 flex w-full items-center justify-center">
-                            <p>No services selected yet.</p>
+                        <div className="p-4 flex w-full items-center justify-end">
+                            <p>Select a Service.</p>
                         </div>
                     )}
                     {selectedServices.length > 0 && (
@@ -337,22 +341,41 @@ const BookingPage: React.FC = () => {
                                 Total Cost: ${totalCost}
                                 {isWorking && <span className="text-green-600"> (50% off applied)</span>}
                             </h4>
-                            <Button
-                                onPress={handleSubmit}
-                                className="w-full mt-8 bg-[#4B4B4B] text-white text-lg">
-                                {
-                                    loading ? "Submitting..." : "Book Now"
-                                }
-                            </Button>
+
+                            <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center w-full justify-end">
+                                <button
+                                    onClick={handleSubmit}
+
+                                    className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded-lg bg-sky-800 border-solid min-h-[46px] max-md:px-5">
+                                    {
+                                        loading ? "Booking..." : "Book Now"
+                                    }
+                                </button>
+                            </div>
                         </>
                     )}
                 </Card>
             </div>
 
+            <div className=" items-end lg:px-20 text-sm text-gray-50 flex flex-col gap-4 w-full md:w-6/12 xl:w-5/12 max-md:pl-5">
+                <div className="flex flex-col justify-center items-start py-10 w-full md:bg-sky-800 md:w-[350px] rounded-xl max-md:pr-5">
+                    <div className="flex flex-col justify-center gap-6">
+                        {services.map((service, index) => (
+                            <div className="w-full md:-ml-10" key={index}>
+                                <ServicesCard service={service} handleOpenForm={handleOpenForm} pricing={pricing} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
             <Modal isOpen={visible} onClose={handleClose}>
                 <ModalContent>
                     <ModalHeader>
-                        <h4>Add {currentService?.name} Details</h4>
+                        <h4 className='text-xl sm:text-2xl font-bold '>Add <span className='text-sky-800'>
+                            {currentService?.name} {" "}
+                        </span>
+                            Details</h4>
                     </ModalHeader>
                     <ModalBody>
                         {currentService?.id === 'transport' && (
@@ -422,12 +445,17 @@ const BookingPage: React.FC = () => {
                         )}
                     </ModalBody>
                     <ModalFooter>
-                        <Button onClick={handleClose} color="danger">
-                            Cancel
-                        </Button>
-                        <Button onClick={handleAddService} disabled={!areFieldsFilled()}>
-                            Add Service
-                        </Button>
+                        <div className="flex gap-3 items-center self-start mt-8 text-base font-normal text-center">
+                            <button onClick={handleClose} className="gap-2.5 hover:scale-105 transition-all duration-250 self-stretch px-5 py-2.5 my-auto  text-white bg-sky-800 rounded-xl max-md:px-5">
+                                Cancel
+
+                            </button>
+                            <button onClick={handleAddService} disabled={!areFieldsFilled()} className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-5 py-2.5 my-auto  text-white rounded-xl border border-[#1CAC78] bg-[#1CAC78] border-solid max-md:px-5">
+                                Add Service
+
+                            </button>
+                        </div>
+
                     </ModalFooter>
                 </ModalContent>
             </Modal>

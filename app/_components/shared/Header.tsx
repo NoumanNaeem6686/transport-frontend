@@ -66,14 +66,14 @@ export const NavigationBar: React.FC = () => {
 
                     <Link href={"/get-offer"}>
                         <div
-                            className={`${true ? "bg-sky-800 border border-sky-800 text-white hover:rotate-6 " : "border border-white hover:border-black bg-white hover:bg-black hover:text-white "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+                            className={`${false ? "bg-sky-800 border border-sky-800 text-white hover:rotate-6 " : "border border-sky-800 text-black hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
                         >
                             Get Offer
                         </div>
                     </Link>
                     <Link href={"/book-now"}>
                         <div
-                            className={`${true ? "border border-sky-800 text-black hover:rotate-6 " : "bg-black border border-black text-white hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+                            className={`${false ? "border border-sky-800 text-black hover:rotate-6 " : "bg-sky-800 border border-sky-800 text-white hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
                         >
                             Book Now
                         </div>
@@ -118,14 +118,16 @@ export const NavigationBar: React.FC = () => {
 
                                         <Link href={"/get-offer"} className='w-full'>
                                             <div
-                                                className={`${true ? "bg-black border border-black text-white hover:rotate-6 " : "border border-white hover:border-black bg-white hover:bg-black hover:text-white "}py-2 px-3  sm:px-5 w-full rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+                                                className={`${false ? "bg-sky-800 border border-sky-800 text-white hover:rotate-6 " : "border border-sky-800 text-black hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+
                                             >
                                                 Get Offer
                                             </div>
                                         </Link>
                                         <Link href={"/book-now"} className='w-full'>
                                             <div
-                                                className={`${true ? "border border-black text-black hover:rotate-6 " : "bg-black border border-black text-white hover:rotate-6  "}py-2 px-3  sm:px-5 w-full rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+                                                className={`${false ? "border border-sky-800 text-black hover:rotate-6 " : "bg-sky-800 border border-sky-800 text-white hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
+
                                             >
                                                 Book Now
                                             </div>

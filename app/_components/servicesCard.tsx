@@ -12,7 +12,7 @@ export function ServicesCard({ service, handleOpenForm, pricing }: any) {
                     }
                 }
                 className=
-                " cursor-pointer overflow-hidden relative card h-80 w-full rounded-md shadow-xl  backgroundImage flex flex-col justify-end p-4"
+                " cursor-pointer overflow-hidden relative card h-56 w-full rounded-md shadow-xl  backgroundImage flex flex-col justify-end p-4"
 
             >
                 <div className="absolute w-full h-full -z-0 top-0 left-0 transition duration-300 bg-black opacity-40 group-hover:opacity-80"></div>
@@ -46,14 +46,14 @@ export function ServicesCard({ service, handleOpenForm, pricing }: any) {
                     <p className="font-normal text-sm text-gray-50 relative z-10 my-4">
                         {service.description}
                     </p>
+                    <div className="flex items-center justify-start">
 
+                        <button
+                            onClick={() => handleOpenForm(service)}
+                            className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-5 py-2.5 my-auto text-white rounded-xl border border-[#1CAC78] bg-[#1CAC78] border-solid  max-md:px-5">
+                            Select {service.name}
 
-
-                    <div
-                        onClick={() => handleOpenForm(service)}
-                        className={`${false ? "border border-black text-black hover:rotate-6 " : "bg-transparent border-2 border-white text-white hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
-                    >
-                        Select {service.name}
+                        </button>
                     </div>
                 </div>
             </div>
