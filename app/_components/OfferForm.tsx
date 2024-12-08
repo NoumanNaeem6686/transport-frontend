@@ -140,95 +140,102 @@ const GetOffer = () => {
   ];
 
   return (
-    <div className="bg-white shadow-lg flex items-center justify-center rounded-3xl flex-col w-11/12 md:w-9/12 p-5 sm:p-10 lg:w-7/12 xl:w-6/12 2xl:w-4/12">
-      {/* User Type Selection */}
-      <div className="w-full mb-4 flex flex-col items-start">
-        <label className="text-black font-semibold text-start mb-2">
-          I am a
-        </label>
-        <Select
-          label="Select Who you are"
-          fullWidth
-          selectedKeys={formData.userType ? [formData.userType] : undefined}
-          onSelectionChange={(key) =>
-            handleChange("userType", key.currentKey as string)
-          }
-        >
-          <SelectItem key="Private">Private Individual</SelectItem>
-          <SelectItem key="Company">Company</SelectItem>
-          <SelectItem key="Student">Student</SelectItem>
-        </Select>
-      </div>
+    <div className="bg-white shadow-lg flex items-center justify-center rounded-3xl flex-col w-11/12 md:w-8/12 p-5 sm:p-10  2xl:w-7/12">
+      <div className="flex flex-col md:flex-row w-full gap-3">
 
-      {/* Name Input */}
-      <div className="w-full mb-4 flex flex-col items-start">
-        <label className="text-black font-semibold mb-2">Enter your name</label>
-        <Input
-          label="Name"
-          fullWidth
-          value={formData.name}
-          onChange={(e) => handleChange("name", e.target.value)}
-        />
-      </div>
+        <div className="w-full mb-4 flex flex-col items-start">
+          <label className="text-black font-semibold text-start mb-2">
+            I am a
+          </label>
+          <Select
+            label="Select Who you are"
+            fullWidth
+            selectedKeys={formData.userType ? [formData.userType] : undefined}
+            onSelectionChange={(key) =>
+              handleChange("userType", key.currentKey as string)
+            }
+          >
+            <SelectItem key="Private">Private Individual</SelectItem>
+            <SelectItem key="Company">Company</SelectItem>
+            <SelectItem key="Student">Student</SelectItem>
+          </Select>
+        </div>
 
-      {/* Email Input */}
-      <div className="w-full mb-4 flex flex-col items-start">
-        <label className="text-black font-semibold mb-2">
-          Enter Your Email
-        </label>
-        <Input
-          label="Enter Email"
-          fullWidth
-          type="email"
-          value={formData.email}
-          onChange={(e) => handleChange("email", e.target.value)}
-        />
-      </div>
-
-      {/* Phone Input */}
-      <div className="w-full mb-4 flex flex-col items-start">
-        <label className="text-black font-semibold mb-2">
-          Enter Your Phone Number
-        </label>
-        <Input
-          label="Enter Phone"
-          fullWidth
-          type="tel"
-          value={formData.phone}
-          onChange={(e) => handleChange("phone", e.target.value)}
-        />
-      </div>
-
-      <div className="w-full mb-4 flex flex-col items-start">
-        <label className="text-black font-semibold mb-2">Best Date range</label>
-        <Input
-          type="date"
-          label="Date Range"
-          fullWidth
-          value={formData.dateRange}
-          onChange={(e) => handleChange("dateRange", e.target.value)}
-        />
-      </div>
-      <div className="w-full mb-4 flex flex-col items-start text-black">
-        <label className="text-black font-semibold mb-2">Best time range</label>
-
-        <LocalizationProvider dateAdapter={AdapterDayjs}>
-          <TimePicker
-            // label="With Time Clock"
-            sx={{
-              width: "100%",
-              borderRadius: "25px",
-            }}
-            value={time}
-            onChange={(newValue) => setTime(newValue)}
-            viewRenderers={{
-              hours: renderTimeViewClock,
-              minutes: renderTimeViewClock,
-              seconds: renderTimeViewClock,
-            }}
+        {/* Name Input */}
+        <div className="w-full mb-4 flex flex-col items-start">
+          <label className="text-black font-semibold mb-2">Enter your name</label>
+          <Input
+            label="Name"
+            fullWidth
+            value={formData.name}
+            onChange={(e) => handleChange("name", e.target.value)}
           />
-        </LocalizationProvider>
+        </div>
+      </div>
 
+      <div className="flex flex-col md:flex-row w-full gap-3">
+
+        {/* Email Input */}
+        <div className="w-full mb-4 flex flex-col items-start">
+          <label className="text-black font-semibold mb-2">
+            Enter Your Email
+          </label>
+          <Input
+            label="Enter Email"
+            fullWidth
+            type="email"
+            value={formData.email}
+            onChange={(e) => handleChange("email", e.target.value)}
+          />
+        </div>
+
+        {/* Phone Input */}
+        <div className="w-full mb-4 flex flex-col items-start">
+          <label className="text-black font-semibold mb-2">
+            Enter Your Phone Number
+          </label>
+          <Input
+            label="Enter Phone"
+            fullWidth
+            type="tel"
+            value={formData.phone}
+            onChange={(e) => handleChange("phone", e.target.value)}
+          />
+        </div>
+      </div>
+      <div className="flex flex-col md:flex-row w-full gap-3">
+
+        <div className="w-full mb-4 flex flex-col items-start">
+          <label className="text-black font-semibold mb-2">Best Date range</label>
+          <Input
+            type="date"
+            label="Date Range"
+            fullWidth
+            value={formData.dateRange}
+            onChange={(e) => handleChange("dateRange", e.target.value)}
+          />
+        </div>
+        <div className="w-full mb-4 flex flex-col items-start text-black">
+          <label className="text-black font-semibold mb-2">Best time range</label>
+
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <TimePicker
+              // label="With Time Clock"
+              sx={{
+                width: "100%",
+                borderRadius: "25px",
+              }}
+              value={time}
+              onChange={(newValue) => setTime(newValue)}
+              viewRenderers={{
+                hours: renderTimeViewClock,
+                minutes: renderTimeViewClock,
+                seconds: renderTimeViewClock,
+              }}
+            />
+          </LocalizationProvider>
+
+        </div>
       </div>
 
       <div className="w-full mb-4 flex flex-col items-start">
@@ -367,7 +374,7 @@ const GetOffer = () => {
           fullWidth
           value={formData.specialRequirements}
           onChange={(e) => handleChange("specialRequirements", e.target.value)}
-          rows={4}
+          rows={7}
         />
       </div>
       <div className="flex items-center justify-start w-full mt-4">
@@ -379,14 +386,18 @@ const GetOffer = () => {
           I agree to the terms and conditions.
         </Checkbox>
       </div>
-      <Button
-        onClick={handleSubmit}
-        className="w-full mt-8 bg-[#4B4B4B] text-white text-lg"
-      >
-        {
-          loading ? "Submitting..." : "Submit"
-        }
-      </Button>
+
+      <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center justify-end w-full">
+        <button
+          onClick={handleSubmit}
+
+          className="gap-2.5 hover:scale-105 transition-all duration-250 self-stretch px-9 py-3.5 my-auto sm:w-48 text-white bg-sky-800 rounded min-h-[46px] max-md:px-5">
+          {
+            loading ? "Sending..." : "Send"
+          }
+        </button>
+
+      </div>
     </div>
   );
 };
