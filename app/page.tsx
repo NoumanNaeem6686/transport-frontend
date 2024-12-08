@@ -4,6 +4,8 @@ import { AboutSection } from './_components/Home/About'
 import { ServicesSection } from './_components/Home/Services'
 import ProcessSection from './_components/Home/Processing'
 import { WhyUs } from './_components/Home/WhyUs'
+import Reviews from './_components/Reviews'
+import { FAQTWO } from './_components/Home/FAQ'
 
 function page() {
   return (
@@ -13,11 +15,14 @@ function page() {
       <ServicesSection />
       <ProcessSection />
       <WhyUs />
+      <Reviews />
+      <FAQTWO />
       {/* <ServicesSlider /> */}
       {/* <AboutUs /> */}
-      {/* <HowItWorks /> */}
+      {/*
+       <HowItWorks /> */}
+      {/*
 
-      {/* <Reviews />
       <LocationArea />
       <FAQ /> */}
 
