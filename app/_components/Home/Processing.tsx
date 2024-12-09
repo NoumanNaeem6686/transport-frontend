@@ -45,11 +45,11 @@ const ProcessSection: React.FC = () => {
         <div className="flex flex-col  xl:px-20 px-5 mt-20">
             <div className="flex flex-wrap gap-10 items-end w-full leading-none uppercase max-md:max-w-full">
                 <div className="flex flex-col flex-1 shrink basis-0 min-w-[240px] max-md:max-w-full">
-                    <div className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl font-bold text-emerald-500 tracking-[5.52px] max-md:max-w-full">
+                    <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl font-bold text-emerald-500 tracking-[5.52px] max-md:max-w-full">
                         <div className="shrink-0 self-stretch my-auto h-0.5 border-2 border-emerald-500 border-solid w-[50px] sm:w-[86px]" />
                         <div className="self-stretch my-auto">Our Process</div>
                     </div>
-                    <div className="mt-4 text-3xl sm:text-4xl font-semibold text-black w-full">
+                    <div data-aos="fade-up-right" className="mt-4 text-3xl sm:text-4xl font-semibold text-black w-full">
                         <span className="font-bold leading-10 text-neutral-800">What Our </span>
                         <span className="font-bold leading-10 text-sky-800">Process</span>
                     </div>

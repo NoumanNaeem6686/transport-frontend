@@ -33,11 +33,11 @@ export const FAQTWO: React.FC = () => {
         <div className="flex flex-col justify-center items-center bg-white bg-opacity-40 w-full mt-20">
             <div className="flex gap-10 items-end max-w-full uppercase w-11/12">
                 <div className="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
-                    <div className="flex flex-wrap gap-6 items-center w-full text-2xl font-bold leading-none text-emerald-500 whitespace-nowrap tracking-[5.52px] max-md:max-w-full">
+                    <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-2xl font-bold leading-none text-emerald-500 whitespace-nowrap tracking-[5.52px] max-md:max-w-full">
                         <div className="shrink-0 self-stretch my-auto h-0.5 border-2 border-emerald-500 border-solid w-[86px]" />
                         <div className="self-stretch my-auto">FAQ'S</div>
                     </div>
-                    <div className="mt-4 text-4xl font-semibold leading-tight text-sky-800 max-md:max-w-full">
+                    <div data-aos="fade-up-right" className="mt-4 text-4xl font-semibold leading-tight text-sky-800 max-md:max-w-full">
                         <span className="font-bold">Looking </span>
                         <span className="font-bold text-sky-800">for answers </span>
                         <span className="font-bold">?</span>
