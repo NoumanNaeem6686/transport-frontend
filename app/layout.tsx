@@ -24,7 +24,7 @@ export default async function RootLayout({
           <AOSProvider>
             {/* <Navbar /> */}
             <NavigationBar />
-            <div className="pt-10 max-w-[1440px] ">
+            <div className="pt-10 max-w-screen">
               {children}
             </div>
             <Footer />

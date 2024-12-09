@@ -315,7 +315,11 @@ const BookingPage: React.FC = () => {
                                             .filter(([key]) => !['id', 'name', 'description', 'image'].includes(key))
                                             .map(([key, value]) => (
                                                 <li key={key} className='text-lg capitalize'>
-                                                    {key}: {value}
+                                                    {key}:
+                                                    {key === 'hours' ? ` ${value} ${value > 1 ? "Hours" : "Hour"} ` :
+                                                        key === 'distance' ? `${value} km` :
+                                                            key === 'area' ? `${value} sq ft` :
+                                                                value}
                                                 </li>
                                             ))}
                                     </ul>

@@ -1,5 +1,6 @@
 "use client";
 
+import { ChevronDown, ChevronUp } from "lucide-react";
 import * as React from "react";
 
 const faqData: any[] = [
@@ -43,15 +44,23 @@ export const FAQTWO: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col mt-10 max-w-full w-10/12">
+            <div className="flex flex-col mt-10 w-10/12">
                 {faqData.map((faq, index) => (
                     <div
                         key={index}
                         className={`flex overflow-hidden flex-col py-8 pr-11 pl-3.5 mt-10 w-full rounded-xl border border-solid bg-slate-100 border-sky-800 border-opacity-70 max-w-[1074px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] max-md:pr-5 max-md:max-w-full cursor-pointer`}
                         onClick={() => toggleFAQ(index)}
                     >
-                        <div className="flex flex-wrap gap-10 items-center text-xl font-semibold leading-relaxed text-zinc-800 max-md:mr-2 max-md:max-w-full">
+                        <div className="flex w-full justify-between flex-wrap gap-10 items-center text-xl font-semibold leading-relaxed text-zinc-800 max-md:mr-2 max-md:max-w-full">
                             <div className="self-stretch my-auto">{faq.question}</div>
+
+                            {expandedIndex === index ?
+                                <ChevronUp />
+                                :
+                                <ChevronDown />
+
+
+                            }
                         </div>
                         {expandedIndex === index && (
                             <div className="mt-2.5 text-lg leading-8 text-stone-900 text-opacity-80 max-md:max-w-full">

@@ -74,8 +74,8 @@ export function HeaderDrawer({
                         </VaulHeader.Trigger>
                     }
                     <VaulHeader.Portal>
-                        <VaulHeader.Overlay className="fixed inset-0 dark:bg-black/40 bg-white/50 backdrop-blur-sm z-50  " />
-                        <VaulHeader.Content className="dark:bg-gray-900 bg-white  border-b z-50 w-[300px] h-full py-3 fixed top-0 left-0">
+                        <VaulHeader.Overlay className="fixed inset-0  bg-white/50 backdrop-blur-sm z-50  " />
+                        <VaulHeader.Content className=" bg-white  border-b z-50 w-[300px] h-full py-3 fixed top-0 left-0">
                             <>
                                 <div className='w-full flex justify-end pr-7 cursor-pointer' onClick={() => setOpen(false)}>
                                     <X />

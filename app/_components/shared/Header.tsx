@@ -88,7 +88,7 @@ export const NavigationBar: React.FC = () => {
                             return <button><MenuIcon /></button>
                         }}>
                         <DrawerContent>
-                            <figure className=' w-[300px] h-full  flex flex-col'>
+                            <figure className=' w-[300px] h-full  flex flex-col bg-white'>
                                 <div className='p-5 flex-grow  h-full w-full flex flex-col justify-between pb-4'>
                                     <div className='flex-grow  w-full flex flex-col mt-3'>
 
