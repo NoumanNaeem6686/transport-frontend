@@ -15,6 +15,7 @@ import { LocalizationProvider, renderTimeViewClock } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
 import { toast } from 'sonner';
+import { CheckOut } from '../_components/CheckOut';
 
 const pricing = {
     transport: {
@@ -346,7 +347,7 @@ const BookingPage: React.FC = () => {
                                 {isWorking && <span className="text-green-600"> (50% off applied)</span>}
                             </h4>
 
-                            <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center w-full justify-end">
+                            {/* <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center w-full justify-end">
                                 <button
                                     onClick={handleSubmit}
 
@@ -355,7 +356,10 @@ const BookingPage: React.FC = () => {
                                         loading ? "Booking..." : "Book Now"
                                     }
                                 </button>
-                            </div>
+                            </div> */}
+                            <CheckOut totalCost={totalCost} />
+
+
                         </>
                     )}
                 </Card>
