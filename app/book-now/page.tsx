@@ -78,19 +78,19 @@ const BookingPage: React.FC = () => {
         {
             id: 'transport',
             name: 'Transport',
-            description: 'Book a transport service. We offer reliable and efficient transportation solutions for your needs.',
+            description: 'Book a transport service. ',
             image: '/get-car.jpg',
         },
         {
             id: 'helper',
             name: 'Helper',
-            description: 'Hire helpers for moving. Our team assists in packing, loading, and unloading efficiently and safely.',
+            description: 'Hire helpers for moving.',
             image: '/helper.jpg',
         },
         {
             id: 'cleaning',
             name: 'Cleaning',
-            description: 'Get your space cleaned. We provide thorough cleaning services to make your place spotless and fresh.',
+            description: 'Get your space cleaned.',
             image: '/cleaning.jpg',
         },
     ];

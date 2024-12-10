@@ -3,7 +3,7 @@
 export function ServicesCard({ service, handleOpenForm, pricing }: any) {
     console.log("🚀 ~ ServicesCard ~ service:", service)
     return (
-        <div className="w-full group/card overflow-hidden rounded-xl group">
+        <div className="w-[250px] sm:w-[300px] group/card overflow-hidden rounded-xl group">
             <div
                 style={
                     {

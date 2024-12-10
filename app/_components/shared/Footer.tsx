@@ -80,7 +80,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="sm:col-span-2 hidden sm:flex">
+                <div className="sm:col-span-2 hidden sm:flex flex-col">
 
                     <p className="text-base font-bold tracking-wide text-gray-900">Maps Location</p>
                     <div className="h-60 mt-5 rounded-xl overflow-hidden">
