@@ -29,6 +29,8 @@ const GetOffer = () => {
     services: [],
     from: "",
     to: "",
+    hours: "",
+    distance: "",
     helpers: "",
     workers: "",
     spaceSize: "",
@@ -108,6 +110,8 @@ const GetOffer = () => {
         services: [],
         from: "",
         to: "",
+        hours: "",
+        distance: "",
         vanType: "",
         helpers: "",
         workers: "",
@@ -299,6 +303,15 @@ const GetOffer = () => {
               onChange={(e) => handleChange("to", e.target.value)}
             />
           </div>
+          <div className="w-full mb-4 flex flex-col items-start">
+            <label className="text-black font-semibold mb-2">Distance</label>
+            <Input
+              label="Distance in KMs"
+              fullWidth
+              value={formData.distance}
+              onChange={(e) => handleChange("distance", e.target.value)}
+            />
+          </div>
           {/* Uncomment and use if vanType is needed
           <div className="w-full mb-4 flex flex-col items-start">
             <label className="text-black font-semibold mb-2">Van type</label>
@@ -350,19 +363,31 @@ const GetOffer = () => {
         </>
       )}
       {formData.services.includes("Helper") && (
-        <div className="w-full mb-4 flex flex-col items-start">
-          <label className="text-black font-semibold mb-2">
-            Number of helpers
-          </label>
-          <Input
-            label="Helpers"
-            type="number"
-            fullWidth
-            value={formData.helpers}
-            onChange={(e) => handleChange("helpers", e.target.value)}
-            min={1}
-          />
-        </div>
+        <>
+          <div className="w-full mb-4 flex flex-col items-start">
+            <label className="text-black font-semibold mb-2">
+              Number of helpers
+            </label>
+            <Input
+              label="Helpers"
+              type="number"
+              fullWidth
+              value={formData.helpers}
+              onChange={(e) => handleChange("helpers", e.target.value)}
+              min={1}
+            />
+          </div>
+          <div className="w-full mb-4 flex flex-col items-start">
+            <label className="text-black font-semibold mb-2">Hours</label>
+            <Input
+              label="Helpers Hours require"
+              fullWidth
+              value={formData.hours}
+              onChange={(e) => handleChange("hours", e.target.value)}
+            />
+          </div>
+        </>
+
       )}
 
       <div className="w-full mb-4 flex flex-col items-start">
