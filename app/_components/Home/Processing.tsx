@@ -76,9 +76,9 @@ const ProcessSection: React.FC = () => {
                                     {processSteps[activeIndex].description}
                                 </div>
                             </div>
-                            <Link href="/get-offer">
-                                <button className="gap-2.5 hover:scale-105 duration-300 self-end px-9 py-3.5 mt-6 w-48 max-w-full text-base font-medium text-center text-white uppercase bg-sky-800 rounded min-h-[46px] max-md:px-5">
-                                    Get Offer
+                            <Link href="book-now">
+                                <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 mt-10 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
+                                    Book Now
                                 </button>
                             </Link>
                         </div>

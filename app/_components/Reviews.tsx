@@ -66,7 +66,7 @@ const Reviews = () => {
     };
 
     return (
-        <div className="flex items-center px-3 sm:px-7">
+        <div className="flex items-center px-3 sm:px-7 max-w-[100vw]">
             <img src="/review.png" alt="" className="h-96 rounded-xl hidden lg:flex" />
 
             <div className="flex flex-col gap-y-8 flex-wrap max-w-sm sm:max-w-2xl mx-auto">
@@ -128,7 +128,7 @@ const Reviews = () => {
 
                             <SwiperSlide
                                 key={index}
-                                className="flex flex-col items-center justify-center w-full h-full p-4 sm:p-8 rounded-xl lg:p-10 bg-gray-100"
+                                className="flex flex-col items-center justify-center max-w-screen-sm overflow-x-hidden sm:w-full h-full p-4 sm:p-8 rounded-xl lg:p-10 bg-gray-100"
                             >
                                 <div className="flex flex-col gap-4">
                                     <svg className="h-6 w-6  text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none"

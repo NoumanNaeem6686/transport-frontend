@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link';
 import * as React from 'react';
 
 const checklistItems = [
@@ -54,12 +55,11 @@ export const AboutSection: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <button
-                        className="gap-2.5 self-stretch px-9 py-3.5 mt-5 w-48 max-w-full text-base font-medium text-center text-white uppercase bg-sky-800 rounded min-h-[46px] max-md:px-5"
-                        type="button"
-                    >
-                        Get Offer
-                    </button>
+                    <Link href="book-now">
+                        <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
+                            Book Now
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

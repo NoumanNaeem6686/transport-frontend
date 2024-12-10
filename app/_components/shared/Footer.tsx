@@ -80,7 +80,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className="sm:col-span-2">
+                <div className="sm:col-span-2 hidden sm:flex">
 
                     <p className="text-base font-bold tracking-wide text-gray-900">Maps Location</p>
                     <div className="h-60 mt-5 rounded-xl overflow-hidden">
@@ -91,7 +91,7 @@ function Footer() {
                 </div>
             </div>
 
-            <div className="flex flex-col-reverse bg-black justify-between py-5 md:px-24 lg:px-8 px-4 border-t lg:flex-row">
+            <div className="flex items-center gap-3 sm:gap-0 justify-center flex-col-reverse bg-black sm:justify-between py-5 md:px-24 lg:px-8 px-4 border-t lg:flex-row">
                 <p className="text-sm text-white">
                     © {new Date().getFullYear()} Moving and More. All rights reserved.
                 </p>
