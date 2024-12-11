@@ -11,9 +11,9 @@ function Footer() {
                         <img src="/t.png" className="h-24 w-auto" alt="Company Logo" />
                     </Link>
                     <div className="lg:max-w-sm">
-                        <p className="text-sm text-gray-800">
+                        {/* <p className="text-sm text-gray-800">
                         Vi är specialiserade på att erbjuda förstklassiga tjänster för städning, flytthjälp och transport. Oavsett om du planerar att flytta, behöver extra hjälp eller vill ha ditt utrymme städat till perfektion, är vi här för att få det att hända.
-                        </p>
+                        </p> */}
                         <div className="flex items-center my-2 space-x-3">
                             <Link href="/" className="text-gray-500 transition-colors duration-300 hover:text-[#4B4B4B]">
                                 <svg viewBox="0 0 24 24" fill="currentColor" className="h-5">
@@ -28,7 +28,7 @@ function Footer() {
                             </Link>
                         </div>
                         <p className=" text-sm text-gray-500">
-                        Följ oss för uppdateringar och exklusiva erbjudanden.
+                            Följ oss för uppdateringar och exklusiva erbjudanden.
                         </p>
                     </div>
                 </div>
@@ -44,11 +44,11 @@ function Footer() {
                             Om US
                         </Link>
                         <Link href={'/partner'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                        Bli partner
+                            Bli partner
                         </Link>
 
                         <Link href={'/work'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                        Arbeta med oss
+                            Arbeta med oss
                         </Link>
                     </div>
 
