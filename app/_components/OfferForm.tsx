@@ -159,9 +159,9 @@ const GetOffer = () => {
               handleChange("userType", key.currentKey as string)
             }
           >
-             <SelectItem key="Private">Privatperson</SelectItem>
-          <SelectItem key="Company">Företag</SelectItem>
-          <SelectItem key="Student">Student</SelectItem>
+            <SelectItem key="Private">Privatperson</SelectItem>
+            <SelectItem key="Company">Företag</SelectItem>
+            <SelectItem key="Student">Student</SelectItem>
           </Select>
         </div>
 
@@ -182,7 +182,7 @@ const GetOffer = () => {
         {/* Email Input */}
         <div className="w-full mb-4 flex flex-col items-start">
           <label className="text-black font-semibold mb-2">
-          Skriv in din e-postadress
+            Skriv in din e-postadress
           </label>
           <Input
             label="Enter Email"
@@ -196,7 +196,7 @@ const GetOffer = () => {
         {/* Phone Input */}
         <div className="w-full mb-4 flex flex-col items-start">
           <label className="text-black font-semibold mb-2">
-          Skriv in ditt telefonnummer
+            Skriv in ditt telefonnummer
           </label>
           <Input
             label="Enter Phone"
@@ -244,7 +244,7 @@ const GetOffer = () => {
 
       <div className="w-full mb-4 flex flex-col items-start">
         <label className="text-black font-semibold mb-2">
-        Välj tjänst(er)
+          Välj tjänst(er)
         </label>
         <Checkbox
           isSelected={selectAll}
@@ -266,7 +266,7 @@ const GetOffer = () => {
       {formData.services.length > 0 && (
         <div className="w-full mb-4 flex flex-col items-start">
           <label className="text-black font-semibold mb-2">
-          Arbetsfrekvens
+            Arbetsfrekvens
           </label>
           <Select
             label="Frequency"
@@ -336,7 +336,7 @@ const GetOffer = () => {
         <>
           <div className="w-full mb-4 flex flex-col items-start">
             <label className="text-black font-semibold mb-2">
-            Antal städare
+              Antal städare
             </label>
             <Input
               label="Cleaners"
@@ -349,7 +349,7 @@ const GetOffer = () => {
           </div>
           <div className="w-full mb-4 flex flex-col items-start">
             <label className="text-black font-semibold mb-2">
-            Ytstorlek (kvm)
+              Ytstorlek (kvm)
             </label>
             <Input
               label="Space Size"
@@ -363,11 +363,11 @@ const GetOffer = () => {
         </>
       )}
       {formData.services.includes("Helper") && (
-<<<<<<< HEAD
+
         <>
           <div className="w-full mb-4 flex flex-col items-start">
             <label className="text-black font-semibold mb-2">
-              Number of helpers
+              Antal hjälpare
             </label>
             <Input
               label="Helpers"
@@ -379,7 +379,7 @@ const GetOffer = () => {
             />
           </div>
           <div className="w-full mb-4 flex flex-col items-start">
-            <label className="text-black font-semibold mb-2">Hours</label>
+            <label className="text-black font-semibold mb-2">Timmar</label>
             <Input
               label="Helpers Hours require"
               fullWidth
@@ -388,27 +388,13 @@ const GetOffer = () => {
             />
           </div>
         </>
-
-=======
-        <div className="w-full mb-4 flex flex-col items-start">
-          <label className="text-black font-semibold mb-2">
-          Antal hjälpare
-          </label>
-          <Input
-            label="Helpers"
-            type="number"
-            fullWidth
-            value={formData.helpers}
-            onChange={(e) => handleChange("helpers", e.target.value)}
-            min={1}
-          />
-        </div>
->>>>>>> 2318c83 (translation)
       )}
 
       <div className="w-full mb-4 flex flex-col items-start">
         <label className="text-black font-semibold mb-2">
-        Speciella krav:
+          Speciella krav:
+
+
         </label>
         <Textarea
           label="Special Requirements"
