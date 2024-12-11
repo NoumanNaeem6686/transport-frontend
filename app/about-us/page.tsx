@@ -55,38 +55,38 @@ function page() {
                 <div className="container mx-auto px-4">
                     <div className="row flex flex-wrap">
                         <div className="content-column order-2 lg:order-1 lg:w-1/2 w-full z-10">
-                        <div className="inner-column lg:pl-8">
+                            <div className="inner-column lg:pl-8">
 
-<div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
-    <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
-        <div className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]" />
-        <div className="self-stretch text-[#1CAC78] my-auto">Om Oss</div>
-    </div>
-    <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
-        Förenkla <span className="text-sky-800">Flytt och transport</span> med Excellens
-    </div>
-</div>
-<p className="text-gray-500 text-base leading-relaxed my-8">
-    På vårt företag tror vi på att göra livet enklare genom att erbjuda pålitliga och effektiva lösningar för flytt, städning
-    och transport. Oavsett om det handlar om att hjälpa dig att flytta, erbjuda professionella städtjänster eller
-    säkerställa punktlig transport.
-</p>
-<ul className="list-style-one space-y-3 mb-8">
-    <li className="relative pl-8 text-gray-800">
-        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
-        Över ett decennium av erfarenhet inom flytt och transporttjänster
-    </li>
-    <li className="relative pl-8 text-gray-800">
-        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
-        Betrodd av mer än 100 000 nöjda kunder världen över
-    </li>
-    <li className="relative pl-8 text-gray-800">
-        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
-        Verksam på över 20 platser för att bättre kunna hjälpa dig
-    </li>
-</ul>
+                                <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
+                                    <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+                                        <div className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]" />
+                                        <div className="self-stretch text-[#1CAC78] my-auto">Om Oss</div>
+                                    </div>
+                                    <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
+                                        Förenkla <span className="text-sky-800">Flytt och transport</span> med Excellens
+                                    </div>
+                                </div>
+                                <p className="text-gray-500 text-base leading-relaxed my-8">
+                                    På vårt företag tror vi på att göra livet enklare genom att erbjuda pålitliga och effektiva lösningar för flytt, städning
+                                    och transport. Oavsett om det handlar om att hjälpa dig att flytta, erbjuda professionella städtjänster eller
+                                    säkerställa punktlig transport.
+                                </p>
+                                <ul className="list-style-one space-y-3 mb-8">
+                                    <li className="relative pl-8 text-gray-800">
+                                        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
+                                        Över ett decennium av erfarenhet inom flytt och transporttjänster
+                                    </li>
+                                    <li className="relative pl-8 text-gray-800">
+                                        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
+                                        Betrodd av mer än 100 000 nöjda kunder världen över
+                                    </li>
+                                    <li className="relative pl-8 text-gray-800">
+                                        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
+                                        Verksam på över 20 platser för att bättre kunna hjälpa dig
+                                    </li>
+                                </ul>
 
-</div>
+                            </div>
 
                         </div>
 
@@ -122,14 +122,14 @@ function page() {
                                     <h1 className="text-2xl sm:text-4xl font-bold text-sky-800 ">
                                         <span className="text-zinc-800">Reliable {" "}</span>
                                         <span className='text-[#1CAC78]'>
-                                        Flytt och Transport{' '}
+                                            Flytt och Transport{' '}
                                         </span>
                                         <span className="text-zinc-800">Services</span>
                                     </h1>
                                     <p className="text-gray-500 text-base font-normal leading-relaxed text-start">
-                                    På vårt företag är vi engagerade i att förenkla livet genom att erbjuda pålitliga flytt- och 
-                                    transportlösningar. Oavsett om det handlar om en lokal flytt eller en långdistansflytt är vårt mål att 
-                                    säkerställa en stressfri upplevelse för varje kund.
+                                        På vårt företag är vi engagerade i att förenkla livet genom att erbjuda pålitliga flytt- och
+                                        transportlösningar. Oavsett om det handlar om en lokal flytt eller en långdistansflytt är vårt mål att
+                                        säkerställa en stressfri upplevelse för varje kund.
                                     </p>
                                 </div>
 
@@ -141,13 +141,13 @@ function page() {
                                     <div className="flex-col justify-start items-start inline-flex">
                                         <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">157k+</h3>
                                         <h6 className="text-gray-500 text-base font-normal leading-relaxed">
-                                        kunder betjänade
+                                            kunder betjänade
                                         </h6>
                                     </div>
                                     <div className="flex-col justify-start items-start inline-flex">
                                         <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">10+</h3>
                                         <h6 className="text-gray-500 text-base font-normal leading-relaxed">
-                                        Aktiva servicelokationer
+                                            Aktiva servicelokationer
                                         </h6>
                                     </div>
                                 </div>
@@ -198,17 +198,19 @@ function page() {
                                                 <div className="self-stretch text-[#1CAC78] my-auto">Vår framgång i siffror</div>
                                             </div>
                                             <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
-                                            På vårt företag är vi engagerade i att förenkla livet genom att erbjuda pålitliga flytt- och
-                                             transportlösningar. Oavsett om det handlar om en lokal flytt eller en långdistansflytt, är vårt mål att säkerställa 
-                                            en stressfri upplevelse för varje kund. <span className="text-sky-800">Flytt, transport och städning</span>  Tjänster
+                                                Enkla flytt. <br />
+                                                Lokal eller lång. <br />
+                                                <span className="text-sky-800">Flytt & städ.</span>
                                             </div>
+
+
                                         </div>
 
                                         <p
                                             className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
-                                            
+
                                             Vi är dedikerade till att förenkla liv genom att erbjuda pålitliga flytt- och transportlösningar.
-                                            Oavsett om det är en lokal flytt eller en långdistansflytt, 
+                                            Oavsett om det är en lokal flytt eller en långdistansflytt,
                                             är vårt uppdrag att säkerställa en stressfri upplevelse för varje kund.
                                         </p>
                                     </div>
@@ -222,8 +224,8 @@ function page() {
                                         </div>
                                         <div
                                             className="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">157k+ 
-                                            Kunder</h4>
+                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">157k+
+                                                Kunder</h4>
                                             <p className="text-gray-500 text-base font-normal leading-relaxed">Betjänade </p>
                                         </div>
                                     </div>

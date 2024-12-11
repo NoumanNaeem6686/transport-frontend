@@ -4,12 +4,12 @@ import React from 'react'
 function LocationArea() {
     return (
         <section className="flex flex-col  items-center justify-center py-16 px-4 ">
-            <div className=" w-full lg:w-6/12 xl:w-1/2 flex flex-col items-start justify-center ">
-            <h2 data-aos="fade-up"
-    data-aos-anchor-placement="top-bottom" className="text-4xl lg:text-6xl text-center font-bold text-gray-800">Behöver du våra tjänster i ditt område?</h2>
-<p className="text-lg text-gray-600 leading-relaxed my-4 mb-10 text-center">
-    Vi erbjuder pålitliga flytt- och transportlösningar över ett brett geografiskt område. Är du osäker på om vi täcker ditt område? Skicka oss dina uppgifter för att ta reda på hur vi kan hjälpa till.
-</p>
+            <div className=" w-full lg:w-7/12 xl:w-8/12 flex flex-col items-start justify-center ">
+                <h2 data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom" className="text-4xl lg:text-6xl text-center font-bold text-gray-800">Behöver du våra tjänster i ditt område?</h2>
+                <p className="text-lg text-gray-600 leading-relaxed my-4 mb-10 text-center">
+                    Vi erbjuder pålitliga flytt- och transportlösningar över ett brett geografiskt område. Är du osäker på om vi täcker ditt område? Skicka oss dina uppgifter för att ta reda på hur vi kan hjälpa till.
+                </p>
 
 
             </div>

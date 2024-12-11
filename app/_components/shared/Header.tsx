@@ -5,8 +5,11 @@ import { Facebook, Mail, MenuIcon, Phone, Twitter, Youtube } from 'lucide-react'
 import Link from 'next/link';
 import * as React from 'react';
 import { DrawerContent, HeaderDrawer } from '../Dialog';
+import { usePathname } from 'next/navigation';
 export const NavigationBar: React.FC = () => {
     const [sidebarOpen, setSidebarOpen] = React.useState(false)
+    const currentPath = usePathname()
+    console.log("🚀 ~ currentPath:", currentPath)
     return (
         <div className="flex flex-col w-full max-md:max-w-full absolute top-0 z-30">
             <section className=" z-50 bg-sky-800 text-white ">
@@ -45,20 +48,20 @@ export const NavigationBar: React.FC = () => {
                         data-aos="fade-left"
                         className="hidden lg:flex flex-wrap gap-8 items-center self-stretch my-auto min-w-[240px] max-md:max-w-full">
 
-                        <Link href={'/'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                        <Link href={'/'} className={`${currentPath == "/" ? "text-sky-800 font-bold" : "text-black"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                             Hem
                         </Link>
-                        <Link href={'/about-us'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                        Om oss
+                        <Link href={'/about-us'} className={`${currentPath == "/about-us" ? "text-sky-800 font-bold" : "text-black"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                            Om oss
                         </Link>
-                        <Link href={'/partner'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                        Bli partner
+                        <Link href={'/partner'} className={`${currentPath == "/partner" ? "text-sky-800 font-bold" : "text-black"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                            Bli partner
                         </Link>
                         {/* <Link href={'/services'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                             Our Services
                         </Link> */}
-                        <Link href={'/work'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                        Arbeta med oss
+                        <Link href={'/work'} className={`${currentPath == "/work" ? "text-sky-800 font-bold" : "text-black"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
+                            Arbeta med oss
                         </Link>
                     </div>
                 </div>
@@ -66,7 +69,7 @@ export const NavigationBar: React.FC = () => {
 
                     <Link href={"/get-offer"}>
                         <div
-                            className={`${false ? "border border-[#1CAC78] bg-[#1CAC78] text-white hover:rotate-6 " : "bg-sky-800 border border-sky-800 text-white hover:rotate-6 "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base  transition-all`}
+                            className={`${false ? "border border-[#1CAC78] bg-[#1CAC78] text-white hover:rotate-6 " : "bg-sky-800 border border-sky-800 text-white hover:rotate-6 "} py-2 px-3  sm:px-5 min-w-[150px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base  transition-all`}
                         >
                             Få erbjudande
                         </div>
@@ -97,19 +100,19 @@ export const NavigationBar: React.FC = () => {
                                         </Link>
                                         <div className='flex flex-col items-start gap-6 mr-3 mt-5'>
                                             <Link href={'/'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                            Hem
+                                                Hem
                                             </Link>
                                             <Link href={'/about-us'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                            Om oss
+                                                Om oss
                                             </Link>
                                             <Link href={'/partner'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                            Bli partner
+                                                Bli partner
                                             </Link>
                                             {/* <Link href={'/services'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                                                 Our Services
                                             </Link> */}
                                             <Link href={'/work'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                            Arbeta med oss
+                                                Arbeta med oss
 
                                             </Link>
                                         </div>

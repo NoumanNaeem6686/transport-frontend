@@ -5,6 +5,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import ScrollBaseAnimation from '../text-marquee';
 import Image from 'next/image';
 import { motion, useAnimation } from 'framer-motion';
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
 const statistics = [
     { title: 'Relocation', value: 20, suffix: '+' },
@@ -65,52 +70,129 @@ const Counter = ({ from, to, suffix }: any) => {
 };
 
 export const TransportPage: React.FC = () => {
+    const slides = [
+        {
+            title: (
+                <h1 data-aos="fade-right" className="text-6xl font-bold text-sky-800 leading-[73px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
+                    <span className="text-zinc-800">Transportlösningar</span>{' '}
+                    <span className="text-[#1CAC78]">gjorda</span>{' '}
+                    <span className="text-zinc-800">enkla.</span>
+                </h1>
+            ),
+            discription: (
+                <p data-aos="fade-up-right" className="mt-8 text-lg leading-7 text-zinc-800 max-md:max-w-full">
+                    Vi erbjuder pålitliga transportlösningar som är anpassade för att passa dina behov. Oavsett
+                    om det är en enkel flytt eller en komplex leverans, gör vi det enkelt och smidigt för dig.
+                </p>
+            ),
+            image: "/transport.png",
+        },
+        {
+            title: (
+                <h1 data-aos="fade-right" className="text-6xl font-bold text-sky-800 leading-[73px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
+                    <span className="text-zinc-800">Professionell</span>{' '}
+                    <span className="text-[#1CAC78]">rengöring</span>{' '}
+                    <span className="text-zinc-800">för dig.</span>
+                </h1>
+            ),
+            discription: (
+                <p data-aos="fade-up-right" className="mt-8 text-lg leading-7 text-zinc-800 max-md:max-w-full">
+                    Våra professionella rengöringstjänster säkerställer att ditt hem eller kontor är skinande rent
+                    och redo för användning. Upplev en renare miljö med vår hjälp.
+                </p>
+            ),
+            image: "/cleaner.png",
+        },
+        {
+            title: (
+                <h1 data-aos="fade-right" className="text-6xl font-bold text-sky-800 leading-[73px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
+                    <span className="text-zinc-800">Flyttning</span>{' '}
+                    <span className="text-[#1CAC78]">utan stress</span>{' '}
+                    <span className="text-zinc-800">eller krångel.</span>
+                </h1>
+            ),
+            discription: (
+                <p data-aos="fade-up-right" className="mt-8 text-lg leading-7 text-zinc-800 max-md:max-w-full">
+                    Låt våra pålitliga hjälpare göra din flytt enkel och smidig. Från packning till transport – vi
+                    tar hand om allt för dig.
+                </p>
+            ),
+            image: "/helper_main.png",
+        },
+    ];
+
     return (
-        <div className="flex flex-col w-full relative">
-            <Image layout="fill" src="/Frame 427319221.png" alt="" className="object-cover" />
-            <div className="flex relative flex-col justify-center items-start px-20 py-36 mt-0 w-full max-md:px-5 max-md:py-24 max-md:max-w-full">
-                <div className="flex z-0 flex-col justify-between max-w-full min-h-[348px] lg:w-[559px]">
-                    <h1 data-aos="fade-right" className="text-6xl font-bold text-sky-800 leading-[73px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
-                        <span className="text-zinc-800">Att flytta</span> behöver{' '}
-                        <span className="text-[#1CAC78]">  inte {' '}</span>
-                        <span className="text-zinc-800">vara svårt.</span>
-                    </h1>
-                    <p data-aos="fade-up-right" className="mt-8 text-lg leading-7 text-zinc-800 max-md:max-w-full">
-                        Whether you're relocating, need professional cleaning, or reliable transport solutions, we
-                        provide tailored services to meet your needs. Experience seamless and efficient assistance at
-                        every step.
-                    </p>
-                    <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center">
-                        <Link href="get-offer">
-                            <button className="gap-2.5 hover:scale-105 transition-all duration-250 self-stretch px-9 py-3.5 my-auto sm:w-48 text-white bg-sky-800 rounded min-h-[46px] max-md:px-5">
-                                Få erbjudande
-                            </button>
-                        </Link>
-                        <Link href="book-now">
-                            <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
-                                Boka nu
-                            </button>
-                        </Link>
-                    </div>
-                </div>
-                <div className="hidden lg:flex absolute z-0 flex-col max-w-full font-semibold text-white right-[77px] top-[140px] w-[187px]">
-                    {statistics.map((stat, index) => (
-                        <div key={index} className={index > 0 ? 'mt-10' : ''}>
-                            <div className="flex flex-col pl-9 w-full whitespace-nowrap max-w-[187px] max-md:pl-5">
-                                <div className="self-start text-2xl leading-none text-right uppercase">
-                                    {stat.title}
+        <div className='relative w-full'>
+            <Swiper
+                slidesPerView={1}
+                spaceBetween={28}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: true,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                loop={true}
+                modules={[Navigation, Autoplay, Pagination]}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                        spaceBetween: 28,
+                    },
+                }}
+            >
+                {slides.map((slide, index) => (
+                    <SwiperSlide key={index}>
+                        <div className="flex flex-col w-full relative ">
+                            <Image layout="fill" src={slide.image} alt="" className="object-cover z-0" />
+                            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/30 to-black/70 z-[1]"></div>
+
+                            <div className="z-20 flex relative flex-col justify-center items-start px-20 py-36 mt-0 w-full max-md:px-5 max-md:py-24 max-md:max-w-full">
+                                <div className="flex z-0 flex-col justify-between max-w-full min-h-[348px] lg:w-[559px]">
+                                    {slide.title}
+                                    {slide.discription}
+                                    <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center">
+                                        <Link href="get-offer">
+                                            <button className="gap-2.5 hover:scale-105 transition-all duration-250 self-stretch px-9 py-3.5 my-auto sm:w-48 text-white hover:bg-sky-900 bg-sky-800 rounded min-h-[46px] max-md:px-5">
+                                                Få erbjudande
+                                            </button>
+                                        </Link>
+                                        <Link href="book-now">
+                                            <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 hover:bg-emerald-600 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
+                                                Boka nu
+                                            </button>
+                                        </Link>
+                                    </div>
                                 </div>
-                                <div className="flex gap-2.5 self-end mt-2 max-md:mr-0.5">
-                                    <Counter from={0} to={stat.value} suffix={stat.suffix} />
-                                </div>
+
+                            </div>
+                            <div className="overflow-hidden z-10 gap-2.5 self-center px-2.5 py-12 mb-10 w-full text-2xl font-medium leading-loose text-white rounded-xl bg-sky-800 max-w-[1061px] max-md:max-w-full">
+                                <ScrollBaseAnimation scrollDependent={true}>{cities}</ScrollBaseAnimation>
                             </div>
                         </div>
-                    ))}
-                </div>
+
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+            <div className="hidden lg:flex absolute right-[77px] top-[140px] z-10 flex-col max-w-full font-semibold text-white w-[187px]">
+                {statistics.map((stat, index) => (
+                    <div key={index} className={`flex flex-col ${index > 0 ? 'mt-10' : ''}`}>
+                        <div className="flex flex-col pl-9 w-full whitespace-nowrap max-w-[187px] text-right">
+                            <div className="text-2xl uppercase">{stat.title}</div>
+                            <div className="flex items-center justify-end gap-1 mt-2">
+                                <Counter from={0} to={stat.value} suffix={stat.suffix} />
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
-            <div className="overflow-hidden z-10 gap-2.5 self-center px-2.5 py-12 mb-10 w-full text-2xl font-medium leading-loose text-white rounded-xl bg-sky-800 max-w-[1061px] max-md:max-w-full">
-                <ScrollBaseAnimation scrollDependent={true}>{cities}</ScrollBaseAnimation>
-            </div>
+
         </div>
+
     );
 };
