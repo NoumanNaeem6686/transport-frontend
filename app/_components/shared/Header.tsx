@@ -14,7 +14,7 @@ export const NavigationBar: React.FC = () => {
                     <div className="flex sm:space-x-6">
                         <a href="tel:123456789" className="hidden md:flex items-center space-x-2">
                             <Phone size={16} />
-                            <span>+1 (737) 211-1792</span>
+                            <span> (737) 8888888</span>
                         </a>
                         <a href="mailto:example@gmail.com" className="flex items-center space-x-2 text-xs md:text-base">
                             <Mail size={16} />
@@ -46,19 +46,19 @@ export const NavigationBar: React.FC = () => {
                         className="hidden lg:flex flex-wrap gap-8 items-center self-stretch my-auto min-w-[240px] max-md:max-w-full">
 
                         <Link href={'/'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Home
+                            Hem
                         </Link>
                         <Link href={'/about-us'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            About Us
+                        Om oss
                         </Link>
                         <Link href={'/partner'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Be Partner
+                        Bli partner
                         </Link>
                         {/* <Link href={'/services'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                             Our Services
                         </Link> */}
                         <Link href={'/work'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Work With Us
+                        Arbeta med oss
                         </Link>
                     </div>
                 </div>
@@ -68,14 +68,14 @@ export const NavigationBar: React.FC = () => {
                         <div
                             className={`${false ? "border border-[#1CAC78] bg-[#1CAC78] text-white hover:rotate-6 " : "bg-sky-800 border border-sky-800 text-white hover:rotate-6 "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base  transition-all`}
                         >
-                            Get Offer
+                            Få erbjudande
                         </div>
                     </Link>
                     <Link href={"/book-now"}>
                         <div
                             className={`${true ? "border border-[#1CAC78] bg-[#1CAC78] text-white hover:rotate-6 " : "bg-sky-800 border border-sky-800 text-white hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base transition-all`}
                         >
-                            Book Now
+                            Boka nu
                         </div>
                     </Link>
                 </div>
@@ -97,19 +97,19 @@ export const NavigationBar: React.FC = () => {
                                         </Link>
                                         <div className='flex flex-col items-start gap-6 mr-3 mt-5'>
                                             <Link href={'/'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                                Home
+                                            Hem
                                             </Link>
                                             <Link href={'/about-us'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                                About Us
+                                            Om oss
                                             </Link>
                                             <Link href={'/partner'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                                Be Partner
+                                            Bli partner
                                             </Link>
                                             {/* <Link href={'/services'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
                                                 Our Services
                                             </Link> */}
                                             <Link href={'/work'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                                Work With Us
+                                            Arbeta med oss
 
                                             </Link>
                                         </div>
@@ -122,7 +122,7 @@ export const NavigationBar: React.FC = () => {
 
 
                                             >
-                                                Get Offer
+                                                Få erbjudande
                                             </div>
                                         </Link>
                                         <Link href={"/book-now"} className='w-full'>
@@ -130,7 +130,7 @@ export const NavigationBar: React.FC = () => {
                                                 className={`${true ? "border border-[#1CAC78] bg-[#1CAC78] text-white hover:rotate-6 " : "bg-sky-800 border border-sky-800 text-white hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base transition-all`}
 
                                             >
-                                                Book Now
+                                                Boka nu
                                             </div>
                                         </Link>
                                     </div>

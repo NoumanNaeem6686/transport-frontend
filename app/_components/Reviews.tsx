@@ -11,39 +11,40 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const staticReviews = [
     {
         name: "John Doe",
-        comment: "The service was excellent! Everything went smoothly and hassle-free.",
+        comment: "Tjänsten var utmärkt! Allt gick smidigt och utan problem.",
         rating: 5,
     },
     {
         name: "Jane Smith",
-        comment: "I loved the professionalism of the team. Highly recommend it!",
+        comment: "Jag älskade professionaliteten hos teamet. Rekommenderas varmt!",
         rating: 4,
     },
     {
         name: "Emily Johnson",
-        comment: "Great experience, and the helpers were very efficient.",
+        comment: "Stor upplevelse, och hjälparna var mycket effektiva.",
         rating: 5,
     },
     {
         name: "Chris Brown",
-        comment: "The vehicle was clean and spacious. Excellent service!",
+        comment: "Fordonet var rent och rymligt. Utmärkt service!",
         rating: 4.5,
     },
     {
         name: "Sarah Wilson",
-        comment: "Amazing support throughout the move. Thank you!",
+        comment: "Fantastiskt stöd under hela flytten. Tack!",
         rating: 5,
     },
     {
         name: "Michael Scott",
-        comment: "Quick and reliable, couldn’t have asked for better service.",
+        comment: "Snabbt och pålitligt, kunde inte ha bett om bättre service.",
         rating: 4.8,
     },
     {
         name: "Pam Beesly",
-        comment: "Everything was well-organized and on time.",
+        comment: "Allt var välorganiserat och i tid.",
         rating: 5,
-    },
+    }
+    
 ];
 
 const Reviews = () => {
@@ -77,10 +78,10 @@ const Reviews = () => {
                             <div
                                 className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[80px] sm:w-[115px]"
                             />
-                            <div className="self-stretch uppercase text-[#1CAC78] my-auto">testimonials</div>
+                            <div className="self-stretch uppercase text-[#1CAC78] my-auto">Testimonialer</div>
                         </div>
                         <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
-                            Our <span className="text-sky-800">Happy</span> customers
+                        Våra <span className="text-sky-800">Glada </span> kunder
                         </div>
                     </div>
                     <button className="swiper-button-prev-custom group hidden sm:flex justify-center hover:bg-sky-900 items-center w-10 h-10 transition-all duration-500 rounded-lg bg-sky-800 text-white active:scale-95">

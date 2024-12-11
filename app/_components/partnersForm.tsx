@@ -81,7 +81,7 @@ const PartnerForm = () => {
             <div className="flex flex-col md:flex-row w-full gap-3">
 
                 <div className="w-full mb-4 flex flex-col items-start">
-                    <label className="text-black font-semibold mb-2">Enter your name</label>
+                    <label className="text-black font-semibold mb-2">Ange ditt namn</label>
                     <Input
                         label="Name"
                         fullWidth
@@ -91,7 +91,7 @@ const PartnerForm = () => {
                 </div>
                 <div className="w-full mb-4 flex flex-col items-start">
                     <label className="text-black font-semibold mb-2">
-                        Enter Your Email
+                    Ange din e-post
                     </label>
                     <Input
                         label="Enter Email"
@@ -106,7 +106,7 @@ const PartnerForm = () => {
 
             <div className="w-full mb-4 flex flex-col items-start">
                 <label className="text-black font-semibold mb-2">
-                    Enter Your Phone Number
+                Ange ditt telefonnummer
                 </label>
                 <Input
                     label="Enter Phone"
@@ -122,7 +122,7 @@ const PartnerForm = () => {
 
                 <div className="w-full mb-4 flex flex-col items-start">
                     <label className="text-black font-semibold mb-2">
-                        Enter Vehicle Number
+                    Ange fordonsnummer
                     </label>
                     <Input
                         label="Vehicle Number"
@@ -135,7 +135,7 @@ const PartnerForm = () => {
                 {/* License Number */}
                 <div className="w-full mb-4 flex flex-col items-start">
                     <label className="text-black font-semibold mb-2">
-                        Enter License Number
+                    Ange körkortnummer
                     </label>
                     <Input
                         label="License Number"
@@ -154,7 +154,7 @@ const PartnerForm = () => {
                     onChange={() => setIsTerm(!isTerm)}
                     className="mb-0.5"
                 >
-                    I agree to the terms and conditions.
+                    Jag godkänner villkoren .
                 </Checkbox>
             </div>
 

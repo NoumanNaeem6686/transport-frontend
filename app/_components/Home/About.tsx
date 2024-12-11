@@ -24,20 +24,17 @@ export const AboutSection: React.FC = () => {
                                 <div
                                     className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]"
                                 />
-                                <div className="self-stretch text-[#1CAC78] my-auto">about us</div>
+                                <div className="self-stretch text-[#1CAC78] my-auto">Om Us</div>
                             </div>
                             <div data-aos="fade-down" className="mt-4 text-2xl md:text-4xl leading-10 text-gray-900 max-md:max-w-full">
-                                Delivering <span className="text-sky-800">Seamless Moving</span> Experiences
+                            Levererar   <span className="text-sky-800">smidiga</span> flyttupplevelser
                             </div>
                         </div>
                         <div className="flex flex-col justify-between mt-7 w-full min-h-[272px] max-md:max-w-full">
                             <div className="text-base leading-7 text-zinc-800 max-md:max-w-full">
-                                We believe in simplifying lives by providing reliable and
-                                efficient moving and transport solutions. Our mission is to make
-                                every move stress-free, ensuring that our customers feel
-                                supported and confident every step of the way. We are passionate
-                                about offering top-notch services that cater to a variety of
-                                needs.
+                            Vi tror på att förenkla livet genom att erbjuda pålitliga och effektiva flytt- och transportlösningar. 
+                            Vår mission är att göra varje flytt stressfri och se till att våra kunder känner sig stöttade och trygga genom hela processen. Vi brinner för att erbjuda 
+                            förstklassiga tjänster som möter en rad olika behov.
                             </div>
                             <div className="flex flex-col pt-4 pb-6 mt-3 w-full max-md:max-w-full">
                                 {checklistItems.map((item, index) => (
@@ -55,13 +52,23 @@ export const AboutSection: React.FC = () => {
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <Link href="book-now">
                         <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
                             Book Now
                         </button>
                     </Link>
+=======
+                    <button
+                        className="gap-2.5 self-stretch px-9 py-3.5 mt-5 w-48 max-w-full text-base font-medium text-center text-white uppercase bg-sky-800 rounded min-h-[46px] max-md:px-5"
+                        type="button"
+                    >
+                        Få erbjudande
+                    </button>
+>>>>>>> 2318c83 (translation)
                 </div>
             </div>
         </div>
+    
     );
 };

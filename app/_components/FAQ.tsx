@@ -4,26 +4,26 @@ import React, { useState } from "react";
 
 const FAQ = () => {
     const faqData = [
-        {
-            question: "How can I book a vehicle or helper?",
-            answer:
-                "To book a vehicle or helper, click on the 'Get Offer' or 'Book Now' button on our website. Fill out the form with your requirements, and we'll provide you with the best options to suit your needs.",
-        },
-        {
-            question: "What services do you offer?",
-            answer:
-                "We offer a range of services, including vehicle rentals for moving or shipping, professional helpers for packing and loading, and full moving assistance to make your relocation stress-free.",
-        },
-        {
-            question: "How does the booking process work?",
-            answer:
-                "It's simple! Choose the services you need, provide your details in the 'Get Offer' form, and select a suitable date and time. Our team will handle the rest to ensure a smooth experience.",
-        },
-        {
-            question: "What makes your services unique?",
-            answer:
-                "We provide a fleet of reliable vehicles, trained and professional helpers, and affordable pricing with no hidden fees. Our flexible scheduling and commitment to customer satisfaction set us apart.",
-        },
+            {
+                question: "Hur kan jag boka ett fordon eller hjälp?",
+                answer:
+                    "För att boka ett fordon eller hjälp, klicka på knappen 'Få erbjudande' eller 'Boka nu' på vår webbplats. Fyll i formuläret med dina krav, så ger vi dig de bästa alternativen som passar dina behov.",
+            },
+            {
+                question: "Vilka tjänster erbjuder ni?",
+                answer:
+                    "Vi erbjuder ett utbud av tjänster, inklusive uthyrning av fordon för flytt eller frakt, professionella hjälpmedel för packning och lastning, samt fullständig flytthjälp för att göra din flytt stressfri.",
+            },
+            {
+                question: "Hur fungerar bokningsprocessen?",
+                answer:
+                    "Det är enkelt! Välj de tjänster du behöver, lämna dina uppgifter i formuläret 'Få erbjudande', och välj ett lämpligt datum och tid. Vårt team tar hand om resten för att säkerställa en smidig upplevelse.",
+            },
+            {
+                question: "Vad gör era tjänster unika?",
+                answer:
+                    "Vi erbjuder en flotta av pålitliga fordon, utbildade och professionella hjälpmedel, och prisvärd prissättning utan dolda avgifter. Vår flexibla schemaläggning och vårt engagemang för kundnöjdhet skiljer oss från andra.",
+            },
         // {
         //     question: "Can I trust your team with my belongings?",
         //     answer:
@@ -52,7 +52,7 @@ const FAQ = () => {
         // {
         //     question: "Do you offer services in my area?",
         //     answer:
-        //         "We operate across a wide range of locations. Click on 'Get Offer' and enter your location details to check availability in your area.",
+        //         "We operate across a wide range of locations. Click on 'Få erbjudande' and enter your location details to check availability in your area.",
         // },
     ];
 
@@ -82,7 +82,7 @@ const FAQ = () => {
                                     FAQs
                                 </h6>
                                 <h2 className="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-5 lg:text-left">
-                                    Looking for answers?
+                                Letar du efter svar?
                                 </h2>
                             </div>
                             <div>

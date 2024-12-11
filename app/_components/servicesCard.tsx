@@ -25,21 +25,21 @@ export function ServicesCard({ service, handleOpenForm, pricing }: any) {
                         service.name.toLowerCase() == "helper" ?
                             <>
                                 <p className="font-normal text-sm text-gray-50 relative z-10">
-                                    Per Helper Cost :  {pricing.helper.ratePerHelperPerHour}$
+                                Kostnad per hjälpare :  {pricing.helper.ratePerHelperPerHour}$
                                 </p>
                             </>
                             :
                             service.name.toLowerCase() == "transport" ?
                                 <>
                                     <p className="font-normal text-sm text-gray-50 relative z-10">
-                                        Per KM Cost :  {pricing.transport.ratePerKm}$
+                                    Per KM Cost :  {pricing.transport.ratePerKm}$
                                     </p>
                                 </>
                                 :
 
                                 <>
                                     <p className="font-normal text-sm text-gray-50 relative z-10">
-                                        Per Cleaner Cost :  {pricing.cleaning.ratePerCleaner}$
+                                    Kostnad per flyttstädare :  {pricing.cleaning.ratePerCleaner}$
                                     </p>
                                 </>
                     }
@@ -51,7 +51,7 @@ export function ServicesCard({ service, handleOpenForm, pricing }: any) {
                         <button
                             onClick={() => handleOpenForm(service)}
                             className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-5 py-2.5 my-auto text-white rounded-xl border border-[#1CAC78] bg-[#1CAC78] border-solid  max-md:px-5">
-                            Select {service.name}
+                            Välj {service.name}
 
                         </button>
                     </div>

@@ -32,11 +32,11 @@ export const ServicesSection: React.FC = () => {
                 <div className="flex flex-col w-full uppercase max-md:max-w-full">
                     <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-2xl font-bold leading-none text-[#1CAC78] tracking-[5.52px] max-md:max-w-full">
                         <div className="shrink-0 self-stretch my-auto rounded-md h-0.5 border-2 border-[#1CAC78]  border-solid w-[86px]" />
-                        <div className="self-stretch my-auto">Our services</div>
+                        <div className="self-stretch my-auto">Våra tjänster</div>
                     </div>
                     <div data-aos="fade-up-right" className="mt-4 text-4xl font-semibold leading-tight text-sky-800 max-md:max-w-full">
-                        <span className="font-bold">What </span>
-                        <span className="font-bold text-sky-800">we do</span>
+                        <span className="font-bold">Vad  </span>
+                        <span className="font-bold text-sky-800">vi gör</span>
                     </div>
                 </div>
                 <div className="gap-10 -start mt-20 place-content-center place-items-center gap-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

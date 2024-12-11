@@ -12,7 +12,7 @@ function Footer() {
                     </Link>
                     <div className="lg:max-w-sm">
                         <p className="text-sm text-gray-800">
-                            We specialize in providing top-notch services for cleaning, moving assistance, and transport. Whether you're looking to relocate, need extra help, or want your space cleaned to perfection, we are here to make it happen.
+                        Vi är specialiserade på att erbjuda förstklassiga tjänster för städning, flytthjälp och transport. Oavsett om du planerar att flytta, behöver extra hjälp eller vill ha ditt utrymme städat till perfektion, är vi här för att få det att hända.
                         </p>
                         <div className="flex items-center my-2 space-x-3">
                             <Link href="/" className="text-gray-500 transition-colors duration-300 hover:text-[#4B4B4B]">
@@ -28,33 +28,33 @@ function Footer() {
                             </Link>
                         </div>
                         <p className=" text-sm text-gray-500">
-                            Follow us for updates and exclusive offers.
+                        Följ oss för uppdateringar och exklusiva erbjudanden.
                         </p>
                     </div>
                 </div>
                 <div>
-                    <p className="text-base font-bold tracking-wide text-gray-900">Pages</p>
+                    <p className="text-base font-bold tracking-wide text-gray-900">Sidor</p>
                     <div
                         className=" flex flex-col mt-5 gap-3">
 
                         <Link href={'/'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Home
+                            Hem
                         </Link>
                         <Link href={'/about-us'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            About Us
+                            Om US
                         </Link>
                         <Link href={'/partner'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Be Partner
+                        Bli partner
                         </Link>
 
                         <Link href={'/work'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Work With Us
+                        Arbeta med oss
                         </Link>
                     </div>
 
                 </div>
                 <div className="space-y-2 text-sm">
-                    <p className="text-base font-bold tracking-wide text-gray-900">Contacts</p>
+                    <p className="text-base font-bold tracking-wide text-gray-900">Kontakt</p>
                     <div className="flex mt-5">
                         <p className="mr-1 text-gray-800"><Phone className='h-5 w-5 mr-1' /></p>
                         <a
@@ -63,7 +63,7 @@ function Footer() {
                             title="Our phone"
                             className="transition-colors duration-300 text-[#4B4B4B] hover:text-gray-700"
                         >
-                            850-123-5021
+                            8888888
                         </a>
                     </div>
                     <div className="flex">

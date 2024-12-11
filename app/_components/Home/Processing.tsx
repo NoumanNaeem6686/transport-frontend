@@ -11,7 +11,7 @@ const ProcessSection: React.FC = () => {
             image: "/process_1.png",
             title: "Request an offer",
             description:
-                "Fill out our 'Get Offer' form to share your moving or transport needs. Provide details about the size of your move, distance, and any special considerations. Our team will review your request and provide a tailored quote promptly. This ensures accurate estimates and proper resource allocation for a smooth process.",
+                "Fill out our 'Få erbjudande' form to share your moving or transport needs. Provide details about the size of your move, distance, and any special considerations. Our team will review your request and provide a tailored quote promptly. This ensures accurate estimates and proper resource allocation for a smooth process.",
             showSeeMore: true,
             hasUnderline: false,
         },
@@ -47,11 +47,11 @@ const ProcessSection: React.FC = () => {
                 <div className="flex flex-col flex-1 shrink basis-0 min-w-[240px] max-md:max-w-full">
                     <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl font-bold text-emerald-500 tracking-[5.52px] max-md:max-w-full">
                         <div className="shrink-0 self-stretch my-auto h-0.5 border-2 border-emerald-500 border-solid w-[50px] sm:w-[86px]" />
-                        <div className="self-stretch my-auto">Our Process</div>
+                        <div className="self-stretch my-auto">Vår process</div>
                     </div>
                     <div data-aos="fade-up-right" className="mt-4 text-3xl sm:text-4xl font-semibold text-black w-full">
-                        <span className="font-bold leading-10 text-neutral-800">What Our </span>
-                        <span className="font-bold leading-10 text-sky-800">Process</span>
+                        <span className="font-bold leading-10 text-neutral-800">"Vår  </span>
+                        <span className="font-bold leading-10 text-sky-800">process</span>
                     </div>
                 </div>
                 <div className="flex sm:flex shrink-0 h-[49px] w-[206px]" />
@@ -76,9 +76,15 @@ const ProcessSection: React.FC = () => {
                                     {processSteps[activeIndex].description}
                                 </div>
                             </div>
+<<<<<<< HEAD
                             <Link href="book-now">
                                 <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 mt-10 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
                                     Book Now
+=======
+                            <Link href="/get-offer">
+                                <button className="gap-2.5 hover:scale-105 duration-300 self-end px-9 py-3.5 mt-6 w-48 max-w-full text-base font-medium text-center text-white uppercase bg-sky-800 rounded min-h-[46px] max-md:px-5">
+                                    Få erbjudande
+>>>>>>> 2318c83 (translation)
                                 </button>
                             </Link>
                         </div>

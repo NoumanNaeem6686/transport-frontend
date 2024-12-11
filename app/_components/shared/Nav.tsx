@@ -86,7 +86,7 @@ function Navbar() {
                         <div
                             className={`bg-white hover:bg-black hover:text-white py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-colors`}
                         >
-                            Get Offer
+                            Få erbjudande
                         </div>
                     </Link>
 
@@ -113,19 +113,19 @@ function Navbar() {
                 <div className="flex flex-row gap-x-6 " data-aos="fade-left">
                     <div className=' items-center gap-x-4 mr-3 hidden lg:flex'>
                         <Link href={'/'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Home
+                            Hem
                         </Link>
                         <Link href={'/about-us'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            About Us
+                            Om Oss
                         </Link>
                         <Link href={'/partner'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Be Partner
+                            Bli Partner
                         </Link>
                         <Link href={'/services'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Our Services
+                        Våra tjänster
                         </Link>
                         <Link href={'/work'} className={`${isHomePage ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                            Work With Us
+                        Arbeta med oss
                         </Link>
                     </div>
                     <div className='hidden lg:flex items-center  gap-x-2'>
@@ -134,14 +134,14 @@ function Navbar() {
                             <div
                                 className={`${isHomePage ? "bg-black border border-black text-white hover:rotate-6 " : "border border-white hover:border-black bg-white hover:bg-black hover:text-white "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
                             >
-                                Get Offer
+                                Få erbjudande
                             </div>
                         </Link>
                         <Link href={"/book-now"}>
                             <div
                                 className={`${isHomePage ? "border border-black text-black hover:rotate-6 " : "bg-black border border-black text-white hover:rotate-6  "}py-2 px-3  sm:px-5 min-w-[120px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
                             >
-                                Book Now
+                                Boka nu
                             </div>
                         </Link>
                     </div>
@@ -164,19 +164,19 @@ function Navbar() {
                                             </Link>
                                             <div className='flex flex-col items-start gap-6 mr-3 mt-5'>
                                                 <Link href={'/'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                                    Home
+                                                    Hem
                                                 </Link>
                                                 <Link href={'/about-us'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                                    About Us
+                                                    Om Oss
                                                 </Link>
                                                 <Link href={'/partner'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                                    Be Partner
+                                                Bli partner 
                                                 </Link>
                                                 <Link href={'/services'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                                    Our Services
+                                                Våra tjänster
                                                 </Link>
                                                 <Link href={'/work'} className={`${true ? "text-black" : "text-white"} hover:scale-x-110 hover:rotate-6 duration-250 transition-all`}>
-                                                    Work With Us
+                                                Arbeta med oss
 
                                                 </Link>
                                             </div>
@@ -187,14 +187,14 @@ function Navbar() {
                                                 <div
                                                     className={`${isHomePage ? "bg-black border border-black text-white hover:rotate-6 " : "border border-white hover:border-black bg-white hover:bg-black hover:text-white "}py-2 px-3  sm:px-5 w-full rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
                                                 >
-                                                    Get Offer
+                                                    Få erbjudande
                                                 </div>
                                             </Link>
                                             <Link href={"/book-now"} className='w-full'>
                                                 <div
                                                     className={`${isHomePage ? "border border-black text-black hover:rotate-6 " : "bg-black border border-black text-white hover:rotate-6  "}py-2 px-3  sm:px-5 w-full rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-all`}
                                                 >
-                                                    Book Now
+                                                    Boka nu
                                                 </div>
                                             </Link>
                                         </div>

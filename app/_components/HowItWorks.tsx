@@ -31,29 +31,30 @@ const HowItWorks = () => {
   }, []);
   const howItWorks = [
     {
-      stepNumber: "1st Step",
-      title: "Request a Offer",
+      stepNumber: "1:a Steg",
+      title: "Begär ett erbjudande",
       description:
-        "Start by filling out our 'Get Offer' form with your details. Share information about your moving or transport needs, such as the type of items, pickup location, and destination. This helps us tailor a solution that best fits your requirements. Our team will review your details and get back to you promptly with the best options.",
+        "Börja med att fylla i vårt formulär 'Få erbjudande' med dina uppgifter. Dela information om dina flytt- eller transportbehov, som typ av objekt, upphämtningsplats och destination. Detta hjälper oss att skräddarsy en lösning som passar dina behov bäst. Vårt team kommer att granska dina uppgifter och återkomma till dig snabbt med de bästa alternativen.",
     },
     {
-      stepNumber: "2nd Step",
-      title: "Select Your Services",
+      stepNumber: "2:a Steg",
+      title: "Välj dina tjänster",
       description:
-        "Once you receive a quote, choose the services you need. Whether it's just a transport vehicle, a team of professional helpers, or a complete moving package, we provide flexible options to suit your budget and preferences. You can customize your services to match your specific requirements.",
+        "När du har fått ett erbjudande, välj de tjänster du behöver. Oavsett om det bara är ett transportfordon, ett team av professionella hjälpare eller ett komplett flyttpaket, erbjuder vi flexibla alternativ som passar din budget och dina preferenser. Du kan anpassa dina tjänster för att matcha dina specifika krav.",
     },
     {
-      stepNumber: "3rd Step",
-      title: "Schedule Your Move",
+      stepNumber: "3:e Steg",
+      title: "Schemalägg din flytt",
       description:
-        "Pick a convenient date and time for your move. Our team ensures timely arrivals and works around your schedule to make the process smooth and hassle-free. We prioritize punctuality to keep your move stress-free and efficient.",
+        "Välj ett bekvämt datum och tid för din flytt. Vårt team säkerställer att vi kommer i tid och arbetar runt ditt schema för att göra processen smidig och utan stress. Vi prioriterar punktlighet för att hålla din flytt stressfri och effektiv.",
     },
     {
-      stepNumber: "4th Step",
-      title: "Sit Back and Relax",
+      stepNumber: "4:e Steg",
+      title: "Slappna av och koppla av",
       description:
-        "With everything planned and scheduled, you can rest easy. Our expert team will handle all the heavy lifting, ensuring your belongings are transported safely and efficiently to their destination. Enjoy a seamless experience with our professional support at every step.",
+        "Med allt planerat och schemalagt kan du luta dig tillbaka och vara lugn. Vårt expertteam kommer att ta hand om allt tunga lyft och säkerställa att dina tillhörigheter transporteras säkert och effektivt till sin destination. Njut av en sömlös upplevelse med vårt professionella stöd genom hela processen.",
     },
+    
   ];
 
   return (
@@ -66,10 +67,10 @@ const HowItWorks = () => {
               data-aos-anchor-placement="top-bottom"
               className="font-bold text-4xl md:text-5xl lg:text-6xl"
             >
-              Our Process
+              Vår Process
             </h1>
             <h2 className="w-full text-center text-primaryColor text-xl font-manrope leading-normal">
-              Easy, Fast, and Reliable
+            Enkelt, Snabbt och Pålitligt
             </h2>
           </div>
           <div className="w-full justify-start lg:items-end items-center lg:gap-16 gap-4 flex lg:flex-row flex-col">

@@ -73,7 +73,7 @@ const GetOffer = () => {
 
   const handleSubmit = async () => {
     if (!isTerm) {
-      toast.error("You must agree to the terms and conditions.");
+      toast.error("Du måste godkänna villkoren");
       return;
     }
     const formattedTime = dayjs(time).format("HH:mm");
@@ -94,12 +94,12 @@ const GetOffer = () => {
 
       if (!response.ok) {
         const errorData = await response.json();
-        toast.error(errorData.message ? errorData.message : "Error during submission");
-        throw new Error(errorData.message || "Failed to submit data");
+        toast.error(errorData.message ? errorData.message : "Fel vid inlämning.");
+        throw new Error(errorData.message || "Misslyckades med att skicka data.");
       }
 
       const result = await response.json();
-      toast.error("Submission successful");
+      toast.error("Inlämning lyckades");
       setFormData({
         userType: "",
         name: "",
@@ -119,10 +119,10 @@ const GetOffer = () => {
         specialRequirements: "",
         frequency: "",
       })
-      console.log("Submission successful:", result);
+      console.log("Inlämning lyckades:", result);
     } catch (error: any) {
       console.error("Error during submission:", error.message);
-      toast.error(error.message ? error.message : "Error during submission");
+      toast.error(error.message ? error.message : "Fel vid inlämning.");
 
     } finally {
       setLoading(false)
@@ -159,15 +159,15 @@ const GetOffer = () => {
               handleChange("userType", key.currentKey as string)
             }
           >
-            <SelectItem key="Private">Private Individual</SelectItem>
-            <SelectItem key="Company">Company</SelectItem>
-            <SelectItem key="Student">Student</SelectItem>
+             <SelectItem key="Private">Privatperson</SelectItem>
+          <SelectItem key="Company">Företag</SelectItem>
+          <SelectItem key="Student">Student</SelectItem>
           </Select>
         </div>
 
         {/* Name Input */}
         <div className="w-full mb-4 flex flex-col items-start">
-          <label className="text-black font-semibold mb-2">Enter your name</label>
+          <label className="text-black font-semibold mb-2">Skriv in ditt namn</label>
           <Input
             label="Name"
             fullWidth
@@ -182,7 +182,7 @@ const GetOffer = () => {
         {/* Email Input */}
         <div className="w-full mb-4 flex flex-col items-start">
           <label className="text-black font-semibold mb-2">
-            Enter Your Email
+          Skriv in din e-postadress
           </label>
           <Input
             label="Enter Email"
@@ -196,7 +196,7 @@ const GetOffer = () => {
         {/* Phone Input */}
         <div className="w-full mb-4 flex flex-col items-start">
           <label className="text-black font-semibold mb-2">
-            Enter Your Phone Number
+          Skriv in ditt telefonnummer
           </label>
           <Input
             label="Enter Phone"
@@ -210,7 +210,7 @@ const GetOffer = () => {
       <div className="flex flex-col md:flex-row w-full gap-3">
 
         <div className="w-full mb-4 flex flex-col items-start">
-          <label className="text-black font-semibold mb-2">Best Date range</label>
+          <label className="text-black font-semibold mb-2">Bästa tidsperiod</label>
           <Input
             type="date"
             label="Date Range"
@@ -220,7 +220,7 @@ const GetOffer = () => {
           />
         </div>
         <div className="w-full mb-4 flex flex-col items-start text-black">
-          <label className="text-black font-semibold mb-2">Best time range</label>
+          <label className="text-black font-semibold mb-2">Bästa tidsintervall</label>
 
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <TimePicker
@@ -244,14 +244,14 @@ const GetOffer = () => {
 
       <div className="w-full mb-4 flex flex-col items-start">
         <label className="text-black font-semibold mb-2">
-          Select service(s)
+        Välj tjänst(er)
         </label>
         <Checkbox
           isSelected={selectAll}
           onChange={(e) => handleSelectAllChange(e.target.checked)}
           className="mb-0.5"
         >
-          Select All
+          Välj alla
         </Checkbox>
         <CheckboxGroup value={formData.services} onChange={handleServiceChange}>
           {servicesOptions.map((service) => (
@@ -266,7 +266,7 @@ const GetOffer = () => {
       {formData.services.length > 0 && (
         <div className="w-full mb-4 flex flex-col items-start">
           <label className="text-black font-semibold mb-2">
-            Frequery Of Work
+          Arbetsfrekvens
           </label>
           <Select
             label="Frequency"
@@ -336,7 +336,7 @@ const GetOffer = () => {
         <>
           <div className="w-full mb-4 flex flex-col items-start">
             <label className="text-black font-semibold mb-2">
-              Number of cleaners
+            Antal städare
             </label>
             <Input
               label="Cleaners"
@@ -349,7 +349,7 @@ const GetOffer = () => {
           </div>
           <div className="w-full mb-4 flex flex-col items-start">
             <label className="text-black font-semibold mb-2">
-              Space size (sqm)
+            Ytstorlek (kvm)
             </label>
             <Input
               label="Space Size"
@@ -363,6 +363,7 @@ const GetOffer = () => {
         </>
       )}
       {formData.services.includes("Helper") && (
+<<<<<<< HEAD
         <>
           <div className="w-full mb-4 flex flex-col items-start">
             <label className="text-black font-semibold mb-2">
@@ -388,11 +389,26 @@ const GetOffer = () => {
           </div>
         </>
 
+=======
+        <div className="w-full mb-4 flex flex-col items-start">
+          <label className="text-black font-semibold mb-2">
+          Antal hjälpare
+          </label>
+          <Input
+            label="Helpers"
+            type="number"
+            fullWidth
+            value={formData.helpers}
+            onChange={(e) => handleChange("helpers", e.target.value)}
+            min={1}
+          />
+        </div>
+>>>>>>> 2318c83 (translation)
       )}
 
       <div className="w-full mb-4 flex flex-col items-start">
         <label className="text-black font-semibold mb-2">
-          Special requirements:
+        Speciella krav:
         </label>
         <Textarea
           label="Special Requirements"
@@ -408,7 +424,7 @@ const GetOffer = () => {
           onChange={() => setIsTerm(!isTerm)}
           className="mb-0.5"
         >
-          I agree to the terms and conditions.
+          Jag godkänner villkoren.
         </Checkbox>
       </div>
 

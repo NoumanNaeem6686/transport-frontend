@@ -71,9 +71,9 @@ export const TransportPage: React.FC = () => {
             <div className="flex relative flex-col justify-center items-start px-20 py-36 mt-0 w-full max-md:px-5 max-md:py-24 max-md:max-w-full">
                 <div className="flex z-0 flex-col justify-between max-w-full min-h-[348px] lg:w-[559px]">
                     <h1 data-aos="fade-right" className="text-6xl font-bold text-sky-800 leading-[73px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
-                        <span className="text-zinc-800">Moving</span> Doesn't{' '}
-                        <span className="text-[#1CAC78]">Have to{' '}</span>
-                        <span className="text-zinc-800">Be Hard</span>
+                        <span className="text-zinc-800">Att flytta</span> behöver{' '}
+                        <span className="text-[#1CAC78]">  inte {' '}</span>
+                        <span className="text-zinc-800">vara svårt.</span>
                     </h1>
                     <p data-aos="fade-up-right" className="mt-8 text-lg leading-7 text-zinc-800 max-md:max-w-full">
                         Whether you're relocating, need professional cleaning, or reliable transport solutions, we
@@ -83,12 +83,12 @@ export const TransportPage: React.FC = () => {
                     <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center">
                         <Link href="get-offer">
                             <button className="gap-2.5 hover:scale-105 transition-all duration-250 self-stretch px-9 py-3.5 my-auto sm:w-48 text-white bg-sky-800 rounded min-h-[46px] max-md:px-5">
-                                Get Offer
+                                Få erbjudande
                             </button>
                         </Link>
                         <Link href="book-now">
                             <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
-                                Book Now
+                                Boka nu
                             </button>
                         </Link>
                     </div>

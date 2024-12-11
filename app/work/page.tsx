@@ -22,7 +22,7 @@ function page() {
 
                         <h1 data-aos="fade-down" className="text-6xl font-bold text-sky-800 leading-[73px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
                             <span className='text-white'>
-                                Work With Us
+                            Arbeta med oss
                             </span>
                         </h1>
                     </div>

@@ -19,15 +19,15 @@ export default function BeOurPartner() {
                 <div className='flex flex-col mt-36 items-center justify-center  text-3xl md:text-5xl lg:text-6xl xl:text-7xl z-30  font-bold'>
 
                     <h1 data-aos="fade-down" className="text-6xl font-bold text-sky-800 leading-[73px] max-md:max-w-full max-md:text-4xl max-md:leading-[58px]">
-                        <span className="text-white">  Join Our {" "}</span>
+                        <span className="text-white">  Gå med i vårt {" "}</span>
                         <span className='text-[#1CAC78]'>
-                            Moving Service {" "}
+                        Flyttjänst {" "}
                         </span>
-                        <span className="text-white">Network</span>
+                        <span className="text-white">nätverk</span>
                     </h1>
 
                     <p className="text-xl text-white max-w-3xl mx-auto mb-8 font-normal text-center">
-                        Become a partner as a cleaner, transporter, or helper and grow with our innovative moving service platform.
+                    Bli en partner som städare, transportör eller hjälpare och väx med vår innovativa flyttjänstplattform.
                     </p>
                 </div>
                 <div className="flex rounded-2xl relative  mx-auto my-4 mb-20  z-20 w-full items-center justify-center" data-aos="fade-up">

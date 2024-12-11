@@ -6,11 +6,11 @@ import * as React from "react";
 const faqData: any[] = [
     {
         question: "How can I book a vehicle or helper?",
-        answer: "To book a vehicle or helper, click on the 'Get Offer' or 'Book Now' button on our website. Fill out the form with your requirements, and we'll provide you with the best options to suit your needs.",
+        answer: "To book a vehicle or helper, click on the 'Få erbjudande' or 'Boka nu' button on our website. Fill out the form with your requirements, and we'll provide you with the best options to suit your needs.",
     },
     {
         question: "How does the booking process work?",
-        answer: "To book a vehicle or helper, click on the 'Get Offer' or 'Book Now' button on our website. Fill out the form with your requirements, and we'll provide you with the best options to suit your needs.",
+        answer: "To book a vehicle or helper, click on the 'Få erbjudande' or 'Boka nu' button on our website. Fill out the form with your requirements, and we'll provide you with the best options to suit your needs.",
     },
     {
         question: "What services do you offer?",

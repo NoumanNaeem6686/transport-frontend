@@ -44,7 +44,7 @@ function page() {
                                 <div
                                     className={`bg-white text-black hover:bg-black hover:text-white py-2 px-3 sm:px-5 min-w-[150px] rounded-full cursor-pointer flex items-center justify-center text-sm sm:text-base hover:border-black transition-colors`}
                                 >
-                                    Book Now
+                                    Boka nu
                                 </div>
                             </Link>
                         </div>
@@ -55,41 +55,39 @@ function page() {
                 <div className="container mx-auto px-4">
                     <div className="row flex flex-wrap">
                         <div className="content-column order-2 lg:order-1 lg:w-1/2 w-full z-10">
-                            <div className="inner-column lg:pl-8">
+                        <div className="inner-column lg:pl-8">
 
-                                <div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
-                                    <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
-                                        <div
-                                            className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]"
+<div className="flex flex-col w-full font-bold uppercase max-md:max-w-full">
+    <div data-aos="fade-right" className="flex flex-wrap gap-6 items-center w-full text-xl sm:text-2xl leading-none text-sky-800 tracking-[5.52px] max-md:max-w-full">
+        <div className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]" />
+        <div className="self-stretch text-[#1CAC78] my-auto">Om Oss</div>
+    </div>
+    <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
+        Förenkla <span className="text-sky-800">Flytt och transport</span> med Excellens
+    </div>
+</div>
+<p className="text-gray-500 text-base leading-relaxed my-8">
+    På vårt företag tror vi på att göra livet enklare genom att erbjuda pålitliga och effektiva lösningar för flytt, städning
+    och transport. Oavsett om det handlar om att hjälpa dig att flytta, erbjuda professionella städtjänster eller
+    säkerställa punktlig transport.
+</p>
+<ul className="list-style-one space-y-3 mb-8">
+    <li className="relative pl-8 text-gray-800">
+        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
+        Över ett decennium av erfarenhet inom flytt och transporttjänster
+    </li>
+    <li className="relative pl-8 text-gray-800">
+        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
+        Betrodd av mer än 100 000 nöjda kunder världen över
+    </li>
+    <li className="relative pl-8 text-gray-800">
+        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
+        Verksam på över 20 platser för att bättre kunna hjälpa dig
+    </li>
+</ul>
 
-                                        />
-                                        <div className="self-stretch text-[#1CAC78] my-auto">About Us</div>
-                                    </div>
-                                    <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
-                                        Simplifying <span className="text-sky-800">Moving and transport</span>  with Excellence
-                                    </div>
-                                </div>
-                                <p className="text-gray-500 text-base leading-relaxed my-8">
-                                    At our company, we believe in making lives easier by offering reliable and efficient moving, cleaning,
-                                    and transport solutions. Whether it's helping you relocate, providing professional cleaning services, or
-                                    ensuring timely transport.
-                                </p>
-                                <ul className="list-style-one space-y-3 mb-8">
-                                    <li className="relative pl-8 text-gray-800">
-                                        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
-                                        Over a decade of experience in moving and transport services
-                                    </li>
-                                    <li className="relative pl-8 text-gray-800">
-                                        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
-                                        Trusted by more than 100k satisfied customers worldwide
-                                    </li>
-                                    <li className="relative pl-8 text-gray-800">
-                                        <span className="absolute left-0 top-0 text-blue-600 font-bold text-lg">&#10004;</span>
-                                        Operating in 20+ locations to serve you better
-                                    </li>
-                                </ul>
+</div>
 
-                            </div>
                         </div>
 
                         <div className="image-column hidden lg:flex lg:w-1/2 w-full relative lg:pl-12 lg:order-2 order-1 mb-8 lg:mb-0">
@@ -124,32 +122,32 @@ function page() {
                                     <h1 className="text-2xl sm:text-4xl font-bold text-sky-800 ">
                                         <span className="text-zinc-800">Reliable {" "}</span>
                                         <span className='text-[#1CAC78]'>
-                                            Moving and Transport{' '}
+                                        Flytt och Transport{' '}
                                         </span>
                                         <span className="text-zinc-800">Services</span>
                                     </h1>
                                     <p className="text-gray-500 text-base font-normal leading-relaxed text-start">
-                                        At our company, we are dedicated to simplifying lives by providing dependable moving and transport
-                                        solutions. Whether it's a local move or a long-distance relocation, our mission is to ensure a
-                                        stress-free experience for every client.
+                                    På vårt företag är vi engagerade i att förenkla livet genom att erbjuda pålitliga flytt- och 
+                                    transportlösningar. Oavsett om det handlar om en lokal flytt eller en långdistansflytt är vårt mål att 
+                                    säkerställa en stressfri upplevelse för varje kund.
                                     </p>
                                 </div>
 
                                 <div className="w-full lg:justify-start justify-center items-center sm:gap-10 gap-5 inline-flex">
                                     <div className="flex-col justify-start items-start inline-flex">
-                                        <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">15+</h3>
-                                        <h6 className="text-gray-500 text-base font-normal leading-relaxed">Years of Expertise</h6>
+                                        <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">5+</h3>
+                                        <h6 className="text-gray-500 text-base font-normal leading-relaxed">År av expertis</h6>
                                     </div>
                                     <div className="flex-col justify-start items-start inline-flex">
-                                        <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">50k+</h3>
+                                        <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">157k+</h3>
                                         <h6 className="text-gray-500 text-base font-normal leading-relaxed">
-                                            Customers Served Globally
+                                        kunder betjänade
                                         </h6>
                                     </div>
                                     <div className="flex-col justify-start items-start inline-flex">
-                                        <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">30+</h3>
+                                        <h3 className="text-gray-900 text-4xl font-bold font-manrope leading-normal">10+</h3>
                                         <h6 className="text-gray-500 text-base font-normal leading-relaxed">
-                                            Active Service Locations
+                                        Aktiva servicelokationer
                                         </h6>
                                     </div>
                                 </div>
@@ -159,7 +157,7 @@ function page() {
 
                                 <Link href="book-now">
                                     <button className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded border border-[#1CAC78] bg-[#1CAC78] border-solid min-h-[46px] max-md:px-5">
-                                        Book Now
+                                        Boka nu
                                     </button>
                                 </Link>
                             </div>
@@ -197,16 +195,21 @@ function page() {
                                                     className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]"
 
                                                 />
-                                                <div className="self-stretch text-[#1CAC78] my-auto">Our Success In Numbers</div>
+                                                <div className="self-stretch text-[#1CAC78] my-auto">Vår framgång i siffror</div>
                                             </div>
                                             <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
-                                                Reliable <span className="text-sky-800">Moving and transport</span>  Services
+                                            På vårt företag är vi engagerade i att förenkla livet genom att erbjuda pålitliga flytt- och
+                                             transportlösningar. Oavsett om det handlar om en lokal flytt eller en långdistansflytt, är vårt mål att säkerställa 
+                                            en stressfri upplevelse för varje kund. <span className="text-sky-800">Flytt, transport och städning</span>  Tjänster
                                             </div>
                                         </div>
 
                                         <p
                                             className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
-                                            At our company, we are dedicated to simplifying lives by providing dependable moving and transport solutions. Whether it's a local move or a long-distance relocation, our mission is to ensure a stress-free experience for every client.
+                                            
+                                            Vi är dedikerade till att förenkla liv genom att erbjuda pålitliga flytt- och transportlösningar.
+                                            Oavsett om det är en lokal flytt eller en långdistansflytt, 
+                                            är vårt uppdrag att säkerställa en stressfri upplevelse för varje kund.
                                         </p>
                                     </div>
                                 </div>
@@ -214,25 +217,26 @@ function page() {
                                     <div className="w-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
                                         <div
                                             className="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">15+ Years</h4>
-                                            <p className="text-gray-500 text-base font-normal leading-relaxed">Years of Expertise</p>
+                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">5+ år</h4>
+                                            <p className="text-gray-500 text-base font-normal leading-relaxed">År av expertis</p>
                                         </div>
                                         <div
                                             className="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">50k+ Customers</h4>
-                                            <p className="text-gray-500 text-base font-normal leading-relaxed">Served Globally</p>
+                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">157k+ 
+                                            Kunder</h4>
+                                            <p className="text-gray-500 text-base font-normal leading-relaxed">Betjänade </p>
                                         </div>
                                     </div>
                                     <div className="w-full h-full justify-start items-center gap-8 grid md:grid-cols-2 grid-cols-1">
                                         <div
                                             className="w-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">30+ Locations</h4>
-                                            <p className="text-gray-500 text-base font-normal leading-relaxed">Active Service Locations</p>
+                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">7+ Plats</h4>
+                                            <p className="text-gray-500 text-base font-normal leading-relaxed">Aktiva tjänsteplatser</p>
                                         </div>
                                         <div
                                             className="w-full h-full p-3.5 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start gap-2.5 inline-flex">
-                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">Stress-Free</h4>
-                                            <p className="text-gray-500 text-base font-normal leading-relaxed">Moving and Transport Services</p>
+                                            <h4 className="text-gray-900 text-2xl font-bold font-manrope leading-9">Stressfri</h4>
+                                            <p className="text-gray-500 text-base font-normal leading-relaxed">Flytt-, Transport- och Städtjänster</p>
                                         </div>
                                     </div>
                                 </div>

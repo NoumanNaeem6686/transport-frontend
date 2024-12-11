@@ -353,7 +353,7 @@ const BookingPage: React.FC = () => {
 
                                     className="gap-2.5 self-stretch hover:scale-105 transition-all duration-250 px-9 py-3.5 my-auto sm:w-48 text-white rounded-lg bg-sky-800 border-solid min-h-[46px] max-md:px-5">
                                     {
-                                        loading ? "Booking..." : "Book Now"
+                                        loading ? "Booking..." : "Boka nu"
                                     }
                                 </button>
                             </div> */}

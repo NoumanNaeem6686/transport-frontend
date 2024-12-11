@@ -172,7 +172,7 @@ const WorkWithUs = () => {
                     onChange={(e) => handleSelectAllChange(e.target.checked)}
                     className="mb-1"
                 >
-                    Select All
+                    Välj Alla
                 </Checkbox>
                 <CheckboxGroup
                     value={formData.services}
@@ -188,28 +188,29 @@ const WorkWithUs = () => {
             <div className="flex flex-col md:flex-row w-full gap-3">
 
                 <div className="w-full mb-4 flex flex-col items-start">
-                    <label className="text-black font-semibold mb-2">Do you have a driving license?</label>
+                    <label className="text-black font-semibold mb-2">Har du körkort?</label>
                     <Select
                         label="Select an option"
                         fullWidth
                         value={formData.isDivingLicense}
                         onSelectionChange={(value) => handleChange("isDivingLicense", value.currentKey)}
                     >
-                        <SelectItem key="yes" value="yes">Yes</SelectItem>
-                        <SelectItem key="no" value="no">No</SelectItem>
+                        <SelectItem key="yes" value="yes">Ja</SelectItem>
+                        <SelectItem key="no" value="no">Nej</SelectItem>
                     </Select>
                 </div>
                 <div className="w-full mb-4 flex flex-col items-start">
-                    <label className="text-black font-semibold mb-2">Work basis</label>
+                    <label className="text-black font-semibold mb-2">Arbetsbasis</label>
                     <Select
                         label="Select an option"
                         fullWidth
                         selectedKeys={formData.workBasis ? [formData.workBasis] : undefined}
                         onSelectionChange={(key) => handleChange("workBasis", key.currentKey)}
                     >
-                        <SelectItem key="full_time">Full Time</SelectItem>
-                        <SelectItem key="part_time">Part Time</SelectItem>
-                        <SelectItem key="hourly">Hourly</SelectItem>
+                        <SelectItem key="full_time">Heltid</SelectItem>
+                        <SelectItem key="part_time">Deltid</SelectItem>
+                        <SelectItem key="hourly">Timanställning</SelectItem>
+
                     </Select>
                 </div>
             </div>
@@ -219,7 +220,7 @@ const WorkWithUs = () => {
                     onChange={() => setIsTerm(!isTerm)}
                     className="mb-0.5"
                 >
-                    I agree to the terms and conditions.
+                   Jag godkänner villkoren.
                 </Checkbox>
             </div>
             <div className="flex gap-3 items-center self-start mt-8 text-base font-medium text-center justify-end w-full">

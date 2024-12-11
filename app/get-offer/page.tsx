@@ -16,7 +16,7 @@ function page() {
 
                 </div>
                 <h1 className="z-10 font-bold text-3xl md:text-5xl lg:text-6xl xl:text-7xl  mt-32" data-aos="fade-down">
-                    Get Customized Offer
+                Få ett anpassat erbjudande
                 </h1>
                 <div className="flex rounded-2xl  mx-auto my-20  z-[30] w-full items-center justify-center" data-aos="fade-up">
                     <GetOffer />

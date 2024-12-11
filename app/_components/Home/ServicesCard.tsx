@@ -28,7 +28,7 @@ export const ServiceCard = ({ title, description, isHighlighted = false, image }
                         <div className={descriptionClasses}>{description}</div>
                     </div>
                     <Link href="/get-offer">
-                        <button className={buttonClasses} tabIndex={0}>Get Offer</button>
+                        <button className={buttonClasses} tabIndex={0}>Få erbjudande</button>
                     </Link>
                 </div>
             </div>

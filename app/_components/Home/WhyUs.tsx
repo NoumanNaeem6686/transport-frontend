@@ -24,15 +24,15 @@ export const WhyUs: React.FC = () => {
                                     className="h-[2px] rounded-md my-auto bg-[#1CAC78] w-[70px]  sm:w-[115px]"
 
                                 />
-                                <div className="self-stretch text-[#1CAC78] my-auto">Why choose us</div>
+                                <div className="self-stretch text-[#1CAC78] my-auto">Varför välja oss</div>
                             </div>
                             <div data-aos="fade-down" className="mt-4 text-3xl sm:text-4xl leading-10 text-gray-900 max-md:max-w-full">
-                                Reliable <span className="text-sky-800">Moving and transport</span> solution
+                            Pålitlig <span className="text-sky-800">Flytt och transport</span> lösning
                             </div>
                         </div>
                         <div className="flex flex-col justify-between mt-7 w-full min-h-[272px] max-md:max-w-full">
                             <div className="text-base leading-7 text-zinc-800 max-md:max-w-full">
-                                Whether you’re moving, shipping, or need professional helpers, we provide seamless services to make your relocation stress- free and efficient.
+                            Oavsett om du flyttar, fraktar eller behöver professionella hjälpmedel, erbjuder vi smidiga tjänster för att göra din flytt stressfri och effektiv.
                             </div>
                             <div className="flex flex-col pt-4 pb-6 mt-3 w-full max-md:max-w-full">
                                 {checklistItems.map((item, index) => (
@@ -54,7 +54,7 @@ export const WhyUs: React.FC = () => {
                         className="gap-2.5 self-stretch px-9 py-3.5 mt-5 w-48 max-w-full text-base font-medium text-center text-white uppercase bg-sky-800 rounded min-h-[46px] max-md:px-5"
                         type="button"
                     >
-                        Get Offer
+                        Få erbjudande
                     </button>
                 </div>
             </div>

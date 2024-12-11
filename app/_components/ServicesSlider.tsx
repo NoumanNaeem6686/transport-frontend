@@ -12,28 +12,25 @@ const ServicesSlider = () => {
 
     const services = [
         {
-            name: "Cleaning",
-            title: "Professional Cleaning Services",
-            description:
-                "Our cleaning services provide a spotless environment for your home or office. We promote a healthier living and working space. Whether you need one-time deep cleaning or a recurring service, we are flexible to match your schedule.",
-            image: "/cleaning.jpg",
-            link: "/book-now?service=cleaning",
+            "name": "Städning",
+            "title": "Professionella Städningstjänster",
+            "description": "Våra städtjänster ger en fläckfri miljö för ditt hem eller kontor. Vi främjar en hälsosammare boende- och arbetsmiljö. Oavsett om du behöver en engångsstädning eller en återkommande tjänst, är vi flexibla för att passa ditt schema.",
+            "image": "/cleaning.jpg",
+            "link": "/book-now?service=cleaning"
         },
         {
-            name: "Transport",
-            title: "Safe and Efficient Transport Services",
-            description:
-                "Our transport ensures your belongings are moved safely. With a fleet of reliable vehicles and skilled drivers, we make sure your items reach their destination on time. Whether you need a small van for light items or a larger vehicle for heavy furniture, we have the right option for you.",
-            image: "/get-car.jpg",
-            link: "/book-now?service=transport",
+            "name": "Transport",
+            "title": "Professionella Transporttjänster",
+            "description": "Våra transporttjänster säkerställer att dina tillhörigheter transporteras säkert. Med en flott av pålitliga fordon och erfarna förare ser vi till att dina saker når sin destination i tid. Oavsett om du behöver en liten van för lätta föremål eller ett större fordon för tunga möbler, har vi rätt alternativ för dig.",
+            "image": "/transport.jpg",
+            "link": "/book-now?service=transport"
         },
         {
-            name: "Helper",
-            title: "Reliable Moving Helper Services",
-            description:
-                "Our helper services are designed to take the stress out of moving. From packing your belongings to heavy lifting, we ensure everything is handled with care. Whether you’re moving within the city or to a new location, our team provides unmatched support.",
-            image: "/helper.jpg",
-            link: "/book-now",
+            "name": "Flytthjälp",
+            "title": "Professionella Flytthjälpstjänster",
+            "description": "Våra flytthjälpstjänster är designade för att ta bort stressen från flytten. Från att packa dina tillhörigheter till tungt lyft, ser vi till att allt hanteras med omsorg. Oavsett om du flyttar inom staden eller till en ny plats, ger vårt team oöverträffat stöd.",
+            "image": "/moving_helpers.jpg",
+            "link": "/book-now?service=moving_helpers"
         },
     ];
 
@@ -41,7 +38,7 @@ const ServicesSlider = () => {
     return (
         <section className="relative overflow-hidden bg-white pb-32 space-y-20">
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl w-full text-center font-bold mb-20">Our Services</h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl w-full text-center font-bold mb-20">Våra Tjänster</h1>
 
             <div className="relative w-full max-w-7xl mx-auto px-4 lg:px-8">
                 <Swiper
@@ -90,7 +87,7 @@ const ServicesSlider = () => {
                                 <button
                                     className=" rounded-full min-w-[200px] flex items-center justify-center bg-[#4B4B4B] px-6 py-1.5 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-gray-700"
                                 >
-                                    Book Now
+                                    Boka nu
                                 </button>
                             </Link>
                         </div>

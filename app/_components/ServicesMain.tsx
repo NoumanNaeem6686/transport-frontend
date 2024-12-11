@@ -17,11 +17,12 @@ function ServicesMain() {
                     <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none  lg:px-0">
 
                         <h2 className="text-3xl text-start lg:text-4xl font-bold tracking-tight text-black">
-                            Professional Cleaning Services
+                        Professionella städtjänster
                         </h2>
                         <p className="mt-4 text-lg text-gray-700 text-start">
-                            Our cleaning services provide a spotless environment for your home or office.We promote a healthier living and working space. Whether you need one-time deep cleaning or a recurring service, we are flexible to match your schedule.
-
+                        Våra städtjänster erbjuder en fläckfri miljö för ditt hem eller kontor. 
+                        Vi främjar en hälsosammare boende- och arbetsmiljö. Oavsett om du behöver en engångsdjupstädning eller en återkommande tjänst,
+                         är vi flexibla för att passa ditt schema.
 
                         </p>
                         <ul className="mt-4 space-y-2 flex flex-col">
@@ -35,7 +36,7 @@ function ServicesMain() {
                                 >
                                     <path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path>
                                 </svg>
-                                Deep cleaning for homes and offices
+                                Djuprengöring för hem och kontor
                             </li>
                             <li className="inline-flex items-center gap-2 text-black">
                                 <svg
@@ -47,7 +48,7 @@ function ServicesMain() {
                                 >
                                     <path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path>
                                 </svg>
-                                Eco-friendly and safe products
+                                Ekologiska och säkra produkter
                             </li>
                             <li className="inline-flex items-center gap-2 text-black">
                                 <svg
@@ -59,7 +60,7 @@ function ServicesMain() {
                                 >
                                     <path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path>
                                 </svg>
-                                Flexible scheduling options
+                                Flexibla schemaläggningsalternativ
                             </li>
                         </ul>
                         <div className="mt-6 flex items-center justify-start">
@@ -67,7 +68,7 @@ function ServicesMain() {
                                 onClick={() => handleBooking("cleaning")}
                                 className="inline-flex rounded-full bg-[#4B4B4B] px-6 py-1.5 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-gray-700"
                             >
-                                Book Now
+                                Boka nu
                             </button>
                         </div>
                     </div>
@@ -100,11 +101,12 @@ function ServicesMain() {
                     <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none  lg:px-0">
 
                         <h2 className="text-3xl text-start lg:text-4xl font-bold tracking-tight text-black">
-                            Safe and Efficient Transport Services
+                        Säkra och Effektiva Transporttjänster
                         </h2>
                         <p className="mt-4 text-lg text-gray-700 text-start">
-                            Our transport ensure your belongings are moved safely. With a fleet of reliable vehicles and skilled drivers, we make sure your items reach their destination on time. Whether you need a small van for light items or a larger vehicle for heavy furniture, we have the right option for you.
-
+                        Våra transporttjänster säkerställer att dina tillhörigheter flyttas säkert. 
+                        Med en flotta av pålitliga fordon och erfarna förare ser vi till att dina saker når sin destination i tid. Oavsett om du behöver en liten skåpbil för lätta saker eller ett större fordon för tunga möbler, 
+                        har vi rätt alternativ för dig.
                         </p>
                         <ul className="mt-4 space-y-2 flex flex-col">
                             <li className="inline-flex items-center gap-2 text-black">
@@ -117,7 +119,7 @@ function ServicesMain() {
                                 >
                                     <path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path>
                                 </svg>
-                                Multiple vehicle options to match your moving needs.
+                                Flera fordonsalternativ för att matcha dina flyttbehov.
                             </li>
                             <li className="inline-flex items-center gap-2 text-black">
                                 <svg
@@ -129,9 +131,9 @@ function ServicesMain() {
                                 >
                                     <path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path>
                                 </svg>
-                                Professional drivers ensuring safe and timely delivery.
+                                Professionella förare som säkerställer säker och snabb leverans.
                             </li>
-                            <li className="inline-flex items-center gap-2 text-black">
+                            {/* <li className="inline-flex items-center gap-2 text-black">
                                 <svg
                                     aria-hidden="true"
                                     className="h-5 w-5 shrink-0 text-[#4B4B4B]"
@@ -142,14 +144,14 @@ function ServicesMain() {
                                     <path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path>
                                 </svg>
                                 GPS tracking available for real-time location updates.
-                            </li>
+                            </li>  */}
                         </ul>
                         <div className="mt-6 flex items-center justify-start">
                             <button
                                 onClick={() => handleBooking("transport")}
                                 className="inline-flex rounded-full bg-[#4B4B4B] px-6 py-1.5 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-gray-700"
                             >
-                                Book Now
+                                Boka nu
                             </button>
                         </div>
                     </div>
@@ -171,11 +173,12 @@ function ServicesMain() {
                     <div className="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none  lg:px-0">
 
                         <h2 className="text-3xl text-start lg:text-4xl font-bold tracking-tight text-black">
-                            Reliable Moving Helper Services
+                        Pålitliga flytthjälpstjänster
                         </h2>
                         <p className="mt-4 text-lg text-gray-700 text-start">
-                            Our helper services are designed to take the stress out of moving. From packing your belongings to heavy lifting, we ensure everything is handled with care.Whether you’re moving within the city or to a new location, our team provides unmatched support.
-                        </p>
+                        Våra hjälptjänster är utformade för att ta bort stressen från flytten. Från att packa dina tillhörigheter till
+                        tungt lyft, ser vi till att allt hanteras med omsorg. Oavsett om du flyttar inom staden eller till en ny plats, 
+                        erbjuder vårt team oöverträffat stöd. </p>
                         <ul className="mt-4 space-y-2 flex flex-col">
                             <li className="inline-flex items-center gap-2 text-black">
                                 <svg
@@ -187,7 +190,7 @@ function ServicesMain() {
                                 >
                                     <path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path>
                                 </svg>
-                                Professional and experienced moving helpers.
+                                Professionella och erfarna flytthjälpare.
                             </li>
                             <li className="inline-flex items-center gap-2 text-black">
                                 <svg
@@ -199,7 +202,7 @@ function ServicesMain() {
                                 >
                                     <path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path>
                                 </svg>
-                                Assistance with packing, unpacking, and organizing.
+                                Hjälp med packning, uppackning och organisering.
                             </li>
                             <li className="inline-flex items-center gap-2 text-black">
                                 <svg
@@ -211,7 +214,7 @@ function ServicesMain() {
                                 >
                                     <path d="M176.49,95.51a12,12,0,0,1,0,17l-56,56a12,12,0,0,1-17,0l-24-24a12,12,0,1,1,17-17L112,143l47.51-47.52A12,12,0,0,1,176.49,95.51Z"></path>
                                 </svg>
-                                Safe handling of fragile and valuable items.
+                                Säker hantering av ömtåliga och värdefulla föremål.
                             </li>
                         </ul>
                         <div className="mt-6 flex items-center justify-start">
@@ -219,7 +222,7 @@ function ServicesMain() {
                                 onClick={() => handleBooking("helper")}
                                 className="inline-flex rounded-full bg-[#4B4B4B] px-6 py-1.5 text-sm font-semibold leading-7 text-white shadow-sm hover:bg-gray-700"
                             >
-                                Book Now
+                                Boka nu
                             </button>
                         </div>
                     </div>
